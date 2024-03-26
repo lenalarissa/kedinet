@@ -1,4 +1,4 @@
-package kedinet.net;
+package kedinet.kedinet;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
