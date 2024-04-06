@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Layout</title>
+    <link rel="stylesheet" href="kedi_net.css"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg" id="nav_bar">
+    <a class="navbar-brand" href="#">
+        <img id="logo" src="./logo.png" alt="Logo">
+        <span class="title">Kedi-net Istanbul</span>
+    </a>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Search</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Sign Up</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Log In</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-heart"></i></a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Filtering Section -->
+<div class="filtering-section">
+<!<!-- Dropdowns and Search Button -->
+<div class="container mt-3">
+    <div class="row">
+        <!-- Dropdowns -->
+        <div class="col">
+            <select class="form-control">
+                <option value="">Postcode</option>
+                <!-- Add postcode options here -->
+            </select>
+        </div>
+        <div class="col">
+            <select class="form-control">
+                <option value="">Breed</option>
+                <!-- Add breed options here -->
+            </select>
+        </div>
+        <div class="col">
+            <select class="form-control">
+                <option value="">Can live with...</option>
+                <!-- Add options here -->
+            </select>
+        </div>
+        <div class="col">
+            <select class="form-control">
+                <option value="">Color</option>
+                <!-- Add color options here -->
+            </select>
+        </div>
+        <!-- Search Button -->
+        <div class="col-auto">
+            <button type="button" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+</div>
+
+    <!-- Additional Filtering Options -->
+    <div class="container mt-3 filtering-section">
+        <div class="row">
+            <!-- Gender -->
+            <div class="col">
+                <div class="filter-box">
+                    <div class="form-group">
+                        <label for="gender">Gender:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Age -->
+            <div class="col">
+                <div class="filter-box">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" class="form-control" id="minAge" placeholder="Min">
+                        <span>-</span>
+                        <input type="number" class="form-control" id="maxAge" placeholder="Max">
+                    </div>
+                </div>
+            </div>
+            <!-- Indoor Cat -->
+            <div class="col">
+                <div class="filter-box">
+                    <div class="form-group">
+                        <label for="indoorCat">Indoor Cat:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="indoorCat" id="indoorYes" value="yes">
+                            <label class="form-check-label" for="indoorYes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="indoorCat" id="indoorNo" value="no">
+                            <label class="form-check-label" for="indoorNo">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Size -->
+            <div class="col">
+                <div class="filter-box">
+                    <div class="form-group">
+                        <label for="size">Size:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="size" id="small" value="small">
+                            <label class="form-check-label" for="small">Small</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="size" id="medium" value="medium">
+                            <label class="form-check-label" for="medium">Medium</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="size" id="big" value="big">
+                            <label class="form-check-label" for="big">Big</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Coat Length -->
+            <div class="col">
+                <div class="filter-box">
+                    <div class="form-group">
+                        <label for="coatLength">Coat Length:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="coatLength" id="short" value="short">
+                            <label class="form-check-label" for="short">Short</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="coatLength" id="mediumLength" value="medium">
+                            <label class="form-check-label" for="mediumLength">Medium</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="coatLength" id="long" value="long">
+                            <label class="form-check-label" for="long">Long</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Reset Button -->
+            <div class="col">
+                    <button type="button" class="btn btn-primary">Reset all Filters</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Content -->
+<div class="container mt-3">
+    <div class="row">
+        <!-- Four Boxes per Row -->
+        <div class="col-md-3">
+            <div class="box">Box 1</div>
+        </div>
+        <div class="col-md-3">
+            <div class="box">Box 2</div>
+        </div>
+        <div class="col-md-3">
+            <div class="box">Box 3</div>
+        </div>
+        <div class="col-md-3">
+            <div class="box">Box 4</div>
+        </div>
+    </div>
+    <!-- Three Rows -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="box">Box 5</div>
+        </div>
+        <div class="col-md-3">
+            <div class="box">Box 6</div>
+        </div>
+        <div class="col-md-3">
+            <div class="box">Box 7</div>
+        </div>
+        <div class="col-md-3">
+            <div class="box">Box 8</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="box">Box 9</div>
+        </div>
+        <div class="col-md-3">
+            <div class="box">Box 10</div>
+        </div>
+        <div class="col-md-3">
+            <div class="box">Box 11</div>
+        </div>
+        <div class="col-md-3">
+            <div class="box">Box 12</div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer bg-light text-center mt-3 py-3">
+    <div class="container">
+        <span class="text-muted">Your Footer Content Here</span>
+    </div>
+</footer>
+
+</body>
+</html>

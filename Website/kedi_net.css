@@ -1,0 +1,31 @@
+#logo{
+    height: 100px;
+}
+#nav_bar{
+    background-color: #b4cfdd;
+}
+.navbar-brand {
+    position: relative;
+}
+.title{
+    font-weight: bold;
+    font-size: 40px;
+    color: #333;
+    margin-left: 30px;
+    position: absolute;
+    bottom: 10px; /* Adjust the value as needed */
+}
+.nav-link {
+    color: black;
+}
+.filtering-section{
+    margin-top: -20px;
+    background-color: #b4cfdd;
+}
+.filter-box {
+    background-color: #f8f9fa; /* Background color of the box */
+    padding: 10px; /* Padding inside the box */
+    margin-bottom: 10px; /* Margin between boxes */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
