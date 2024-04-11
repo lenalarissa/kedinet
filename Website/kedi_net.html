@@ -86,7 +86,7 @@
             <div class="col">
                 <div class="filter-box">
                     <div class="form-group">
-                        <label for="gender">Gender:</label><br>
+                        <label>Gender:</label><br>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="gender" id="female" value="female">
                             <label class="form-check-label" for="female">Female</label>
@@ -102,7 +102,7 @@
             <div class="col">
                 <div class="filter-box">
                     <div class="form-group">
-                        <label for="age">Age:</label>
+                        <label>Age:</label>
                         <input type="number" class="form-control" id="minAge" placeholder="Min">
                         <span>-</span>
                         <input type="number" class="form-control" id="maxAge" placeholder="Max">
@@ -113,7 +113,7 @@
             <div class="col">
                 <div class="filter-box">
                     <div class="form-group">
-                        <label for="indoorCat">Indoor Cat:</label><br>
+                        <label>Indoor Cat:</label><br>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="indoorCat" id="indoorYes" value="yes">
                             <label class="form-check-label" for="indoorYes">Yes</label>
@@ -129,7 +129,7 @@
             <div class="col">
                 <div class="filter-box">
                     <div class="form-group">
-                        <label for="size">Size:</label><br>
+                        <label>Size:</label><br>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="size" id="small" value="small">
                             <label class="form-check-label" for="small">Small</label>
@@ -149,7 +149,7 @@
             <div class="col">
                 <div class="filter-box">
                     <div class="form-group">
-                        <label for="coatLength">Coat Length:</label><br>
+                        <label>Coat Length:</label><br>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="coatLength" id="short" value="short">
                             <label class="form-check-label" for="short">Short</label>
@@ -172,8 +172,28 @@
             </div>
         </div>
     </div>
-
 </div>
+
+<!-- Sorting Options -->
+<div class="container mt-3 sorting-section">
+    <div class="row justify-content-end">
+        <div class="col-auto">
+            <label class="mr-2">Sort by:</label>
+        </div>
+        <div class="col-auto">
+            <div class="form-group">
+                <select class="form-control form-control-sm" id="sortOptions">
+                    <option value="newest-oldest">Addition (newest to oldest)</option>
+                    <option value="oldest-newest">Addition (oldest to newest)</option>
+                    <option value="young-old">Age (young to old)</option>
+                    <option value="old-young">Age (old to young)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <!-- Content -->
 <div class="container mt-3">
