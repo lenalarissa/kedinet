@@ -8,11 +8,6 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        .box {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 <body>
@@ -49,28 +44,36 @@
         <div class="row upper-row">
             <!-- Dropdowns -->
             <div class="col">
-                <select class="form-control">
-                    <option value="">Postcode</option>
-                    <!-- Add postcode options here -->
-                </select>
+                <label>
+                    <select class="form-control">
+                        <option value="">Postcode</option>
+                        <!-- Add postcode options here -->
+                    </select>
+                </label>
             </div>
             <div class="col">
-                <select class="form-control">
-                    <option value="">Breed</option>
-                    <!-- Add breed options here -->
-                </select>
+                <label>
+                    <select class="form-control">
+                        <option value="">Breed</option>
+                        <!-- Add breed options here -->
+                    </select>
+                </label>
             </div>
             <div class="col">
-                <select class="form-control">
-                    <option value="">Can live with...</option>
-                    <!-- Add options here -->
-                </select>
+                <label>
+                    <select class="form-control">
+                        <option value="">Can live with...</option>
+                        <!-- Add options here -->
+                    </select>
+                </label>
             </div>
             <div class="col">
-                <select class="form-control">
-                    <option value="">Color</option>
-                    <!-- Add color options here -->
-                </select>
+                <label>
+                    <select class="form-control">
+                        <option value="">Color</option>
+                        <!-- Add color options here -->
+                    </select>
+                </label>
             </div>
             <!-- Search Button -->
             <div class="col-auto">
@@ -102,9 +105,9 @@
                 <div class="filter-box">
                     <div class="form-group">
                         <label>Age:</label>
-                        <input type="number" class="form-control" id="minAge" placeholder="Min">
+                        <label for="minAge"></label><input type="number" class="form-control" id="minAge" placeholder="Min">
                         <span>-</span>
-                        <input type="number" class="form-control" id="maxAge" placeholder="Max">
+                        <label for="maxAge"></label><input type="number" class="form-control" id="maxAge" placeholder="Max">
                     </div>
                 </div>
             </div>
@@ -185,7 +188,7 @@
         </div>
         <div class="col-auto">
             <div class="form-group">
-                <select class="form-control form-control-sm" id="sortOptions">
+                <label for="sortOptions"></label><select class="form-control form-control-sm" id="sortOptions">
                     <option value="newest-oldest">Addition (newest to oldest)</option>
                     <option value="oldest-newest">Addition (oldest to newest)</option>
                     <option value="young-old">Age (young to old)</option>
@@ -278,7 +281,6 @@
             </div>
         </div>
     </div>
-    <!-- Three Rows -->
     <div class="row">
         <div class="col-md-3">
             <div class="box">
@@ -357,7 +359,6 @@
             </div>
         </div>
     </div>
-    <!-- Three Rows -->
     <div class="row">
         <div class="col-md-3">
             <div class="box">
