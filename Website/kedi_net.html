@@ -39,51 +39,67 @@
 
 <!-- Filtering Section -->
 <div class="filtering-section">
-    <!<!-- Dropdowns and Search Button -->
     <div class="container mt-3">
-        <div class="row upper-row">
-            <!-- Dropdowns -->
+        <!-- First Row -->
+        <div class="row">
+            <!-- Postcode -->
             <div class="col">
                 <label>
-                    <select class="form-control">
+                    <select class="form-control full-width">
                         <option value="">Postcode</option>
                         <!-- Add postcode options here -->
                     </select>
                 </label>
             </div>
+            <!-- Breed -->
             <div class="col">
                 <label>
-                    <select class="form-control">
+                    <select class="form-control full-width">
                         <option value="">Breed</option>
                         <!-- Add breed options here -->
                     </select>
                 </label>
             </div>
+            <!-- Can live with... -->
             <div class="col">
                 <label>
-                    <select class="form-control">
+                    <select class="form-control full-width">
                         <option value="">Can live with...</option>
                         <!-- Add options here -->
                     </select>
                 </label>
             </div>
+            <!-- Color -->
             <div class="col">
                 <label>
-                    <select class="form-control">
+                    <select class="form-control full-width">
                         <option value="">Color</option>
                         <!-- Add color options here -->
                     </select>
                 </label>
             </div>
             <!-- Search Button -->
-            <div class="col-auto">
+            <div class="col">
                 <button type="button" class="btn btn-primary btn-block search-btn">Search</button>
             </div>
         </div>
-    </div>
-
-    <div class="container mt-3 filtering-section">
+        <!-- Second Row -->
         <div class="row">
+            <!-- Age -->
+            <div class="col">
+                <div class="filter-box">
+                    <div class="form-group">
+                        <label>Age:</label>
+                        <div class="input-group">
+                            <label for="minAge" class="sr-only">Minimum Age</label>
+                            <input type="number" class="form-control" id="minAge" placeholder="Min">
+                            <span class="input-group-text">-</span>
+                            <label for="maxAge" class="sr-only">Maximum Age</label>
+                            <input type="number" class="form-control" id="maxAge" placeholder="Max">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Gender -->
             <div class="col">
                 <div class="filter-box">
@@ -97,17 +113,6 @@
                             <input class="form-check-input" type="checkbox" name="gender" id="male" value="male">
                             <label class="form-check-label" for="male">Male</label>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Age -->
-            <div class="col">
-                <div class="filter-box">
-                    <div class="form-group">
-                        <label>Age:</label>
-                        <label for="minAge"></label><input type="number" class="form-control" id="minAge" placeholder="Min">
-                        <span>-</span>
-                        <label for="maxAge"></label><input type="number" class="form-control" id="maxAge" placeholder="Max">
                     </div>
                 </div>
             </div>
@@ -168,17 +173,24 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Third Row -->
+        <div class="row align-items-center">
+            <!-- Spacing column to align the reset button -->
+            <div class="col-lg-9"></div>
             <!-- Reset Button -->
             <div class="col-lg-3">
                 <div class="row justify-content-end">
-                    <div class="col-auto">
-                        <button type="button" class="btn btn-primary btn-block reset-btn">Reset all Filters</button>
+                    <div class="col-auto align-self-center">
+                        <button type="button" class="btn btn-secondary btn-block reset-btn">Reset all Filters</button>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
+
 
 <!-- Sorting Options -->
 <div class="container mt-3 sorting-section">
@@ -189,11 +201,11 @@
         <div class="col-auto">
             <div class="form-group">
                 <label for="sortOptions"></label><select class="form-control form-control-sm" id="sortOptions">
-                    <option value="newest-oldest">Addition (newest to oldest)</option>
-                    <option value="oldest-newest">Addition (oldest to newest)</option>
-                    <option value="young-old">Age (young to old)</option>
-                    <option value="old-young">Age (old to young)</option>
-                </select>
+                <option value="newest-oldest">Addition (newest to oldest)</option>
+                <option value="oldest-newest">Addition (oldest to newest)</option>
+                <option value="young-old">Age (young to old)</option>
+                <option value="old-young">Age (old to young)</option>
+            </select>
             </div>
         </div>
     </div>
