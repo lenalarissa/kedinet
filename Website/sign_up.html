@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Layout</title>
+    <link rel="stylesheet" href="sign_up.css"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg" id="nav_bar">
+    <a class="navbar-brand" href="#">
+        <img id="logo" src="./logo.png" alt="Logo">
+        <span class="title">Kedi-net Istanbul</span>
+    </a>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Search</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Sign Up</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Log In</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-heart"></i></a>
+        </li>
+    </ul>
+</nav>
+
+
+
+<!-- Content -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Top Box -->
+            <div class="box top-box">
+                <h5 class="box-sign-up text-center">Sign Up</h5>
+                <form>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password (min. length of 8):</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Password (repeated):</label>
+                        <input type="password" class="form-control" id="confirm-password" placeholder="Repeat your password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer text-center mt-3 py-3">
+    <div class="container">
+        <span class="text-muted"></span>
+    </div>
+</footer>
+
+</body>
+</html>
