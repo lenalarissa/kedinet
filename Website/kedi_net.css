@@ -41,6 +41,7 @@
     /* height: 450px; Removed fixed height */
     /* Added box-sizing property to include padding and border in the width calculation */
     box-sizing: border-box;
+    background-color: #b4cfdd;
 }
 
 .box-image {
@@ -71,4 +72,3 @@
     border: none;
     background-color: transparent;
 }
-
