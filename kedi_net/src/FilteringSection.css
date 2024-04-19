@@ -1,0 +1,37 @@
+.filtering-section {
+    margin-top: -20px;
+    background-color: #b4cfdd;
+    padding: 10px 0;
+}
+
+.filter-box {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filtering-section .container .row {
+    align-items: flex-start;
+}
+
+.search-btn {
+    margin-right: 5px;
+}
+
+/* spacing between columns */
+.row [class^="col"] {
+    padding-right: 5px;  /* Adjust as needed */
+}
+
+/* spacing between rows */
+.row + .row {
+    margin-top: 10px;
+}
+
+.reset-btn {
+    /*width: 200px !important;
+    margin-right: 10px;
+    height: 40px;*/
+}
