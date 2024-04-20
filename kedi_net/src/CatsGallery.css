@@ -1,0 +1,40 @@
+.box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #b4cfdd;
+    width: 100%;
+    height: 350px;
+}
+
+.box-image {
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+}
+
+.box-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box-details {
+    padding-top: 10px;
+}
+
+.box-name {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.box-info {
+    margin: 0;
+    font-size: 14px;
+}
+
+.heart-button {
+    border: none;
+    background-color: transparent;
+}
