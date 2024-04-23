@@ -3,8 +3,10 @@ import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import {useAuth} from "./AuthContext";
 
 const SearchPage = () => {
+
 
     {/* Regions */
     }
@@ -268,11 +270,27 @@ const SearchPage = () => {
         }
     ];
 
+    const { isLoggedIn, logout } = useAuth();
+    const [showLoginPrompt, setShowLoginPrompt] = useState(false);
+
+    // only for simulation
+    const [heartClickedCats, setHeartClickedCats] = useState([]);
+
+
     const handleHeartClick = (catId, e) => {
-        // prevent this to be the link to the cats profile
         e.preventDefault();
         e.stopPropagation();
-        // would save the cat to a list of favourites
+
+        if (isLoggedIn) {
+            // only for simulation
+            if (heartClickedCats.includes(catId)) {
+                setHeartClickedCats(heartClickedCats.filter(id => id !== catId));
+            } else {
+                setHeartClickedCats([...heartClickedCats, catId]);
+            }
+        } else {
+            setShowLoginPrompt(true);
+        }
     };
 
     return (
@@ -524,17 +542,20 @@ const SearchPage = () => {
                                         alignItems: 'center',
                                         justifyContent: 'space-between',
                                     }}>
-                                        <h5 className="box-name">{cat.name} </h5>
+                                        <h5 className="box-with-button">{cat.name} </h5>
                                         <button
                                             type="button"
                                             className="btn heart-button"
-                                            style={{color: 'white', zIndex: 1}}
+                                            style={{
+                                                color: heartClickedCats.includes(cat.id) ? 'black' : 'white',
+                                            }}
                                             onClick={(e) => {
-                                                handleHeartClick(cat, e);
+                                                handleHeartClick(cat.id, e); // Pass only the cat id
                                             }}
                                         >
                                             <FontAwesomeIcon icon={faHeart} size="1x"/>
                                         </button>
+
                                     </div>
                                     <p className="box-info">Breed: {cat.breed} | Gender: {cat.gender}</p>
                                     <p className="box-info">Region: {cat.region}</p>
@@ -544,6 +565,13 @@ const SearchPage = () => {
                     ))}
                 </div>
             </div>
+            {showLoginPrompt && (
+                <div className="fav-cats-popup">
+                        <h2>Login Required</h2>
+                        <p>You need to be logged in to save a cat.</p>
+                        <button className="fav-cats-button" onClick={() => setShowLoginPrompt(false)}>Close</button>
+                </div>
+            )}
         </div>
     );
 };

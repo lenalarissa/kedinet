@@ -29,6 +29,15 @@ const Help = () => {
                                     </p>
                                 </li>
                                 <li>
+                                    <h5>How can I save cats I like?</h5>
+                                    <p>
+                                        When you are logged in, you can click on the little heart beside the cat you like.
+                                        This will save the cat to a list. If you have already saved a cat, you will remove it
+                                        from your list by clicking on the heart again.
+                                        You can click on the heart on the top right of the page to see all your saved cats in a list.
+                                    </p>
+                                </li>
+                                <li>
                                     <h5>How do I contact a shelter?</h5>
                                     <p>
                                         If you're interested in adopting a cat, you can contact the shelter directly

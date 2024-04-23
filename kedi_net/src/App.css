@@ -53,11 +53,8 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.popup-content {
-  text-align: center;
-}
-
 .popup-content button {
+  text-align: center;
   margin-top: 10px;
   padding: 5px 10px;
   background-color: #007bff;
@@ -66,3 +63,32 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+}
+
+.footer-left {
+  margin-left: 40px;
+  flex: 1;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+  margin-right: 40px;
+}
+
+.above-footer {
+  height: 20px;
+  background-color: white;
+}
+

@@ -13,6 +13,9 @@ import SignUp from "./SignUp";
 import React, { useState } from 'react';
 import Help from "./Help";
 import FavCats from "./FavCats";
+import Admin from "./Admin";
+import EditCats from "./EditCats";
+import AddCat from "./AddCat";
 
 function App() {
     const { isLoggedIn, logout } = useAuth();
@@ -60,7 +63,7 @@ function App() {
                                 <Link to="/signUp" className="nav-link">Sign Up</Link>
                             )}
                             {isLoggedIn ? (
-                                <span className="nav-link" style={{ cursor: 'pointer' }} onClick={logout}>Log Out</span>
+                                <span className="nav-link" style={{cursor: 'pointer'}} onClick={logout}>Log Out</span>
                             ) : (
                                 <Link to="/login" className="nav-link">Log In</Link>
                             )}
@@ -68,7 +71,8 @@ function App() {
                             {isLoggedIn ? (
                                 <Link to="/favCats" className="nav-link"><FontAwesomeIcon icon={faHeart}/></Link>
                             ) : (
-                                <span className="nav-link" style={{cursor: 'pointer'}} onClick={handleFavCatsClick}><FontAwesomeIcon icon={faHeart}/></span>
+                                <span className="nav-link" style={{cursor: 'pointer'}}
+                                      onClick={handleFavCatsClick}><FontAwesomeIcon icon={faHeart}/></span>
                             )}
                         </Nav>
                     </Navbar.Collapse>
@@ -80,7 +84,19 @@ function App() {
                     <Route path="/login" element={<LogIn/>}/>
                     <Route path="/help" element={<Help/>}/>
                     <Route path="/favCats" element={<FavCats/>}/>
+                    <Route path="/admin" element={<Admin/>}/>
+                    <Route path="/editCats" element={<EditCats/>}/>
+                    <Route path="/addCat" element={<AddCat/>}/>
                 </Routes>
+                <div className="above-footer">
+                    <p></p>
+                </div>
+                <footer className="footer">
+                    <div className="footer-left">Contact: istanbul@kedi-net.com</div>
+                    <nav className="footer-right">
+                        <Link to="/admin" className="nav-link">Admin Log In</Link>
+                    </nav>
+                </footer>
             </Router>
             {showSignUpPopup && (
                 <div className="signup-popup">

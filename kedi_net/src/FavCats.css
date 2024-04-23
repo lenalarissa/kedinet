@@ -62,10 +62,38 @@
 }
 
 .fav-cats-text {
-    margin-left: 130px;
+    margin-left: 40px;
     align-items: center;
     font-size: 20px !important;
     font-weight: bold;
     margin-top: -10px !important;
     font-size: 25px !important;
+}
+
+.confirmation-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8f9fa;
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    color: black;
+    border: 2px solid black;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.confirmation-button {
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.confirmation-button + .confirmation-button {
+    margin-left: 10px;
 }
