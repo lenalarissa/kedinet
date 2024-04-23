@@ -4,37 +4,100 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart} from '@fortawesome/free-solid-svg-icons';
 import logo from './logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {Link, Route, Routes, BrowserRouter as Router} from 'react-router-dom';
 import SearchPage from "./SearchPage";
-
+import CatProfile from "./CatProfile";
+import { useAuth } from './AuthContext';
+import LogIn from "./LogIn";
+import SignUp from "./SignUp";
+import React, { useState } from 'react';
+import Help from "./Help";
+import FavCats from "./FavCats";
 
 function App() {
+    const { isLoggedIn, logout } = useAuth();
+    const [showSignUpPopup, setShowSignUpPopup] = useState(false);
+    const [showFavCatsPopup, setShowFavCatsPopup] = useState(false);
+
+    const handleSignUpClick = () => {
+        if (isLoggedIn) {
+            // If user is logged in, show the sign-up pop-up
+            setShowSignUpPopup(true);
+        }
+    };
+
+    const handleSignUpClose = () => {
+        // Close the sign-up pop-up
+        setShowSignUpPopup(false);
+    };
+
+    function handleFavCatsClick() {
+        if (!isLoggedIn) {
+            // If user is logged in, show the sign-up pop-up
+            setShowFavCatsPopup(true);
+        }
+    }
+    const handleFavCatsClose = () => {
+        // Close the sign-up pop-up
+        setShowFavCatsPopup(false);
+    };
 
     return (
         <div>
-            <Navbar expand="lg" id="nav_bar">
-                <Navbar.Brand href="#">
-                    <img id="logo" src={logo} alt="Logo"/>
-                    <span className="title">Kedi-net Istanbul</span>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                        <Nav.Link href="#" style={{fontWeight: 'bold'}}>Search</Nav.Link>
-                        <Nav.Link href="/sign_up">Sign Up</Nav.Link>
-                        <Nav.Link href="/log_in">Log In</Nav.Link>
-                        <Nav.Link href="/help">Help</Nav.Link>
-                        <Nav.Link href="/fav_cats"><FontAwesomeIcon icon={faHeart}/></Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
-            {/*<SearchPage/>*/}
             <Router>
+                <Navbar expand="lg" id="nav_bar">
+                    <Link to="/" className="navbar-brand">
+                        <img id="logo" src={logo} alt="Logo"/>
+                        <span className="title">Kedi-net Istanbul</span>
+                    </Link>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ml-auto">
+                            <Link to="/" className="nav-link">Search</Link>
+                            {isLoggedIn ? (
+                                <span className="nav-link" style={{cursor: 'pointer'}} onClick={handleSignUpClick}>Sign Up</span>
+                            ) : (
+                                <Link to="/signUp" className="nav-link">Sign Up</Link>
+                            )}
+                            {isLoggedIn ? (
+                                <span className="nav-link" style={{ cursor: 'pointer' }} onClick={logout}>Log Out</span>
+                            ) : (
+                                <Link to="/login" className="nav-link">Log In</Link>
+                            )}
+                            <Link to="/help" className="nav-link">Help</Link>
+                            {isLoggedIn ? (
+                                <Link to="/favCats" className="nav-link"><FontAwesomeIcon icon={faHeart}/></Link>
+                            ) : (
+                                <span className="nav-link" style={{cursor: 'pointer'}} onClick={handleFavCatsClick}><FontAwesomeIcon icon={faHeart}/></span>
+                            )}
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
                 <Routes>
-                    <Route exact path="/" element={<SearchPage/>}>
-                    </Route>
+                    <Route exact path="/" element={<SearchPage/>}/>
+                    <Route path="/cat/:catId" element={<CatProfile/>}/>
+                    <Route path="/signUp" element={<SignUp/>}/>
+                    <Route path="/login" element={<LogIn/>}/>
+                    <Route path="/help" element={<Help/>}/>
+                    <Route path="/favCats" element={<FavCats/>}/>
                 </Routes>
             </Router>
+            {showSignUpPopup && (
+                <div className="signup-popup">
+                    <div className="popup-content">
+                        <p>You are already logged in. Please log out to sign up for a new account.</p>
+                        <button onClick={handleSignUpClose}>Close</button>
+                    </div>
+                </div>
+            )}
+            {showFavCatsPopup && (
+                <div className="signup-popup">
+                    <div className="popup-content">
+                        <p>To see you favorite cats sign up or log in to your user account.</p>
+                        <button onClick={handleFavCatsClose}>Close</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

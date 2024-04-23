@@ -1,6 +1,8 @@
 import './CatsGallery.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+
 
 const CatGallery = ({ cats }) => {
     const handleHeartClick = (catId) => {
@@ -13,6 +15,7 @@ const CatGallery = ({ cats }) => {
                 {cats.map((cat, index) => (
                     <div className="col-md-3" key={index}>
                         <div className="box">
+                            {/*<Link to={`/cat/${cat.id}`}>*/}
                             <div className="box-image position-relative">
                                 {/* Heart-shaped button */}
                                 <button type="button" className="btn heart-button position-absolute top-0 start-0"
@@ -27,6 +30,7 @@ const CatGallery = ({ cats }) => {
                                 <p className="box-info">Breed: {cat.breed} | Gender: {cat.gender}</p>
                                 <p className="box-info">Region: {cat.region}</p>
                             </div>
+                            {/*</Link>*/}
                         </div>
                     </div>
                 ))}

@@ -183,6 +183,7 @@ const SearchPage = () => {
     }
     const handleSearchClick = () => {
         // hand over the chosen filtering options
+        // will give back the list with the matching cats (here is only a mocked one)
     };
 
     {/* Reset */
@@ -215,7 +216,7 @@ const SearchPage = () => {
             breed: 'Persian',
             gender: 'Male',
             region: 'Kadiköy',
-            imageUrl: 'https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg'
+            image: 'https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg'
         },
         {
             id: 2,
@@ -223,7 +224,7 @@ const SearchPage = () => {
             breed: 'Siamese',
             gender: 'Female',
             region: 'Kadiköy',
-            imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg'
+            image: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg'
         },
         {
             id: 3,
@@ -231,7 +232,7 @@ const SearchPage = () => {
             breed: 'Maine Coon',
             gender: 'Female',
             region: 'Beşiktaş',
-            imageUrl: 'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/rockcms/2022-08/220805-domestic-cat-mjf-1540-382ba2.jpg'
+            image: 'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/rockcms/2022-08/220805-domestic-cat-mjf-1540-382ba2.jpg'
         },
         {
             id: 4,
@@ -239,7 +240,7 @@ const SearchPage = () => {
             breed: 'Ragdoll',
             gender: 'Male',
             region: 'Şişli',
-            imageUrl: 'https://idsb.tmgrup.com.tr/ly/uploads/images/2021/09/08/thumbs/871x871/142774.jpg'
+            image: 'https://idsb.tmgrup.com.tr/ly/uploads/images/2021/09/08/thumbs/871x871/142774.jpg'
         },
         {
             id: 5,
@@ -247,7 +248,7 @@ const SearchPage = () => {
             breed: 'Bengal',
             gender: 'Male',
             region: 'Üsküdar',
-            imageUrl: 'https://www.cats.org.uk/media/13135/191108case015.jpg?width=500&height=333.3333333333333'
+            image: 'https://www.cats.org.uk/media/13135/191108case015.jpg?width=500&height=333.3333333333333'
         },
         {
             id: 6,
@@ -255,7 +256,7 @@ const SearchPage = () => {
             breed: 'Scottish Fold',
             gender: 'Female',
             region: 'Kadıköy',
-            imageUrl: 'https://www.cats.org.uk/media/13134/190110case061.jpg?width=500&height=333.3333333333333'
+            image: 'https://www.cats.org.uk/media/13134/190110case061.jpg?width=500&height=333.3333333333333'
         },
         {
             id: 7,
@@ -263,11 +264,14 @@ const SearchPage = () => {
             breed: 'Sphynx',
             gender: 'Male',
             region: 'Beyoğlu',
-            imageUrl: 'https://www.cats.org.uk/media/13136/220325case013.jpg?width=500&height=333.49609375'
+            image: 'https://www.cats.org.uk/media/13136/220325case013.jpg?width=500&height=333.49609375'
         }
     ];
 
-    const handleHeartClick = (catId) => {
+    const handleHeartClick = (catId, e) => {
+        // prevent this to be the link to the cats profile
+        e.preventDefault();
+        e.stopPropagation();
         // would save the cat to a list of favourites
     };
 
@@ -510,23 +514,31 @@ const SearchPage = () => {
                 <div className="row">
                     {cats.map((cat, index) => (
                         <div className="col-md-3" key={index}>
-                            <div className="box">
-                                {/*<Link to={`/cat/${cat.id}`}>*/}
+                            <div className="cat-box">
+                                <Link to={`/cat/${cat.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                                 <div className="box-image position-relative">
-                                    {/* Heart-shaped button */}
-                                    <button type="button" className="btn heart-button position-absolute top-0 start-0"
-                                            style={{color: 'black', zIndex: 1}} onClick={() => handleHeartClick(cat)}>
-                                        <FontAwesomeIcon icon={faHeart} size="1x"/>
-                                    </button>
-                                    {/* Image */}
-                                    <img src={cat.imageUrl} alt="Cat Image"/>
-                                </div>
-                                <div className="box-details">
-                                    <h5 className="box-name">{cat.name}</h5>
+                                        <img src={cat.image} alt="Cat Image"/>
+                                    </div>
+                                    <div className="box-details" style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'space-between',
+                                    }}>
+                                        <h5 className="box-name">{cat.name} </h5>
+                                        <button
+                                            type="button"
+                                            className="btn heart-button"
+                                            style={{color: 'white', zIndex: 1}}
+                                            onClick={(e) => {
+                                                handleHeartClick(cat, e);
+                                            }}
+                                        >
+                                            <FontAwesomeIcon icon={faHeart} size="1x"/>
+                                        </button>
+                                    </div>
                                     <p className="box-info">Breed: {cat.breed} | Gender: {cat.gender}</p>
                                     <p className="box-info">Region: {cat.region}</p>
-                                </div>
-                                {/*</Link>*/}
+                                </Link>
                             </div>
                         </div>
                     ))}
