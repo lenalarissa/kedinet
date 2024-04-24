@@ -13,7 +13,7 @@
     z-index: 1000;
 }
 
-.popup button{
+.popup button {
     text-align: center;
     margin-top: 10px;
     padding: 5px 10px;
@@ -22,4 +22,8 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.confirmation-button + .confirmation-button {
+    margin-left: 10px;
 }

@@ -1,4 +1,4 @@
-.body {
+.frame {
     position: relative;
     flex-direction: column;
     min-height: 100vh;
@@ -27,6 +27,7 @@
     text-align: right;
     margin-right: 40px;
 }
+
 .nav-link-footer {
     color: black;
     font-size: 16px;

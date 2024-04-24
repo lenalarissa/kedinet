@@ -1,12 +1,12 @@
 import '../styles/Popup.css';
 
-const CatsProfilePopup = ({ showLoginPrompt, setShowLoginPrompt }) => {
+const CatsProfilePopup = ({showLoginPrompt, setShowLoginPrompt}) => {
     return (
         showLoginPrompt && (
-            <div className="cats-profile-popup">
+            <div className="popup">
                 <h2>Login Required</h2>
                 <p>You need to be logged in to save a cat.</p>
-                <button className="cats-profile-button" onClick={() => setShowLoginPrompt(false)}>Close</button>
+                <button onClick={() => setShowLoginPrompt(false)}>Close</button>
             </div>
         )
     );

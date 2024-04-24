@@ -15,6 +15,7 @@
 .filtering-section .container .row {
     align-items: flex-start;
 }
+
 .reset-btn {
     margin-bottom: 5px;
     margin-right: 5px;
@@ -34,12 +35,15 @@
 .row + .row {
     margin-top: 10px;
 }
+
 .selected-region {
     cursor: pointer;
 }
+
 #sortOptions {
     margin-top: -25px;
 }
+
 .cat-box {
     height: 350px !important;
     border: 1px solid #ccc !important;
@@ -80,28 +84,4 @@
 .heart-button {
     border: none;
     background-color: transparent;
-}
-.fav-cats-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f8f9fa;
-    width: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    color: black;
-    border: 2px solid black;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
-
-.fav-cats-button {
-    text-align: center;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }

@@ -4,15 +4,16 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart} from '@fortawesome/free-solid-svg-icons';
 import logo from '../assets/logo.png';
 import {Link, useNavigate} from 'react-router-dom';
-import React, { useState } from 'react';
+import {useState} from 'react';
 import SignUpPopup from "./SignUpPopup";
 import FavCatsPopup from "./FavCatsPopup";
-import { useAuth } from '../AuthContext';
+import {useAuth} from '../AuthContext';
 
 
 const NavBar = () => {
     const navigate = useNavigate();
-    const { isLoggedIn, logout } = useAuth();
+    const {isLoggedIn, logout} = useAuth();
+
     const [showSignUpPopup, setShowSignUpPopup] = useState(false);
     const [showFavCatsPopup, setShowFavCatsPopup] = useState(false);
 
@@ -34,11 +35,13 @@ const NavBar = () => {
             setShowFavCatsPopup(true);
         }
     }
+
     const handleFavCatsClose = () => {
         // Close the sign-up pop-up
         setShowFavCatsPopup(false);
     };
 
+    // Log Out
     const handleLogout = () => {
         const confirmLogout = window.confirm('Are you sure you want to log out?');
         if (confirmLogout) {

@@ -1,28 +1,29 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import SearchPage from '../pages/SearchPage';
-import CatProfile from '../pages/CatProfile';
-import SignUp from '../pages/SignUp';
-import LogIn from '../pages/LogIn';
-import Help from '../pages/Help';
-import FavCats from '../pages/FavCats';
-import Admin from '../pages/Admin';
-import EditCats from '../pages/EditCats';
-import AddCat from '../pages/AddCat';
-import AuthContext from "../AuthContext";
+import CatProfileForUserPage from '../pages/CatProfileForUserPage';
+import SignUpPage from '../pages/SignUpPage';
+import LogInPage from '../pages/LogInPage';
+import HelpPage from '../pages/HelpPage';
+import FavCatsPage from '../pages/FavCatsPage';
+import AdminLogInPage from '../pages/AdminLogInPage';
+import EditCatsPage from '../pages/EditCatsPage';
+import AddCatPage from '../pages/AddCatPage';
+import CatProfileForAdminPage from "../pages/CatProfileForAdminPage";
 
 const RouteConfig = () => {
     return (
         <Router>
             <Routes>
-                <Route exact path="/" element={<SearchPage />} />
-                <Route path="/cat/:catId" element={<CatProfile />} />
-                <Route path="/signUp" element={<SignUp />} />
-                <Route path="/login" element={<LogIn />} />
-                <Route path="/help" element={<Help />} />
-                <Route path="/favCats" element={<FavCats />} />
-                <Route path="/admin" element={<Admin />} />
-                <Route path="/editCats" element={<EditCats />} />
-                <Route path="/addCat" element={<AddCat />} />
+                <Route exact path="/" element={<SearchPage/>}/>
+                <Route path="/catUser/:catId" element={<CatProfileForUserPage/>}/>
+                <Route path="/catAdmin/:catId" element={<CatProfileForAdminPage/>}/>
+                <Route path="/signUp" element={<SignUpPage/>}/>
+                <Route path="/login" element={<LogInPage/>}/>
+                <Route path="/help" element={<HelpPage/>}/>
+                <Route path="/favCats" element={<FavCatsPage/>}/>
+                <Route path="/admin" element={<AdminLogInPage/>}/>
+                <Route path="/editCats" element={<EditCatsPage/>}/>
+                <Route path="/addCat" element={<AddCatPage/>}/>
             </Routes>
         </Router>
     );

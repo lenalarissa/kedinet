@@ -1,6 +1,6 @@
 import '../styles/Popup.css';
 
-const SignUpPopup = ({ handleClose }) => {
+const SignUpPopup = ({handleClose}) => {
 
     return (
         <div className="popup">

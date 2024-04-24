@@ -1,6 +1,7 @@
 .container {
     padding: 0;
 }
+
 .full-width-container {
     padding-left: 0;
     padding-right: 0;
@@ -35,11 +36,11 @@
     margin-top: -10px !important;
 }
 
-.image-slider-box{
+.image-slider-box {
     top: 50%;
     height: auto;
     background-color: #b4cfdd;
-    margin-left: 0  !important;
+    margin-left: 0 !important;
     padding: 20px;
     margin-top: 10px;
 }
@@ -58,6 +59,7 @@
     margin-left: 80px;
     font-weight: bold;
 }
+
 .box-text {
     margin-left: 80px;
     margin-right: 80px;
@@ -65,9 +67,8 @@
 
 .about-box {
     background-color: #b4cfdd;
-    margin-left: 0;
     height: auto;
-    margin: 0px !important;
+    margin: 0 !important;
     padding: 20px;
 }
 
@@ -77,28 +78,4 @@
     margin: 1px !important;
     padding: 20px;
     margin-bottom: 20px !important;
-}
-.cats-profile-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f8f9fa;
-    width: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    color: black;
-    border: 2px solid black;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
-
-.cats-profile-button {
-    text-align: center;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
