@@ -37,8 +37,8 @@ const LogInPage = () => {
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6">
-                        <div className="box top-box">
-                            <h5 className="box-sign-up text-center">Log In</h5>
+                        <div className="box-log-in">
+                            <h5 className="text-center">Log In</h5>
                             <form onSubmit={handleSubmit}>
                                 <div className="form-group">
                                     <label htmlFor="email">e-mail:</label>

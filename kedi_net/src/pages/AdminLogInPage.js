@@ -1,4 +1,4 @@
-import '../styles/LogIn.css';
+import '../styles/SignUp.css';
 import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '../AuthContext';
@@ -37,8 +37,8 @@ const AdminLogInPage = () => {
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6">
-                        <div className="box top-box-admin">
-                            <h5 className="box-sign-up text-center">Log In</h5>
+                        <div className="box-sign-up">
+                            <h5 className="text-center">Log In</h5>
                             <p>Only admins can log in here. If you want to log in and
                                 you are not an admin, click on 'Log In' in the Navigation Bar ar the top.</p>
                             <form onSubmit={handleSubmit}>
