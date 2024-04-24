@@ -1,0 +1,80 @@
+.add-cat-form {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.form-group-add {
+    margin-bottom: 20px;
+}
+
+.form-group-add label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.can-live-with-options {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ccc; /* Add border */
+    padding: 10px; /* Add padding for spacing */
+    background-color: #f7f7f7; /* Add background color */
+    border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+.can-live-with-option {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.can-live-with-option label {
+    margin-left: 5px;
+}
+.form-group-add-indoor {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-group-add-indoor label {
+    margin-right: 10px;
+}
+
+

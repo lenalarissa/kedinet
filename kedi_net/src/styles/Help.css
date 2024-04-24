@@ -1,0 +1,9 @@
+.faq-box {
+    height: auto !important;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    white-space: pre-line;
+    margin-bottom: 20px;
+}
