@@ -211,9 +211,48 @@ const SearchPage = () => {
     };
 
     // Search Button
+    const [selectedFiltersString, setSelectedFiltersString] = useState('');
+    const generateSelectedFiltersString = () => {
+        // represents what should be searched for now:
+        let selectedFilters = "Search for:\n";
+
+        // append the filtering options to teh string
+        if (selectedRegions.length > 0) {
+            selectedFilters += "- Regions: " + selectedRegions.join(", ") + "\n";
+        }
+        if (selectedBreeds.length > 0) {
+            selectedFilters += "- Breeds: " + selectedBreeds.join(", ") + "\n";
+        }
+        if (selectedCanLiveWith.length > 0) {
+            selectedFilters += "- Can live with: " + selectedCanLiveWith.join(", ") + "\n";
+        }
+        if (selectedColors.length > 0) {
+            selectedFilters += "- Colors: " + selectedColors.join(", ") + "\n";
+        }
+        if (minAge !== '' || maxAge !== '') {
+            selectedFilters += "- Age: ";
+            selectedFilters += minAge !== '' ? `min ${minAge}` : '';
+            selectedFilters += maxAge !== '' ? `, max ${maxAge}` : '';
+            selectedFilters += "\n";
+        }
+        if (selectedGender.length > 0) {
+            selectedFilters += "- Gender: " + selectedGender.join(", ") + "\n";
+        }
+        if (selectedIndoorCat.length > 0) {
+            selectedFilters += "- Indoor Cat: " + selectedIndoorCat.join(", ") + "\n";
+        }
+        if (selectedSize.length > 0) {
+            selectedFilters += "- Size: " + selectedSize.join(", ") + "\n";
+        }
+        if (selectedCoatLength.length > 0) {
+            selectedFilters += "- Coat Length: " + selectedCoatLength.join(", ") + "\n";
+        }
+        setSelectedFiltersString(selectedFilters);
+    };
     const handleSearchClick = () => {
         // hands over the chosen filtering options (backend)
         //I will get back a list with the matching cats (here is only a mocked one)
+        generateSelectedFiltersString();
     };
 
     // Reset Button
@@ -470,6 +509,10 @@ const SearchPage = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    {/* String of selected filtering option */}
+                    <div className="container mt-3">
+                        <p>{selectedFiltersString}</p>
                     </div>
                 </div>
                 {/* Sorting Section */}

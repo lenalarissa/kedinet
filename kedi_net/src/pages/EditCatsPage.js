@@ -53,7 +53,7 @@ const EditCatsPage = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="fav-cats">
-                            <div className="fav-cats-text">All cats available on the website from {admin.shelterName}:
+                            <div className="fav-cats-text">All cats from {admin.shelterName}:
                             </div>
                         </div>
                     </div>

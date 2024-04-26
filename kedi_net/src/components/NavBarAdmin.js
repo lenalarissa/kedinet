@@ -20,7 +20,7 @@ const NavBarAdmin = () => {
             <Navbar expand="lg" id="nav_bar">
                 <img id="logo" src={logo} alt="Logo"/>
                 <span className="title">
-                        Kedi-net Istanbul - <span className="admin">Admin</span>
+                        Kedi-net Istanbul <span className="admin">Admin</span>
                     </span>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">

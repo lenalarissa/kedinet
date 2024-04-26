@@ -5,6 +5,9 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-left">Contact: istanbul@kedi-net.com</div>
+            <nav className="footer-middle">
+                <Link to="/about" className="nav-link-footer">About</Link>
+            </nav>
             <nav className="footer-right">
                 <Link to="/admin" className="nav-link-footer">Admin Log In</Link>
             </nav>
