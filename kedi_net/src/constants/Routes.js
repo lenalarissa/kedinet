@@ -10,6 +10,7 @@ import EditCatsPage from '../pages/EditCatsPage';
 import AddCatPage from '../pages/AddCatPage';
 import CatProfileForAdminPage from "../pages/CatProfileForAdminPage";
 import AboutPage from "../pages/AboutPage";
+import UserAccountPage from "../pages/UserAccountPage";
 
 const RouteConfig = () => {
     return (
@@ -26,6 +27,7 @@ const RouteConfig = () => {
                 <Route path="/editCats" element={<EditCatsPage/>}/>
                 <Route path="/addCat" element={<AddCatPage/>}/>
                 <Route path="/about" element={<AboutPage/>}/>
+                <Route path="/account" element={<UserAccountPage/>}/>
             </Routes>
         </Router>
     );

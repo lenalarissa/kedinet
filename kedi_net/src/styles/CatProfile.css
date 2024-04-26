@@ -9,8 +9,8 @@
 
 
 .cat-name-box {
-    position: relative; /* Add relative positioning to the name-box */
-    background-color: #b4cfdd;
+    position: relative;
+    background-color: #b4cfdd !important;
     height: 40px !important;
     margin-top: 15px !important;
     text-decoration: underline !important;
@@ -37,9 +37,11 @@
 }
 
 .image-slider-box {
+    border: 1px solid;
+    border-color: #cccccc;
     top: 50%;
     height: auto;
-    background-color: #b4cfdd;
+    background-color: #f9f9f9;
     margin-left: 0 !important;
     padding: 20px;
     margin-top: 10px;
@@ -66,14 +68,18 @@
 }
 
 .about-box {
-    background-color: #b4cfdd;
+    background-color: #f9f9f9;
+    border: 1px solid;
+    border-color: #cccccc;
     height: auto;
     margin: 0 !important;
     padding: 20px;
 }
 
 .smaller-box {
-    background-color: #b4cfdd;
+    background-color: #f9f9f9;
+    border: 1px solid;
+    border-color: #cccccc;
     height: 400px !important;
     margin: 1px !important;
     padding: 20px;

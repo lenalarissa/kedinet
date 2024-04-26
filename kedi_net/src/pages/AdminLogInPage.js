@@ -38,7 +38,7 @@ const AdminLogInPage = () => {
                 <div className="row justify-content-center">
                     <div className="col-md-6">
                         <div className="box-sign-up">
-                            <h5 className="text-center">Log In</h5>
+                            <h5 className="text-center">Admin Log In</h5>
                             <p>Only admins can log in here. If you want to log in and
                                 you are not an admin, click on 'Log In' in the Navigation Bar ar the top.</p>
                             <form onSubmit={handleSubmit}>

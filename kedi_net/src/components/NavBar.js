@@ -5,7 +5,7 @@ import {faHeart} from '@fortawesome/free-solid-svg-icons';
 import logo from '../assets/logo.png';
 import {Link, useNavigate} from 'react-router-dom';
 import {useState} from 'react';
-import SignUpPopup from "./SignUpPopup";
+//import SignUpPopup from "./SignUpPopup";
 import FavCatsPopup from "./FavCatsPopup";
 import {useAuth} from '../AuthContext';
 
@@ -14,21 +14,9 @@ const NavBar = () => {
     const navigate = useNavigate();
     const {isLoggedIn, logout} = useAuth();
 
-    const [showSignUpPopup, setShowSignUpPopup] = useState(false);
+    // Fav Cats Pop-up
     const [showFavCatsPopup, setShowFavCatsPopup] = useState(false);
 
-    // Sign Up Pop-up
-    const handleSignUpClick = () => {
-        if (isLoggedIn) {
-            setShowSignUpPopup(true);
-        }
-    };
-    const handleSignUpClose = () => {
-        // Close the sign-up pop-up
-        setShowSignUpPopup(false);
-    };
-
-    // Fav Cats Pop-up
     function handleFavCatsClick() {
         if (!isLoggedIn) {
             // If user is logged in, show the sign-up pop-up
@@ -40,6 +28,20 @@ const NavBar = () => {
         // Close the sign-up pop-up
         setShowFavCatsPopup(false);
     };
+
+
+    /*// Sign Up Pop-up
+    const [showSignUpPopup, setShowSignUpPopup] = useState(false);
+    const handleSignUpClick = () => {
+        if (isLoggedIn) {
+            setShowSignUpPopup(true);
+        }
+    };
+    const handleSignUpClose = () => {
+        // Close the sign-up pop-up
+        setShowSignUpPopup(false);
+    };*/
+
 
     // Log Out
     const handleLogout = () => {
@@ -63,8 +65,9 @@ const NavBar = () => {
                     <Nav className="ml-auto">
                         <Link to="/" className="nav-link">Search</Link>
                         {isLoggedIn ? (
-                            <span className="nav-link" style={{cursor: 'pointer'}}
-                                  onClick={handleSignUpClick}>Sign Up</span>
+                            /*<span className="nav-link" style={{cursor: 'pointer'}}
+                                  onClick={handleSignUpClick}>Sign Up</span>*/
+                            <Link to="/account" className="nav-link">Account</Link>
                         ) : (
                             <Link to="/signUp" className="nav-link">Sign Up</Link>
                         )}
@@ -83,7 +86,7 @@ const NavBar = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-            {showSignUpPopup && <SignUpPopup handleClose={handleSignUpClose}/>}
+            {/*{showSignUpPopup && <SignUpPopup handleClose={handleSignUpClose}/>}*/}
             {showFavCatsPopup && <FavCatsPopup handleClose={handleFavCatsClose}/>}
         </div>
     );
