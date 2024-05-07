@@ -1,5 +1,5 @@
 import '../styles/SignUp.css';
-import {useState} from 'react';
+import { useState } from 'react';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
@@ -8,10 +8,12 @@ const UserAccountPage = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
     };
+
     const handleConfirmPasswordChange = (e) => {
         setConfirmPassword(e.target.value);
     };
@@ -22,19 +24,21 @@ const UserAccountPage = () => {
         setError('');
         if (password !== confirmPassword) {
             setError('Passwords do not match');
-        }
-        // checks if password is longer than 8 chars
-        else if (password.length < 8) {
+        } else if (password.length < 8) {
             setError('Password must be at least 8 characters long');
         } else {
             setSuccessMessage('Password changed successfully');
-            // here the password in the database is changed
+            // Here, you would change the password in the database
         }
+    };
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
     };
 
     return (
         <div className="frame">
-            <NavBar/>
+            <NavBar />
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6">
@@ -46,7 +50,7 @@ const UserAccountPage = () => {
                                 <div className="form-group">
                                     <label htmlFor="password">New Password (min. length of 8):</label>
                                     <input
-                                        type="password"
+                                        type={showPassword ? 'text' : 'password'}
                                         className="form-control"
                                         id="password"
                                         placeholder="Enter your new password"
@@ -58,7 +62,7 @@ const UserAccountPage = () => {
                                 <div className="form-group">
                                     <label htmlFor="confirm-password">Confirm New Password:</label>
                                     <input
-                                        type="password"
+                                        type={showPassword ? 'text' : 'password'}
                                         className="form-control"
                                         id="confirm-password"
                                         placeholder="Repeat your new password"
@@ -69,13 +73,25 @@ const UserAccountPage = () => {
                                 </div>
                                 {error && <p className="text-danger">{error}</p>}
                                 {successMessage && <p className="text-success">{successMessage}</p>}
+                                <div className="form-check">
+                                    <input
+                                        type="checkbox"
+                                        className="form-check-input"
+                                        id="showPassword"
+                                        checked={showPassword}
+                                        onChange={togglePasswordVisibility}
+                                    />
+                                    <label className="form-check-label" htmlFor="showPassword">
+                                        Show Password
+                                    </label>
+                                </div>
                                 <button type="submit" className="btn btn-primary btn-block">Change Password</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 };

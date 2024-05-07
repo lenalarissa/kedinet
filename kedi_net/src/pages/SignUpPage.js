@@ -1,18 +1,19 @@
 import '../styles/SignUp.css';
-import {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
-import {useAuth} from '../AuthContext';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../AuthContext';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 const SignUpPage = () => {
-    const {login} = useAuth();
+    const { login } = useAuth();
     const navigate = useNavigate();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -28,30 +29,28 @@ const SignUpPage = () => {
         e.preventDefault();
         if (password !== confirmPassword) {
             setError('Passwords do not match');
-        }
-        // will look into the database, this is for testing purposes
-        else if (email === 'user@gmail.com') {
+        } else if (email === 'user@gmail.com') {
             setError('Email is already in use');
-        }
-        // checks if password is longer than 8 chars
-        else if (password.length < 8) {
+        } else if (password.length < 8) {
             setError('Password must be at least 8 characters long');
         } else {
-            // user is logged in successfully
-            // user data would now bew saved in database
             login();
-            navigate('/', {state: {loginSuccess: true}});
+            navigate('/', { state: { loginSuccess: true } });
         }
+    };
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
     };
 
     return (
         <div className="frame">
-            <NavBar/>
+            <NavBar />
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6">
                         <div className="box-sign-up">
-                            <h5 className="ext-center">Sign Up</h5>
+                            <h5 className="text-center">Sign Up</h5>
                             <form onSubmit={handleSubmit}>
                                 <div className="form-group">
                                     <label htmlFor="email">e-mail:</label>
@@ -68,7 +67,7 @@ const SignUpPage = () => {
                                 <div className="form-group">
                                     <label htmlFor="password">Password (min. length of 8):</label>
                                     <input
-                                        type="password"
+                                        type={showPassword ? 'text' : 'password'}
                                         className="form-control"
                                         id="password"
                                         placeholder="Enter your password"
@@ -78,25 +77,37 @@ const SignUpPage = () => {
                                     <p></p>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="confirm-password">Password (repeated):</label>
+                                    <label htmlFor="confirm-password">Confirm Password:</label>
                                     <input
-                                        type="password"
+                                        type={showPassword ? 'text' : 'password'}
                                         className="form-control"
                                         id="confirm-password"
-                                        placeholder="Repeat your password"
+                                        placeholder="Confirm your password"
                                         value={confirmPassword}
                                         onChange={handleConfirmPasswordChange}
                                     />
                                     <p></p>
                                 </div>
                                 {error && <p className="text-danger">{error}</p>}
+                                <div className="form-check">
+                                    <input
+                                        type="checkbox"
+                                        className="form-check-input"
+                                        id="showPassword"
+                                        checked={showPassword}
+                                        onChange={togglePasswordVisibility}
+                                    />
+                                    <label className="form-check-label" htmlFor="showPassword">
+                                        Show Password
+                                    </label>
+                                </div>
                                 <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 };

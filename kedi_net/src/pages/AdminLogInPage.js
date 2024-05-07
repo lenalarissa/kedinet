@@ -1,21 +1,23 @@
 import '../styles/SignUp.css';
-import {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
-import {useAuth} from '../AuthContext';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../AuthContext';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 const AdminLogInPage = () => {
-    const {login} = useAuth();
+    const { login } = useAuth();
     const navigate = useNavigate();
 
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleIdChange = (e) => {
         setId(e.target.value);
     };
+
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
     };
@@ -25,22 +27,26 @@ const AdminLogInPage = () => {
         // simulation of the log in process
         if (id === '1997' && password === 'password') {
             login();
-            navigate('/editCats')
+            navigate('/editCats');
         } else {
             setError('Invalid ID or password. Please try again.');
         }
     };
 
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
     return (
         <div className="frame">
-            <NavBar/>
+            <NavBar />
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6">
                         <div className="box-sign-up">
                             <h5 className="text-center">Admin Log In</h5>
                             <p>Only admins can log in here. If you want to log in and
-                                you are not an admin, click on 'Log In' in the Navigation Bar ar the top.</p>
+                                you are not an admin, click on 'Log In' in the Navigation Bar at the top.</p>
                             <form onSubmit={handleSubmit}>
                                 <div className="form-group">
                                     <label htmlFor="id">ID:</label>
@@ -57,7 +63,7 @@ const AdminLogInPage = () => {
                                 <div className="form-group">
                                     <label htmlFor="password">Password:</label>
                                     <input
-                                        type="password"
+                                        type={showPassword ? 'text' : 'password'}
                                         className="form-control"
                                         id="password"
                                         placeholder="Enter your password"
@@ -67,13 +73,25 @@ const AdminLogInPage = () => {
                                     <p></p>
                                 </div>
                                 {error && <p className="text-danger">{error}</p>}
+                                <div className="form-check">
+                                    <input
+                                        type="checkbox"
+                                        className="form-check-input"
+                                        id="showPassword"
+                                        checked={showPassword}
+                                        onChange={togglePasswordVisibility}
+                                    />
+                                    <label className="form-check-label" htmlFor="showPassword">
+                                        Show Password
+                                    </label>
+                                </div>
                                 <button type="submit" className="btn btn-primary btn-block">Log In</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 };

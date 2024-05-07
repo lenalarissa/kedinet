@@ -1,21 +1,23 @@
 import '../styles/LogIn.css';
-import {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
-import {useAuth} from '../AuthContext';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../AuthContext';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 const LogInPage = () => {
-    const {login} = useAuth();
+    const { login } = useAuth();
     const navigate = useNavigate();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
     };
+
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
     };
@@ -31,9 +33,13 @@ const LogInPage = () => {
         }
     };
 
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
     return (
         <div className="frame">
-            <NavBar/>
+            <NavBar />
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6">
@@ -55,7 +61,7 @@ const LogInPage = () => {
                                 <div className="form-group">
                                     <label htmlFor="password">Password:</label>
                                     <input
-                                        type="password"
+                                        type={showPassword ? 'text' : 'password'}
                                         className="form-control"
                                         id="password"
                                         placeholder="Enter your password"
@@ -65,13 +71,25 @@ const LogInPage = () => {
                                     <p></p>
                                 </div>
                                 {error && <p className="text-danger">{error}</p>}
+                                <div className="form-check">
+                                    <input
+                                        type="checkbox"
+                                        className="form-check-input"
+                                        id="showPassword"
+                                        checked={showPassword}
+                                        onChange={togglePasswordVisibility}
+                                    />
+                                    <label className="form-check-label" htmlFor="showPassword">
+                                        Show Password
+                                    </label>
+                                </div>
                                 <button type="submit" className="btn btn-primary btn-block">Log In</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 };
