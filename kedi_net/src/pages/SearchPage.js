@@ -16,6 +16,7 @@ import cat7 from "../assets/cat_img/7.jpeg";
 import breeds from '../constants/Breeds'
 import CatsProfilePopup from "../components/CatsProfilePopup";
 
+
 const SearchPage = () => {
     // some mock cats as objects since there is no connection to the database yet
     const cats = [
@@ -115,6 +116,7 @@ const SearchPage = () => {
             setSelectedBreeds([...selectedBreeds, breed]);
         }
     };
+
 
     // Can Live With...
     const [showCanLiveWith, setShowCanLiveWith] = useState(false);
@@ -398,7 +400,7 @@ const SearchPage = () => {
                         <div className="row">
                             {/* Age */}
                             <div className="col">
-                                <div className="filter-box">
+                                <div className="filter-box-check">
                                     <div className="form-group">
                                         <label>Age:</label>
                                         <div className="input-group">
@@ -413,7 +415,7 @@ const SearchPage = () => {
                             </div>
                             {/* Gender */}
                             <div className="col">
-                                <div className="filter-box">
+                                <div className="filter-box-check">
                                     <div className="form-group">
                                         <label>Gender:</label><br/>
                                         {genders.map((gender, index) => (
@@ -430,7 +432,7 @@ const SearchPage = () => {
                             </div>
                             {/* Indoor Cat */}
                             <div className="col">
-                                <div className="filter-box">
+                                <div className="filter-box-check">
                                     <div className="form-group">
                                         <label>Indoor Cat:</label><br/>
                                         {indoorCatOptions.map((option, index) => (
@@ -448,7 +450,7 @@ const SearchPage = () => {
                             </div>
                             {/* Size */}
                             <div className="col">
-                                <div className="filter-box">
+                                <div className="filter-box-check">
                                     <div className="form-group">
                                         <label>Size:</label><br/>
                                         {sizeOptions.map((size, index) => (
@@ -465,7 +467,7 @@ const SearchPage = () => {
                             </div>
                             {/* Coat Length */}
                             <div className="col">
-                                <div className="filter-box">
+                                <div className="filter-box-check">
                                     <div className="form-group">
                                         <label>Coat Length:</label><br/>
                                         {coatLengthOptions.map((length, index) => (
