@@ -63,7 +63,7 @@ const EditCatsPage = () => {
                         {cats.map((cat, index) => (<div className="col-md-3" key={index}>
                                 <div className="cat-box">
                                     <Link to={`/catAdmin/${cat.id}`} style={{textDecoration: 'none', color: 'inherit'}}>
-                                        <div className="box-image position-relative">
+                                    <div className="box-image position-relative">
                                             <img src={cat.image} alt="Cat Image"/>
                                             <button
                                                 type="button"
