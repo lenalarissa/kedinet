@@ -22,16 +22,32 @@ const LogInPage = () => {
         setPassword(e.target.value);
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault(); // not refreshing the page
-        // simulation of the log in process
-        if (email === 'user@gmail.com' && password === 'password') {
-            login();
-            navigate('/');
-        } else {
-            setError('Invalid email or password. Please try again.');
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch("http://localhost:8080/user/addUser", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+            if (response.ok) {
+                const data = await response.json();
+                // Assuming the backend returns a token upon successful login
+                // You can handle the token as per your authentication mechanism
+                const token = data.token;
+                login();
+                navigate('/');
+            } else {
+                setError('Invalid email or password. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error logging in:', error);
+            setError('An error occurred while logging in. Please try again.');
         }
     };
+
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
