@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"kedinet.kedinet.service", "kedinet.kedinet.repository"})
 public class KedinetApplication {
 
 	public static void main(String[] args) {

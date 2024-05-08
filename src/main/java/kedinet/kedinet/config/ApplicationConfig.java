@@ -7,15 +7,16 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
+// Source: https://www.youtube.com/watch?v=KxqlJblhzfI
 @Configuration
 @RequiredArgsConstructor
 public class ApplicationConfig {
 
     private final UserRepo userRepo;
+
     @Bean
-    public UserDetailsService userDetailsService(){
+    public UserDetailsService userDetailsService() {
         return username -> userRepo.findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-        }
     }
 }

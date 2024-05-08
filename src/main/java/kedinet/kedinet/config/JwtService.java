@@ -6,6 +6,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
 
 import java.security.Key;
 import java.util.Date;
@@ -14,6 +15,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 // Source: https://www.youtube.com/watch?v=KxqlJblhzfI
+@Service
 public class JwtService {
 
     private static final String SECRET_KEY = "9a40d0e9976f4c8ca5cc0ba7aaca5ee10705f13793be55c2d8a3d30e77491bd8";
