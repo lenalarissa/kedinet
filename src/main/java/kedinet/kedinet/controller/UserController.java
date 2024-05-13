@@ -1,36 +1,31 @@
 package kedinet.kedinet.controller;
 
+import kedinet.kedinet.model.Cat;
 import kedinet.kedinet.model.User;
-import kedinet.kedinet.service.UserService;
+import kedinet.kedinet.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import java.util.Optional;
 
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("/user")
 public class UserController {
-    @Autowired
-    private UserService userService;
 
     @Autowired
-    public UserController(UserService userService) {
-        this.userService = userService;
+    private UserRepo userRepo;
+
+    @PostMapping("/createUser")
+    public ResponseEntity<User> createUser(@RequestBody User newUser) {
+        Optional<User> user = userRepo.findByEmail(newUser.getEmail());
+        if(!user.isPresent()){
+            userRepo.save(newUser);
+            return new ResponseEntity(HttpStatus.CREATED);
+        }
+        return new ResponseEntity("User exists already", HttpStatus.CONFLICT);
     }
 
-    @PostMapping("createUser")
-    public ResponseEntity<User>createUser(@RequestBody User user) {
-        System.out.println("User wants to be created");
-        User createdUser = userService.createUser(user);
-        return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
-    }
-
-    @GetMapping("/getAllUsers")
-    List<User> getAllUsers(){
-        return userService.getAllUsers();
-    }
 }

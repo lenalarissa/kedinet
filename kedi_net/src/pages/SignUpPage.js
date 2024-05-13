@@ -11,6 +11,7 @@ const SignUpPage = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -33,12 +34,13 @@ const SignUpPage = () => {
             setError('Password must be at least 8 characters long');
         } else {
             try {
+                const userData = { email, password, role: 'USER' };
                 const response = await fetch('http://localhost:8080/user/createUser', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ email, password }),
+                    body: JSON.stringify(userData),
                 });
                 if (response.ok) {
                     login();
