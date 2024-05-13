@@ -25,19 +25,35 @@ const SignUpPage = () => {
         setConfirmPassword(e.target.value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (password !== confirmPassword) {
             setError('Passwords do not match');
-        } else if (email === 'user@gmail.com') {
-            setError('Email is already in use');
         } else if (password.length < 8) {
             setError('Password must be at least 8 characters long');
         } else {
-            login();
-            navigate('/', { state: { loginSuccess: true } });
+            try {
+                const response = await fetch('http://localhost:8080/user/createUser', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, password }),
+                });
+                if (response.ok) {
+                    login();
+                    navigate('/', { state: { loginSuccess: true } });
+                } else {
+                    const data = await response.json();
+                    setError(data.message || 'Failed to create user');
+                }
+            } catch (error) {
+                console.error('Error creating user:', error);
+                setError('Failed to create user');
+            }
         }
     };
+
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);

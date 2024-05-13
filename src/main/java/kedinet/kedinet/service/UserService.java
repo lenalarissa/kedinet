@@ -7,7 +7,7 @@ import java.util.List;
 
 @Service
 public interface UserService {
-    public User saveUser(User user);
-    public List<User> getAllUsers();
-    public User findByEmailAndPassword(String email, String password);
+    User createUser(User user);
+    List<User> getAllUsers();
+    User findByEmailAndPassword(String email, String password);
 }
