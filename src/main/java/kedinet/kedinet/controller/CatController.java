@@ -17,7 +17,7 @@ public class CatController {
     private CatRepo catRepo;
 
     @GetMapping("/readCats")
-    public ResponseEntity<Iterable<Cat>> readCats(){
+    public ResponseEntity<Iterable<Cat>> readCats(@RequestHeader("secretKey") String secretKey){
         Iterable<Cat> cats = catRepo.findAll();
         return new ResponseEntity<Iterable<Cat>>(cats, HttpStatus.OK);
     }
