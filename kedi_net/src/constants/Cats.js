@@ -24,6 +24,7 @@ const cats = [{
     size: 'medium',
     coatLength: 'medium',
     canLiveWith: 'other cats & children',
+    color: 'brown',
     disease: 'none',
     shelter: {
         name: 'Kadıköy Shelter',

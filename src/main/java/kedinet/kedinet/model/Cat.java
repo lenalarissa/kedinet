@@ -17,4 +17,5 @@ public class Cat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+
 }

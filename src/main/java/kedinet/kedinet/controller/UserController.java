@@ -16,6 +16,9 @@ public class UserController {
     @Autowired
     private UserRepo userRepo;
 
+    @Autowired
+    private CatController catController;
+
 
     @PostMapping("/createUser")
     public ResponseEntity<String> createUser(@RequestBody User newUser) {

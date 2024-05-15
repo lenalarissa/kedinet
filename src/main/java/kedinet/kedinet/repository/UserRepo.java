@@ -8,4 +8,5 @@ import java.util.Optional;
 public interface UserRepo extends CrudRepository<User, Integer> {
     Optional<User> findByEmail(String email);
     Optional<User> findByEmailAndPassword(String email, String password);
+    Optional<User> findBySecretKey(String secretKey);
 }

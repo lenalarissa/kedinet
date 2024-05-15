@@ -92,6 +92,7 @@ const CatProfile = ({showHeartButton}) => {
                                 <p className="box-text">Breed: {cat.breed}</p>
                                 <p className="box-text">Age: {cat.age}</p>
                                 <p className="box-text">Indoor Cat: {cat.indoorCat}</p>
+                                <p className="box-text">Color: {cat.color}</p>
                                 <p className="box-text">Size: {cat.size}</p>
                                 <p className="box-text">Coat Length: {cat.coatLength}</p>
                                 <p className="box-text">Can live with: {cat.canLiveWith}</p>
