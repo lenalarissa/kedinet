@@ -1,5 +1,6 @@
 package kedinet.kedinet.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import kedinet.kedinet.model.enums.*;
@@ -8,6 +9,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.util.Objects;
 import java.util.Set;
 
 @Data
@@ -60,24 +63,38 @@ public class Cat {
     @Column
     private String disease;
 
-/*    @Column(nullable = false)
-    private Integer shelterId;
-
-    // TODO: TEST
-    // this does not work
-    @ManyToOne
-    @JoinColumn(name = "shelter_id")
-    private Shelter shelter;*/
-
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "shelter_id")
-    @JsonManagedReference
+    @JsonManagedReference("shelter-cats")
     private Shelter shelter;
 
     @ManyToMany(mappedBy = "favCats")
-    private Set<User> user;
+    @JsonIgnore
+    private Set<User> users;
 
     @OneToMany
     @JoinColumn(name = "catId")
+    @JsonIgnore
     private Set<Image> images;
+
+    @Column(nullable = false)
+    private LocalDate dateAdded;
+
+    @PrePersist
+    protected void onCreate() {
+        dateAdded = LocalDate.now();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id); // Use a field that uniquely identifies the entity
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Cat cat = (Cat) obj;
+        return Objects.equals(id, cat.id); // Compare only the unique identifier
+    }
 }

@@ -42,14 +42,10 @@ public class Shelter {
     private String phone;
 
     @OneToOne(mappedBy = "shelter")
-    @JsonBackReference
+    @JsonBackReference("admin-shelter")
     private Admin admin;
 
-/*    @OneToMany
-    @JoinColumn(name = "shelterId")
-    private Set<Cat> cats;*/
-
     @OneToMany(mappedBy = "shelter")
-    @JsonBackReference
+    @JsonBackReference("shelter-cats")
     private Set<Cat> cats;
 }

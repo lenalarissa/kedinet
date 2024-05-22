@@ -25,19 +25,17 @@ const LogInPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:8080/user/addUser", {
+            const response = await fetch('http://localhost:8080/user/loginUser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ email, password }),
             });
+
             if (response.ok) {
-                const data = await response.json();
-                // Assuming the backend returns a token upon successful login
-                // You can handle the token as per your authentication mechanism
-                const token = data.token;
-                login();
+                const secretKey = await response.text();
+                login({ email, secretKey });
                 navigate('/');
             } else {
                 setError('Invalid email or password. Please try again.');
@@ -47,7 +45,6 @@ const LogInPage = () => {
             setError('An error occurred while logging in. Please try again.');
         }
     };
-
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);

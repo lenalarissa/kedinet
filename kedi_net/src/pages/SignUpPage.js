@@ -11,7 +11,6 @@ const SignUpPage = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -19,9 +18,11 @@ const SignUpPage = () => {
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
     };
+
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
     };
+
     const handleConfirmPasswordChange = (e) => {
         setConfirmPassword(e.target.value);
     };
@@ -43,7 +44,8 @@ const SignUpPage = () => {
                     body: JSON.stringify(userData),
                 });
                 if (response.ok) {
-                    login();
+                    const secretKey = await response.text(); // assuming the backend returns only the secret key
+                    login({ email, secretKey }); // pass user data including secret key
                     navigate('/', { state: { loginSuccess: true } });
                 } else {
                     const data = await response.json();
@@ -55,7 +57,6 @@ const SignUpPage = () => {
             }
         }
     };
-
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);

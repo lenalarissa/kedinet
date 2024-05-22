@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.Set;
 
 @Builder
@@ -26,8 +28,9 @@ public class CatDTO {
     private CanLiveWith canLiveWith;
     private Color color;
     private String disease;
-    private String shelter;
     private Set<String> imageNames;
+    private ShelterDTO shelter;
+    private LocalDate dateAdded;
 
     public CatDTO(Cat cat, Set<String> imageNames) {
         this.id = cat.getId();
@@ -42,7 +45,8 @@ public class CatDTO {
         this.canLiveWith = cat.getCanLiveWith();
         this.color = cat.getColor();
         this.disease = cat.getDisease();
-        this.shelter = cat.getShelter() != null ? cat.getShelter().getName() : null;
         this.imageNames = imageNames;
+        this.shelter = cat.getShelter() != null ? new ShelterDTO(cat.getShelter()) : null;
+        this.dateAdded = cat.getDateAdded();
     }
 }

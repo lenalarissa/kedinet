@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Objects;
 import java.util.Set;
 
 @Data
@@ -36,10 +37,24 @@ public class User {
             joinColumns = @JoinColumn(name = "userId"),
             inverseJoinColumns = @JoinColumn(name = "catId")
     )
+    @JsonIgnore
     private Set<Cat> favCats;
 
     @JsonIgnore
     public void setKey(String secretKey) {
         this.secretKey = secretKey;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id); // Use a field that uniquely identifies the entity
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        User user = (User) obj;
+        return Objects.equals(id, user.id); // Compare only the unique identifier
     }
 }

@@ -1,65 +1,73 @@
 import '../styles/FavCats.css';
-import {useState} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faTimes} from '@fortawesome/free-solid-svg-icons';
-import {Link} from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import matar1 from "../assets/cat_img/matar1.jpg";
-import cat2 from "../assets/cat_img/2.jpeg";
-import cat3 from "../assets/cat_img/3.jpeg";
-import cat4 from "../assets/cat_img/4.jpeg";
+import { useAuth } from "../AuthContext";
+import { loadCatImage } from '../utils/ImageLoader'; // Assuming you have a utility function to load images
 
 const FavCatsPage = () => {
+    const { user } = useAuth();
+    const [cats, setCats] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    // some mock cats as objects since there is no connection to the database yet
-    const [cats, setCats] = useState([
-        {
-            id: 1,
-            name: 'Matar',
-            breed: 'Arabian Mau',
-            gender: 'Female',
-            region: 'Kadiköy',
-            image: matar1
-        },
-        {
-            id: 2,
-            name: 'Whiskers',
-            breed: 'Siamese',
-            gender: 'Female',
-            region: 'Kadiköy',
-            image: cat2
-        },
-        {
-            id: 3,
-            name: 'Snowball',
-            breed: 'Maine Coon',
-            gender: 'Female',
-            region: 'Beşiktaş',
-            image: cat3
-        },
-        {
-            id: 4,
-            name: 'Mittens',
-            breed: 'Ragdoll',
-            gender: 'Male',
-            region: 'Şişli',
-            image: cat4
+    useEffect(() => {
+        if (user) {
+            fetch(`http://localhost:8080/user/favorites?secretKey=${user.secretKey}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Network response was not ok: ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    setCats(data);
+                    setLoading(false);
+                })
+                .catch(error => {
+                    console.error('Error fetching favorite cats:', error);
+                    setError(error.message);
+                    setLoading(false);
+                });
         }
-    ]);
+    }, [user]);
 
     const handleXClick = (catId, e) => {
-        // prevents this to be the link to the cats profile
         e.preventDefault();
         e.stopPropagation();
-        // deletes the cat from the list of favourites (this is only for simulation purposes)
-        const updatedCats = cats.filter(cat => cat.id !== catId);
-        setCats(updatedCats);
+        fetch(`http://localhost:8080/user/removeFavorite?secretKey=${user.secretKey}&catId=${catId}`, {
+            method: 'POST',
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                const updatedCats = cats.filter(cat => cat.id !== catId);
+                setCats(updatedCats);
+            })
+            .catch(error => {
+                console.error('Error removing favorite cat:', error);
+            });
     };
+
+    const formatText = (text) => {
+        return text.toLowerCase().replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+    };
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
 
     return (
         <div className="frame">
-            <NavBar/>
+            <NavBar />
             <div className="fav-page">
                 <div className="row">
                     <div className="col-md-12">
@@ -75,7 +83,7 @@ const FavCatsPage = () => {
                                 <div className="cat-box-fav">
                                     <Link to={`/catUser/${cat.id}`} style={{textDecoration: 'none', color: 'inherit'}}>
                                         <div className="box-image position-relative">
-                                            <img src={cat.image} alt="Cat Image"/>
+                                            <img src={loadCatImage(cat.imageNames[0])} alt="Cat Image"/>
                                             <button
                                                 type="button"
                                                 className="btn x-button"
@@ -91,8 +99,10 @@ const FavCatsPage = () => {
                                         }}>
                                             <div className="box-name">{cat.name} </div>
                                         </div>
-                                        <p className="box-info">Breed: {cat.breed} | Gender: {cat.gender}</p>
-                                        <p className="box-info">Region: {cat.region}</p>
+                                        <p className="box-info">Breed: {formatText(cat.breed)}</p>
+                                        <p className="box-info">Gender: {formatText(cat.gender)}</p>
+                                        <p className="box-info">Age: {cat.age}</p>
+                                        <p className="box-info">Region: {formatText(cat.shelter.region)}</p>
                                     </Link>
                                 </div>
                             </div>

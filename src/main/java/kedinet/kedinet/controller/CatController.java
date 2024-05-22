@@ -5,12 +5,14 @@ import kedinet.kedinet.dto.CatDTO;
 import kedinet.kedinet.model.Cat;
 import kedinet.kedinet.model.enums.*;
 import kedinet.kedinet.repository.CatRepo;
+import kedinet.kedinet.repository.ImageRepo;
 import kedinet.kedinet.service.CatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -25,14 +27,17 @@ public class CatController {
     @Autowired
     private CatRepo catRepo;
 
+    @Autowired
+    ImageRepo imageRepo;
+
     @GetMapping("/readFavCats")
     public ResponseEntity<Iterable<Cat>> readAllCats(@RequestHeader("secretKey") String secretKey){
-        // TODO look for those cats that a user has liked
         System.out.println(secretKey);
         Iterable<Cat> cats = catRepo.findAll();
         return new ResponseEntity<Iterable<Cat>>(cats, HttpStatus.OK);
     }
 
+    // TODO: TEST SORTING ADDITION
     @GetMapping("/readSearchedCats")
     public ResponseEntity<List<CatDTO>> readSearchedCats(
             @RequestParam(value = "minAge", required = false) Integer ageFrom,
@@ -44,26 +49,31 @@ public class CatController {
             @RequestParam(value = "selectedGender", required = false) List<Gender> genders,
             @RequestParam(value = "selectedIndoorCat", required = false) Boolean isIndoorCat,
             @RequestParam(value = "selectedRegions", required = false) List<Region> regions,
-            @RequestParam(value = "selectedSize", required = false) List<Size> sizes) {
-
-
-        System.out.println("Received search parameters:");
-        System.out.println("minAge: " + ageFrom);
-        System.out.println("maxAge: " + ageTo);
-        System.out.println("selectedBreeds: " + breeds);
-        System.out.println("selectedCanLiveWith: " + canLiveWithList);
-        System.out.println("selectedCoatLength: " + coatLengths);
-        System.out.println("selectedColors: " + colors);
-        System.out.println("selectedGender: " + genders);
-        System.out.println("selectedIndoorCat: " + isIndoorCat);
-        System.out.println("selectedRegions: " + regions);
-        System.out.println("selectedSize: " + sizes);
+            @RequestParam(value = "selectedSize", required = false) List<Size> sizes,
+            @RequestParam(value = "sort", required = false, defaultValue = "newest-oldest") String sortOption) {
 
         List<CatDTO> cats = catService.getFilteredCats(ageFrom, ageTo, breeds, canLiveWithList, coatLengths, colors, genders, isIndoorCat, regions, sizes);
+
+        switch (sortOption) {
+            case "newest-oldest":
+                cats.sort(Comparator.comparing(CatDTO::getDateAdded).reversed());
+                break;
+            case "oldest-newest":
+                cats.sort(Comparator.comparing(CatDTO::getDateAdded));
+                break;
+            case "young-old":
+                cats.sort(Comparator.comparing(CatDTO::getAge));
+                break;
+            case "old-young":
+                cats.sort(Comparator.comparing(CatDTO::getAge).reversed());
+                break;
+            default:
+                break;
+        }
+
         return new ResponseEntity<>(cats, HttpStatus.OK);
-        //List<Cat> cats = catService.getFilteredCats(ageFrom, ageTo, breeds, canLiveWithList, coatLengths, colors, genders, isIndoorCat, regions, sizes);
-        //return new ResponseEntity<>(cats, HttpStatus.OK);
     }
+
 
     @GetMapping("/readCat")
     public ResponseEntity<CatDTO> readCat(@RequestParam(value = "id") int id) {
@@ -76,6 +86,7 @@ public class CatController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    // TODO: TEST ESP. IF DATE WAS ADDED
     @PostMapping("/createCat")
     public ResponseEntity<Cat> createCat(@RequestBody Cat cat) {
         catRepo.save(cat);
@@ -101,4 +112,14 @@ public class CatController {
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+
+    @GetMapping("/shelter/{shelterId}/cats")
+    public ResponseEntity<List<CatDTO>> getCatsByShelter(@PathVariable Integer shelterId) {
+        List<Cat> cats = catRepo.findByShelterId(shelterId);
+        List<CatDTO> catDTOs = cats.stream()
+                .map(cat -> new CatDTO(cat, imageRepo.findByCatId(cat.getId()).stream().map(Image::getName).collect(Collectors.toSet())))
+                .collect(Collectors.toList());
+        return new ResponseEntity<>(catDTOs, HttpStatus.OK);
+    }
+
 }

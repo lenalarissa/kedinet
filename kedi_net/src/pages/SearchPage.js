@@ -6,21 +6,14 @@ import {Link} from 'react-router-dom';
 import {useAuth} from "../AuthContext";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import matar1 from "../assets/cat_img/matar1.jpg";
-import cat2 from "../assets/cat_img/2.jpeg";
-import cat3 from "../assets/cat_img/3.jpeg";
-import cat4 from "../assets/cat_img/4.jpeg";
-import cat5 from "../assets/cat_img/5.jpg";
-import cat6 from "../assets/cat_img/6.jpg";
-import cat7 from "../assets/cat_img/7.jpeg";
-import breeds from '../constants/Breeds'
+import breeds from '../constants/Breeds';
 import CatsProfilePopup from "../components/CatsProfilePopup";
-
 
 const SearchPage = () => {
 
+    const {isLoggedIn, user} = useAuth();
     const [cats, setCats] = useState([]);
-
+    const [favorites, setFavorites] = useState(new Set());
 
     // Regions
     const [showRegions, setShowRegions] = useState(false);
@@ -34,11 +27,11 @@ const SearchPage = () => {
         "Sile", "Silivri", "Sisli", "Sultanbeyli", "Sultangazi", "Tuzla", "Umraniye",
         "Uskudar", "Zeytinburnu"
     ];
-    // toggle is for showing filtering options or not
+
     const toggleRegions = () => {
         setShowRegions(!showRegions);
     };
-    // handles selecting or de-selecting if sth was selected previously
+
     const handleRegionChange = (region) => {
         if (selectedRegions.includes(region)) {
             setSelectedRegions(selectedRegions.filter(item => item !== region));
@@ -53,6 +46,7 @@ const SearchPage = () => {
     const toggleBreeds = () => {
         setShowBreeds(!showBreeds);
     };
+
     const handleBreedChange = (breed) => {
         if (selectedBreeds.includes(breed)) {
             setSelectedBreeds(selectedBreeds.filter(item => item !== breed));
@@ -61,7 +55,6 @@ const SearchPage = () => {
         }
     };
 
-
     // Can Live With...
     const [showCanLiveWith, setShowCanLiveWith] = useState(false);
     const [selectedCanLiveWith, setSelectedCanLiveWith] = useState([]);
@@ -69,6 +62,7 @@ const SearchPage = () => {
     const toggleCanLiveWith = () => {
         setShowCanLiveWith(!showCanLiveWith);
     };
+
     const handleCanLiveWithChange = (option) => {
         if (selectedCanLiveWith.includes(option)) {
             setSelectedCanLiveWith(selectedCanLiveWith.filter(item => item !== option));
@@ -84,6 +78,7 @@ const SearchPage = () => {
     const toggleColors = () => {
         setShowColors(!showColors);
     };
+
     const handleColorChange = (color) => {
         if (selectedColors.includes(color)) {
             setSelectedColors(selectedColors.filter(item => item !== color));
@@ -103,6 +98,7 @@ const SearchPage = () => {
             setMinAge('');
         }
     };
+
     const handleMaxAgeChange = (event) => {
         const value = parseInt(event.target.value);
         if (!isNaN(value) && value >= minAge && value <= 20) {
@@ -156,7 +152,7 @@ const SearchPage = () => {
         }
     };
 
-    // Search Button
+    // Search
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
@@ -169,11 +165,10 @@ const SearchPage = () => {
         return value;
     };
 
-    const fetchCats = (searchParams = {}) => {
+    const fetchCats = (searchParams = {}, sortOption = selectedOption) => {
         const params = new URLSearchParams();
         Object.entries(searchParams).forEach(([key, value]) => {
             if (key === "selectedIndoorCat" && value.includes("Yes") && value.includes("No")) {
-                // Skip adding the selectedIndoorCat parameter if both Yes and No are selected
                 return;
             }
             if (Array.isArray(value) && value.length > 0) {
@@ -184,6 +179,8 @@ const SearchPage = () => {
                 params.append(key, typeof value === 'string' ? value.toUpperCase().replace(/ /g, '_') : value);
             }
         });
+
+        params.append('sort', sortOption);
 
         const url = `http://localhost:8080/readSearchedCats?${params.toString()}`;
         console.log("URL being requested:", url);
@@ -213,8 +210,8 @@ const SearchPage = () => {
     };
 
     useEffect(() => {
-        fetchCats(); // Fetch initial cats data when the component mounts
-    }, []); // Empty dependency array ensures this runs only once
+        fetchCats();
+    }, []);
 
     const handleSearchClick = () => {
         console.log("Searching with:", {
@@ -245,9 +242,29 @@ const SearchPage = () => {
         }
     };
 
+    // Fav Cats
+    const fetchFavorites = async (secretKey) => {
+        try {
+            const response = await fetch(`http://localhost:8080/user/favorites?secretKey=${secretKey}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            const favoriteCatIds = new Set(data.map(cat => cat.id));
+            setFavorites(favoriteCatIds);
+        } catch (error) {
+            console.error('Error fetching favorite cats:', error);
+        }
+    };
+
+    useEffect(() => {
+        if (isLoggedIn && user && user.secretKey) {
+            fetchFavorites(user.secretKey);
+        }
+    }, [isLoggedIn, user]);
+
 
     // Reset Button
-    // resets all filtering options
     const handleResetClick = () => {
         setSelectedRegions([]);
         setSelectedBreeds([]);
@@ -265,27 +282,67 @@ const SearchPage = () => {
     const [selectedOption, setSelectedOption] = useState('newest-oldest');
     const handleSortChange = (event) => {
         setSelectedOption(event.target.value);
-        // sorting the list in a new way needs connection to backend
+        fetchCats({
+            minAge: minAge,
+            maxAge: maxAge,
+            selectedBreeds: selectedBreeds,
+            selectedCanLiveWith: selectedCanLiveWith,
+            selectedCoatLength: selectedCoatLength,
+            selectedColors: selectedColors,
+            selectedGender: selectedGender,
+            selectedIndoorCat: selectedIndoorCat,
+            selectedRegions: selectedRegions,
+            selectedSize: selectedSize
+        }, event.target.value);
     };
 
     // Heart-Button
-    const {isLoggedIn} = useAuth();
     const [showLoginPrompt, setShowLoginPrompt] = useState(false);
     const [heartClickedCats, setHeartClickedCats] = useState([]);
-    const handleHeartClick = (catId, e) => {
+    const handleHeartClick = async (catId, e) => {
         e.preventDefault();
         e.stopPropagation();
 
-        if (isLoggedIn) {
-            // only for simulation
-            if (heartClickedCats.includes(catId)) {
-                setHeartClickedCats(heartClickedCats.filter(id => id !== catId));
-            } else {
-                setHeartClickedCats([...heartClickedCats, catId]);
+        if (isLoggedIn && user) {
+            const isFavorite = favorites.has(catId);
+            const url = new URL(isFavorite ? "http://localhost:8080/user/removeFavorite" : "http://localhost:8080/user/addFavorite");
+            url.searchParams.append("secretKey", user.secretKey);
+            url.searchParams.append("catId", catId);
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (response.ok) {
+                    setFavorites(prev => {
+                        const updatedFavorites = new Set(prev);
+                        if (isFavorite) {
+                            updatedFavorites.delete(catId);
+                        } else {
+                            updatedFavorites.add(catId);
+                        }
+                        return updatedFavorites;
+                    });
+                } else {
+                    console.error(`Failed to ${isFavorite ? 'remove' : 'add'} favorite`);
+                }
+            } catch (error) {
+                console.error(`Error ${isFavorite ? 'removing' : 'adding'} favorite:`, error);
             }
         } else {
             setShowLoginPrompt(true);
         }
+    };
+
+
+
+    const formatText = (text) => {
+        if (!text) return ''; // return an empty string if text is undefined or null
+        return text.toLowerCase().replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
     };
 
     return (
@@ -501,10 +558,6 @@ const SearchPage = () => {
                             </div>
                         </div>
                     </div>
-                    {/* String of selected filtering option */}{/*
-                    <div className="container mt-3">
-                        <p>{selectedFiltersString}</p>
-                    </div>*/}
                 </div>
                 {/* Sorting Section */}
                 <div className="container mt-3 sorting-section">
@@ -553,17 +606,17 @@ const SearchPage = () => {
                                                 type="button"
                                                 className="btn heart-button"
                                                 style={{
-                                                    color: heartClickedCats.includes(cat.id) ? 'black' : 'white',
+                                                    color: favorites.has(cat.id) ? 'black' : 'white',
                                                 }}
-                                                onClick={(e) => {
-                                                    handleHeartClick(cat.id, e); // Pass only the cat id
-                                                }}
+                                                onClick={(e) => handleHeartClick(cat.id, e)}
                                             >
                                                 <FontAwesomeIcon icon={faHeart} size="1x"/>
                                             </button>
                                         </div>
-                                        <p className="box-info">Breed: {cat.breed} | Gender: {cat.gender}</p>
-                                        <p className="box-info">Region: {cat.region}</p>
+                                        <p className="box-info">Breed: {formatText(cat.breed)}</p>
+                                        <p className="box-info">Gender: {formatText(cat.gender)}</p>
+                                        <p className="box-info">Age: {cat.age}</p>
+                                        <p className="box-info">Region: {formatText(cat.shelter.region)}</p>
                                     </Link>
                                 </div>
                             </div>
@@ -576,6 +629,5 @@ const SearchPage = () => {
         </div>
     );
 };
-
 
 export default SearchPage;

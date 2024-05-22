@@ -10,41 +10,101 @@ import CatsProfilePopup from "../components/CatsProfilePopup";
 import { loadCatImage } from '../utils/ImageLoader';
 
 const CatProfile = ({ showHeartButton }) => {
-    const { isLoggedIn } = useAuth();
+    const { isLoggedIn, user } = useAuth();
     const { catId } = useParams();
     const [cat, setCat] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [favorites, setFavorites] = useState(new Set());
     const [heartClicked, setHeartClicked] = useState(false);
     const [showLoginPrompt, setShowLoginPrompt] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:8080/readCat?id=${catId}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Network response was not ok: ${response.statusText}`);
+        const fetchCatData = async () => {
+            try {
+                const catResponse = await fetch(`http://localhost:8080/readCat?id=${catId}`);
+                if (!catResponse.ok) {
+                    throw new Error(`Network response was not ok: ${catResponse.statusText}`);
                 }
-                return response.json();
-            })
-            .then(data => {
-                setCat(data);
+                const catData = await catResponse.json();
+                setCat(catData);
                 setLoading(false);
-            })
-            .catch(error => {
+            } catch (error) {
                 console.error('Error fetching data:', error);
                 setError(error.message);
                 setLoading(false);
-            });
+            }
+        };
+
+        fetchCatData();
     }, [catId]);
 
-    const handleHeartClick = (e) => {
+    useEffect(() => {
+        const fetchFavorites = async (secretKey) => {
+            try {
+                const response = await fetch(`http://localhost:8080/user/favorites?secretKey=${secretKey}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                const favoriteCatIds = new Set(data.map(cat => cat.id));
+                setFavorites(favoriteCatIds);
+                setHeartClicked(favoriteCatIds.has(Number(catId))); // Set initial heartClicked state
+                console.log('Favorite cat IDs:', favoriteCatIds); // Debugging line
+                console.log('Current cat ID:', catId); // Debugging line
+                console.log('Is current cat in favorites:', favoriteCatIds.has(Number(catId))); // Debugging line
+            } catch (error) {
+                console.error('Error fetching favorite cats:', error);
+            }
+        };
+
+        if (isLoggedIn && user && user.secretKey) {
+            fetchFavorites(user.secretKey);
+        }
+    }, [isLoggedIn, user, catId]);
+
+    const handleHeartClick = async (e) => {
         e.preventDefault();
         e.stopPropagation();
-        if (isLoggedIn) {
-            setHeartClicked(!heartClicked);
+
+        if (isLoggedIn && user) {
+            const isFavorite = favorites.has(Number(catId));
+            const url = new URL(isFavorite ? "http://localhost:8080/user/removeFavorite" : "http://localhost:8080/user/addFavorite");
+            url.searchParams.append("secretKey", user.secretKey);
+            url.searchParams.append("catId", catId);
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (response.ok) {
+                    setFavorites(prev => {
+                        const updatedFavorites = new Set(prev);
+                        if (isFavorite) {
+                            updatedFavorites.delete(Number(catId));
+                        } else {
+                            updatedFavorites.add(Number(catId));
+                        }
+                        return updatedFavorites;
+                    });
+                    setHeartClicked(!isFavorite); // Update heartClicked state
+                } else {
+                    console.error(`Failed to ${isFavorite ? 'remove' : 'add'} favorite`);
+                }
+            } catch (error) {
+                console.error(`Error ${isFavorite ? 'removing' : 'adding'} favorite:`, error);
+            }
         } else {
             setShowLoginPrompt(true);
         }
+    };
+
+    const formatText = (text) => {
+        return text.toLowerCase().replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
     };
 
     if (loading) {
@@ -89,7 +149,7 @@ const CatProfile = ({ showHeartButton }) => {
                             <div className="image-slider-box">
                                 <Carousel
                                     showThumbs={false}
-                                    showIndicators={false}
+                                    showIndicators={true}
                                     infiniteLoop={true}
                                     swipeable={true}
                                 >
@@ -124,21 +184,32 @@ const CatProfile = ({ showHeartButton }) => {
                         <div className="col-md-6">
                             <div className="smaller-box">
                                 <h5 className="box-title">Characteristics</h5>
-                                <p className="box-text">Gender: {cat.gender}</p>
-                                <p className="box-text">Breed: {cat.breed}</p>
+                                <p className="box-text">Gender: {formatText(cat.gender)}</p>
+                                <p className="box-text">Breed: {cat.breed.split('_').map(word => word.charAt(0) + word.slice(1).toLowerCase()).join(' ')}</p>
                                 <p className="box-text">Age: {cat.age}</p>
                                 <p className="box-text">Indoor Cat: {cat.isIndoorCat ? 'Yes' : 'No'}</p>
-                                <p className="box-text">Color: {cat.color}</p>
-                                <p className="box-text">Size: {cat.size}</p>
-                                <p className="box-text">Coat Length: {cat.coatLength}</p>
-                                <p className="box-text">Can live with: {cat.canLiveWith}</p>
-                                <p className="box-text">Disease: {cat.disease}</p>
+                                <p className="box-text">Color: {formatText(cat.color)}</p>
+                                <p className="box-text">Size: {formatText(cat.size)}</p>
+                                <p className="box-text">Coat Length: {formatText(cat.coatLength)}</p>
+                                <p className="box-text">Can live with: {formatText(cat.canLiveWith)}</p>
+                                <p className="box-text">Disease: {cat.disease ? formatText(cat.disease) : 'None'}</p>
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="smaller-box">
                                 <h5 className="box-title">Shelter</h5>
-                                <p className="box-text">{cat.shelter}</p>
+                                {cat.shelter && (
+                                    <>
+                                        <p className="box-text">Name: {cat.shelter.name}</p>
+                                        <p className="box-text">Region: {formatText(cat.shelter.region)}</p>
+                                        <p className="box-text">Address: {cat.shelter.address}</p>
+                                        <p className="box-text">
+                                            Website: <a href={cat.shelter.website} target="_blank" rel="noopener noreferrer">{cat.shelter.website}</a>
+                                        </p>
+                                        <p className="box-text">E-mail: {cat.shelter.email}</p>
+                                        <p className="box-text">Phone: {cat.shelter.phone}</p>
+                                    </>
+                                )}
                             </div>
                         </div>
                     </div>

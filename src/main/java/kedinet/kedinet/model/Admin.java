@@ -32,7 +32,7 @@ public class Admin {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "shelterId", referencedColumnName = "id")
-    @JsonManagedReference
+    @JsonManagedReference(value = "admin-shelter")
     private Shelter shelter;
 
     @JsonIgnore

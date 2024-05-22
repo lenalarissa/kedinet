@@ -2,8 +2,10 @@ import '../styles/SignUp.css';
 import { useState } from 'react';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import { useAuth } from '../AuthContext';
 
 const UserAccountPage = () => {
+    const { user } = useAuth(); // Get user information from context
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
@@ -18,7 +20,7 @@ const UserAccountPage = () => {
         setConfirmPassword(e.target.value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setSuccessMessage('');
         setError('');
@@ -27,8 +29,25 @@ const UserAccountPage = () => {
         } else if (password.length < 8) {
             setError('Password must be at least 8 characters long');
         } else {
-            setSuccessMessage('Password changed successfully');
-            // Here, you would change the password in the database
+            try {
+                const response = await fetch("http://localhost:8080/user/updatePassword", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email: user.email, newPassword: password }),
+                });
+
+                if (response.ok) {
+                    setSuccessMessage('Password changed successfully');
+                } else {
+                    const errorText = await response.text();
+                    setError(errorText);
+                }
+            } catch (error) {
+                console.error('Error updating password:', error);
+                setError('An error occurred while updating the password. Please try again.');
+            }
         }
     };
 

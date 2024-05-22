@@ -22,13 +22,30 @@ const AdminLogInPage = () => {
         setPassword(e.target.value);
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault(); // not refreshing the page
-        // simulation of the log in process
-        if (id === '1997' && password === 'password') {
-            login();
-            navigate('/editCats');
-        } else {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch(`http://localhost:8080/admin/login?loginId=${id}&password=${password}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.text(); // Assuming the secret key is returned as plain text
+
+            if (data) {
+                login(data); // Pass the secret key to the login function
+                navigate('/editCats');
+            } else {
+                setError('Invalid ID or password. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error during login:', error);
             setError('Invalid ID or password. Please try again.');
         }
     };
@@ -51,7 +68,7 @@ const AdminLogInPage = () => {
                                 <div className="form-group">
                                     <label htmlFor="id">ID:</label>
                                     <input
-                                        type="id"
+                                        type="text"
                                         className="form-control"
                                         id="id"
                                         placeholder="Enter your ID"
@@ -97,3 +114,4 @@ const AdminLogInPage = () => {
 };
 
 export default AdminLogInPage;
+

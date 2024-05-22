@@ -14,22 +14,20 @@ import UserAccountPage from "../pages/UserAccountPage";
 
 const RouteConfig = () => {
     return (
-        <Router>
-            <Routes>
-                <Route exact path="/" element={<SearchPage/>}/>
-                <Route path="/catUser/:catId" element={<CatProfileForUserPage/>}/>
-                <Route path="/catAdmin/:catId" element={<CatProfileForAdminPage/>}/>
-                <Route path="/signUp" element={<SignUpPage/>}/>
-                <Route path="/login" element={<LogInPage/>}/>
-                <Route path="/help" element={<HelpPage/>}/>
-                <Route path="/favCats" element={<FavCatsPage/>}/>
-                <Route path="/admin" element={<AdminLogInPage/>}/>
-                <Route path="/editCats" element={<EditCatsPage/>}/>
-                <Route path="/addCat" element={<AddCatPage/>}/>
-                <Route path="/about" element={<AboutPage/>}/>
-                <Route path="/account" element={<UserAccountPage/>}/>
-            </Routes>
-        </Router>
+        <Routes>
+            <Route exact path="/" element={<SearchPage/>}/>
+            <Route path="/catUser/:catId" element={<CatProfileForUserPage/>}/>
+            <Route path="/catAdmin/:catId" element={<CatProfileForAdminPage/>}/>
+            <Route path="/signUp" element={<SignUpPage/>}/>
+            <Route path="/login" element={<LogInPage/>}/>
+            <Route path="/help" element={<HelpPage/>}/>
+            <Route path="/favCats" element={<FavCatsPage/>}/>
+            <Route path="/admin" element={<AdminLogInPage/>}/>
+            <Route path="/editCats" element={<EditCatsPage/>}/>
+            <Route path="/addCat" element={<AddCatPage/>}/>
+            <Route path="/about" element={<AboutPage/>}/>
+            <Route path="/account" element={<UserAccountPage/>}/>
+        </Routes>
     );
 }
 
