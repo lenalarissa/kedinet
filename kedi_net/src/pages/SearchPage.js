@@ -1,5 +1,5 @@
 import '../styles/SearchPage.css';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
@@ -18,65 +18,9 @@ import CatsProfilePopup from "../components/CatsProfilePopup";
 
 
 const SearchPage = () => {
-    // some mock cats as objects since there is no connection to the database yet
-    const cats = [
-        {
-            id: 1,
-            name: 'Matar',
-            breed: 'Arabian Mau',
-            gender: 'Female',
-            region: 'Kadiköy',
-            image: matar1
-        },
-        {
-            id: 2,
-            name: 'Whiskers',
-            breed: 'Siamese',
-            gender: 'Female',
-            region: 'Kadiköy',
-            image: cat2
-        },
-        {
-            id: 3,
-            name: 'Snowball',
-            breed: 'Maine Coon',
-            gender: 'Female',
-            region: 'Beşiktaş',
-            image: cat3
-        },
-        {
-            id: 4,
-            name: 'Mittens',
-            breed: 'Ragdoll',
-            gender: 'Male',
-            region: 'Şişli',
-            image: cat4
-        },
-        {
-            id: 5,
-            name: 'Simba',
-            breed: 'Bengal',
-            gender: 'Male',
-            region: 'Üsküdar',
-            image: cat5
-        },
-        {
-            id: 6,
-            name: 'Luna',
-            breed: 'Scottish Fold',
-            gender: 'Female',
-            region: 'Kadıköy',
-            image: cat6
-        },
-        {
-            id: 7,
-            name: 'Max',
-            breed: 'Sphynx',
-            gender: 'Male',
-            region: 'Beyoğlu',
-            image: cat7
-        }
-    ];
+
+    const [cats, setCats] = useState([]);
+
 
     // Regions
     const [showRegions, setShowRegions] = useState(false);
@@ -213,49 +157,94 @@ const SearchPage = () => {
     };
 
     // Search Button
-    const [selectedFiltersString, setSelectedFiltersString] = useState('');
-    const generateSelectedFiltersString = () => {
-        // represents what should be searched for now:
-        let selectedFilters = "Search for:\n";
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
-        // append the filtering options to teh string
-        if (selectedRegions.length > 0) {
-            selectedFilters += "- Regions: " + selectedRegions.join(", ") + "\n";
+    const convertToUpperCase = (value) => {
+        if (typeof value === 'string') {
+            return value.toUpperCase();
+        } else if (Array.isArray(value)) {
+            return value.map(v => v.toUpperCase());
         }
-        if (selectedBreeds.length > 0) {
-            selectedFilters += "- Breeds: " + selectedBreeds.join(", ") + "\n";
-        }
-        if (selectedCanLiveWith.length > 0) {
-            selectedFilters += "- Can live with: " + selectedCanLiveWith.join(", ") + "\n";
-        }
-        if (selectedColors.length > 0) {
-            selectedFilters += "- Colors: " + selectedColors.join(", ") + "\n";
-        }
-        if (minAge !== '' || maxAge !== '') {
-            selectedFilters += "- Age: ";
-            selectedFilters += minAge !== '' ? `min ${minAge}` : '';
-            selectedFilters += maxAge !== '' ? `, max ${maxAge}` : '';
-            selectedFilters += "\n";
-        }
-        if (selectedGender.length > 0) {
-            selectedFilters += "- Gender: " + selectedGender.join(", ") + "\n";
-        }
-        if (selectedIndoorCat.length > 0) {
-            selectedFilters += "- Indoor Cat: " + selectedIndoorCat.join(", ") + "\n";
-        }
-        if (selectedSize.length > 0) {
-            selectedFilters += "- Size: " + selectedSize.join(", ") + "\n";
-        }
-        if (selectedCoatLength.length > 0) {
-            selectedFilters += "- Coat Length: " + selectedCoatLength.join(", ") + "\n";
-        }
-        setSelectedFiltersString(selectedFilters);
+        return value;
     };
+
+    const fetchCats = (searchParams = {}) => {
+        const params = new URLSearchParams();
+        Object.entries(searchParams).forEach(([key, value]) => {
+            if (key === "selectedIndoorCat" && value.includes("Yes") && value.includes("No")) {
+                // Skip adding the selectedIndoorCat parameter if both Yes and No are selected
+                return;
+            }
+            if (Array.isArray(value) && value.length > 0) {
+                params.append(key, value.map(v => typeof v === 'string' ? v.toUpperCase().replace(/ /g, '_') : v).join(','));
+            } else if (Array.isArray(value) && value.length === 0) {
+                params.append(key, '');
+            } else if (value || value === 0) {
+                params.append(key, typeof value === 'string' ? value.toUpperCase().replace(/ /g, '_') : value);
+            }
+        });
+
+        const url = `http://localhost:8080/readSearchedCats?${params.toString()}`;
+        console.log("URL being requested:", url);
+
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                setCats(data);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                setError(error.message);
+                setLoading(false);
+            });
+    };
+
+    useEffect(() => {
+        fetchCats(); // Fetch initial cats data when the component mounts
+    }, []); // Empty dependency array ensures this runs only once
+
     const handleSearchClick = () => {
-        // hands over the chosen filtering options (backend)
-        //I will get back a list with the matching cats (here is only a mocked one)
-        generateSelectedFiltersString();
+        console.log("Searching with:", {
+            minAge, maxAge, selectedBreeds, selectedCanLiveWith, selectedCoatLength,
+            selectedColors, selectedGender, selectedIndoorCat, selectedRegions, selectedSize
+        });
+        fetchCats({
+            minAge: minAge,
+            maxAge: maxAge,
+            selectedBreeds: selectedBreeds,
+            selectedCanLiveWith: selectedCanLiveWith,
+            selectedCoatLength: selectedCoatLength,
+            selectedColors: selectedColors,
+            selectedGender: selectedGender,
+            selectedIndoorCat: selectedIndoorCat,
+            selectedRegions: selectedRegions,
+            selectedSize: selectedSize
+        });
     };
+
+    // Images
+    const getImagePath = (imageName) => {
+        try {
+            return require(`../assets/cat_images/${imageName}`);
+        } catch (err) {
+            console.error('Error loading image:', imageName, err);
+            return null;
+        }
+    };
+
 
     // Reset Button
     // resets all filtering options
@@ -512,10 +501,10 @@ const SearchPage = () => {
                             </div>
                         </div>
                     </div>
-                    {/* String of selected filtering option */}
+                    {/* String of selected filtering option */}{/*
                     <div className="container mt-3">
                         <p>{selectedFiltersString}</p>
-                    </div>
+                    </div>*/}
                 </div>
                 {/* Sorting Section */}
                 <div className="container mt-3 sorting-section">
@@ -549,14 +538,17 @@ const SearchPage = () => {
                                 <div className="cat-box">
                                     <Link to={`/catUser/${cat.id}`} style={{textDecoration: 'none', color: 'inherit'}}>
                                         <div className="box-image position-relative">
-                                            <img src={cat.image} alt="Cat Image"/>
+                                            <img
+                                                src={cat.imageNames && cat.imageNames.length > 0 ? getImagePath(cat.imageNames[0]) : null}
+                                                alt="Cat Image"
+                                            />
                                         </div>
                                         <div className="box-details" style={{
                                             display: 'flex',
                                             alignItems: 'center',
                                             justifyContent: 'space-between',
                                         }}>
-                                            <h5 className="box-with-button">{cat.name} </h5>
+                                            <h5 className="box-with-button">{cat.name}</h5>
                                             <button
                                                 type="button"
                                                 className="btn heart-button"
@@ -569,7 +561,6 @@ const SearchPage = () => {
                                             >
                                                 <FontAwesomeIcon icon={faHeart} size="1x"/>
                                             </button>
-
                                         </div>
                                         <p className="box-info">Breed: {cat.breed} | Gender: {cat.gender}</p>
                                         <p className="box-info">Region: {cat.region}</p>

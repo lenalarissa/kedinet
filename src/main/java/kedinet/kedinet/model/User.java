@@ -1,11 +1,14 @@
 package kedinet.kedinet.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Data
 @Builder
@@ -26,6 +29,14 @@ public class User {
 
     @Column(nullable = false)
     private String secretKey;
+
+    @ManyToMany
+    @JoinTable(
+            name = "fav_cats",
+            joinColumns = @JoinColumn(name = "userId"),
+            inverseJoinColumns = @JoinColumn(name = "catId")
+    )
+    private Set<Cat> favCats;
 
     @JsonIgnore
     public void setKey(String secretKey) {

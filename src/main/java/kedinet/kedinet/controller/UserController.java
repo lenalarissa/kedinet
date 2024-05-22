@@ -30,12 +30,11 @@ public class UserController {
         }
         return new ResponseEntity("User exists already", HttpStatus.CONFLICT);
     }
-    @GetMapping("/login")
+    @GetMapping("/loginUser")
     public ResponseEntity<String> login(@RequestParam String email,
                                          @RequestParam String password){
         Optional<User> user = userRepo.findByEmailAndPassword(email, password);
         if(user.isPresent()){
-          // TODO save a key?
             return new ResponseEntity<String>(user.get().getSecretKey(), HttpStatus.OK);
         }
         user = userRepo.findByEmail(email);
