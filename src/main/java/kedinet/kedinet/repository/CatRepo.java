@@ -14,5 +14,6 @@ import org.springframework.stereotype.Repository;
 
 
 public interface CatRepo extends JpaRepository<Cat, Integer>, CatRepoCustom {
+    List<Cat> findByShelterId(Integer shelterId);
 }
 

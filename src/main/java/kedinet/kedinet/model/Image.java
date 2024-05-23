@@ -20,6 +20,7 @@ public class Image {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
-    private Integer catId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cat_id", nullable = false)
+    private Cat cat;
 }

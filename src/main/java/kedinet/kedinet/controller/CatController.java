@@ -1,9 +1,11 @@
 package kedinet.kedinet.controller;
 
+import kedinet.kedinet.model.Admin;
 import kedinet.kedinet.model.Image;
 import kedinet.kedinet.dto.CatDTO;
 import kedinet.kedinet.model.Cat;
 import kedinet.kedinet.model.enums.*;
+import kedinet.kedinet.repository.AdminRepo;
 import kedinet.kedinet.repository.CatRepo;
 import kedinet.kedinet.repository.ImageRepo;
 import kedinet.kedinet.service.CatService;
@@ -29,6 +31,9 @@ public class CatController {
 
     @Autowired
     ImageRepo imageRepo;
+
+    @Autowired
+    AdminRepo adminRepo;
 
     @GetMapping("/readFavCats")
     public ResponseEntity<Iterable<Cat>> readAllCats(@RequestHeader("secretKey") String secretKey){
@@ -86,6 +91,17 @@ public class CatController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    @GetMapping("/cat/{id}")
+    public ResponseEntity<CatDTO> getCatById(@PathVariable Integer id) {
+        Optional<Cat> catOpt = catRepo.findById(id);
+        if (!catOpt.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        Cat cat = catOpt.get();
+        CatDTO catDTO = new CatDTO(cat, imageRepo.findByCatId(cat.getId()).stream().map(Image::getName).collect(Collectors.toSet()));
+        return new ResponseEntity<>(catDTO, HttpStatus.OK);
+    }
+
     // TODO: TEST ESP. IF DATE WAS ADDED
     @PostMapping("/createCat")
     public ResponseEntity<Cat> createCat(@RequestBody Cat cat) {
@@ -121,5 +137,4 @@ public class CatController {
                 .collect(Collectors.toList());
         return new ResponseEntity<>(catDTOs, HttpStatus.OK);
     }
-
 }

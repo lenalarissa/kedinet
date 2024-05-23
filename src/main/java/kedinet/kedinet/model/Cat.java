@@ -72,8 +72,7 @@ public class Cat {
     @JsonIgnore
     private Set<User> users;
 
-    @OneToMany
-    @JoinColumn(name = "catId")
+    @OneToMany(mappedBy = "cat", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private Set<Image> images;
 

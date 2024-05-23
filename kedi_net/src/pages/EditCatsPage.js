@@ -1,88 +1,138 @@
 import '../styles/FavCats.css';
-import React, {useState} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faTimes} from '@fortawesome/free-solid-svg-icons';
-import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import NavBarAdmin from "../components/NavBarAdmin";
-import matar1 from "../assets/cat_img/matar1.jpg";
-import cat2 from "../assets/cat_img/2.jpeg";
-import cat3 from "../assets/cat_img/3.jpeg";
-import cat4 from "../assets/cat_img/4.jpeg";
 import DeleteConfirmationPopup from "../components/DeleteConfirmationPopup";
+import { useAuth } from "../AuthContext";
 
 const EditCatsPage = () => {
-
-    // some mock cats as objects since there is no connection to the database yet
-    const [cats, setCats] = useState([{
-        id: 1, name: 'Matar', breed: 'Arabian Mau', gender: 'Female', region: 'Kadiköy', image: matar1
-    }, {
-        id: 2, name: 'Whiskers', breed: 'Siamese', gender: 'Female', region: 'Kadiköy', image: cat2
-    }, {
-        id: 3, name: 'Snowball', breed: 'Maine Coon', gender: 'Female', region: 'Beşiktaş', image: cat3
-    }, {
-        id: 4, name: 'Mittens', breed: 'Ragdoll', gender: 'Male', region: 'Şişli', image: cat4
-    }]);
-
-    // mock admin (can only edit the cats from their shelter
-    const admin = {shelterName: "Shelter Kadiköy"}
-
-    // for deleting it needs a confirmation
+    const { user } = useAuth();
+    const [cats, setCats] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const [showConfirmation, setShowConfirmation] = useState(false);
     const [catToDelete, setCatToDelete] = useState(null);
 
+    useEffect(() => {
+        console.log('User object:', user); // Log the user object
+        const fetchCats = async () => {
+            try {
+                const response = await fetch(`http://localhost:8080/admin/cats?secretKey=${user.secretKey}`);
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                const data = await response.json();
+                setCats(data);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching cats:', error);
+                setError(error.message);
+                setLoading(false);
+            }
+        };
+
+        if (user) {
+            fetchCats();
+        }
+    }, [user]);
+
     const handleXClick = (catId, e) => {
-        // prevent this to be the link to the cats profile
         e.preventDefault();
         e.stopPropagation();
         setCatToDelete(catId);
         setShowConfirmation(true);
     };
-    const handleDeleteConfirm = () => {
-        const updatedCats = cats.filter(cat => cat.id !== catToDelete);
-        setCats(updatedCats);
-        setShowConfirmation(false);
+
+    const handleDeleteConfirm = async () => {
+        try {
+            const response = await fetch(`http://localhost:8080/admin/deleteCat?secretKey=${user.secretKey}&id=${catToDelete}`, {
+                method: 'DELETE',
+            });
+            if (response.ok) {
+                setCats(cats.filter(cat => cat.id !== catToDelete));
+                setShowConfirmation(false);
+                setCatToDelete(null);
+            } else {
+                const errorText = await response.text();
+                throw new Error(`Failed to delete cat: ${response.statusText}, ${errorText}`);
+            }
+        } catch (error) {
+            console.error('Error deleting cat:', error);
+            setError(error.message);
+        }
     };
+
     const handleDeleteCancel = () => {
         setCatToDelete(null);
         setShowConfirmation(false);
     };
 
-    return (<div>
-            <NavBarAdmin/>
+    const getImagePath = (imageName) => {
+        try {
+            return require(`../assets/cat_images/${imageName}`);
+        } catch (err) {
+            console.error('Error loading image:', imageName, err);
+            return null;
+        }
+    };
+
+    const formatText = (text) => {
+        if (!text) return ''; // return an empty string if text is undefined or null
+        return text.toLowerCase().replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+    };
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
+    return (
+        <div>
+            <NavBarAdmin />
             <div className="fav-page">
                 <div className="row">
                     <div className="col-md-12">
                         <div className="fav-cats">
-                            <div className="fav-cats-text">All cats from {admin.shelterName}:
-                            </div>
+                            <div className="fav-cats-text">All cats from {user ? user.shelterName : ''}:</div>
                         </div>
                     </div>
                 </div>
                 <div className="container mt-3">
                     <div className="row">
-                        {cats.map((cat, index) => (<div className="col-md-3" key={index}>
+                        {cats.map((cat, index) => (
+                            <div className="col-md-3" key={index}>
                                 <div className="cat-box">
-                                    <Link to={`/catAdmin/${cat.id}`} style={{textDecoration: 'none', color: 'inherit'}}>
-                                    <div className="box-image position-relative">
-                                            <img src={cat.image} alt="Cat Image"/>
+                                    <Link to={`/editCat/${cat.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        <div className="box-image position-relative">
+                                            <img
+                                                src={cat.imageNames && cat.imageNames.length > 0 ? getImagePath(cat.imageNames[0]) : null}
+                                                alt="Cat Image"
+                                            />
                                             <button
                                                 type="button"
                                                 className="btn x-button"
                                                 onClick={(e) => handleXClick(cat.id, e)}
                                             >
-                                                <FontAwesomeIcon icon={faTimes} size="1x"/>
+                                                <FontAwesomeIcon icon={faTimes} size="1x" />
                                             </button>
                                         </div>
                                         <div className="box-details" style={{
                                             display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                                         }}>
-                                            <div className="box-name">{cat.name} </div>
+                                            <div className="box-name">{cat.name}</div>
                                         </div>
-                                        <p className="box-info">Breed: {cat.breed} | Gender: {cat.gender}</p>
-                                        <p className="box-info">Region: {cat.region}</p>
+                                        <p className="box-info">Breed: {formatText(cat.breed)}</p>
+                                        <p className="box-info">Gender: {formatText(cat.gender)}</p>
+                                        <p className="box-info">Age: {cat.age}</p>
                                     </Link>
                                 </div>
-                            </div>))}
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <DeleteConfirmationPopup
@@ -90,9 +140,9 @@ const EditCatsPage = () => {
                     handleDeleteConfirm={handleDeleteConfirm}
                     handleDeleteCancel={handleDeleteCancel}
                 />
-
             </div>
-        </div>);
+        </div>
+    );
 };
 
 export default EditCatsPage;

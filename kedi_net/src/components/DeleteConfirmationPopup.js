@@ -6,8 +6,10 @@ const DeleteConfirmationPopup = ({ showConfirmation, handleDeleteConfirm, handle
             <div className="popup">
                 <div className="popup-content">
                     <p>Are you sure you want to delete this cat?</p>
-                    <button className="confirmation-button" onClick={handleDeleteConfirm}>Yes</button>
-                    <button className="confirmation-button" onClick={handleDeleteCancel}>No</button>
+                    <div className="popup-buttons">
+                        <button className="confirmation-button" onClick={handleDeleteConfirm}>Yes</button>
+                        <button className="confirmation-button" onClick={handleDeleteCancel}>No</button>
+                    </div>
                 </div>
             </div>
         )

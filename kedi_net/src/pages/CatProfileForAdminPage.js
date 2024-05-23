@@ -1,5 +1,5 @@
 import NavBarAdmin from '../components/NavBarAdmin';
-import EditCatForm from '../components/EditCatForm';
+import EditCatFormPage from './EditCatFormPage';
 import cats from '../constants/Cats';
 
 const CatProfileForAdminPage = ({ catId }) => {
@@ -8,7 +8,7 @@ const CatProfileForAdminPage = ({ catId }) => {
     return (
         <div>
             <NavBarAdmin />
-            <EditCatForm cat={cat} />
+            <EditCatFormPage cat={cat} />
         </div>
     );
 };
