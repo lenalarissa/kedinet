@@ -20,7 +20,7 @@ const EditCatFormPage = () => {
         canLiveWith: '',
         disease: '',
         information: '',
-        images: [], // Will store both existing URLs and new File objects
+        images: [], // stores both existing URLs and new File objects
     });
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -46,7 +46,7 @@ const EditCatFormPage = () => {
                     canLiveWith: catData.canLiveWith || '',
                     disease: catData.disease || '',
                     information: catData.about || '',
-                    images: imageUrls, // Load existing image URLs
+                    images: imageUrls, //
                 });
                 setImagePreviews(imageUrls);
                 setLoading(false);
@@ -105,7 +105,6 @@ const EditCatFormPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Add your logic to handle form submission and updating the cat information
         navigate('/editCats');
     };
 
