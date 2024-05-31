@@ -8,7 +8,7 @@ import DeleteConfirmationPopup from "../components/DeleteConfirmationPopup";
 import { useAuth } from "../AuthContext";
 
 const EditCatsPage = () => {
-    const { user } = useAuth();
+    const { admin } = useAuth(); // Use admin state here
     const [cats, setCats] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -16,10 +16,10 @@ const EditCatsPage = () => {
     const [catToDelete, setCatToDelete] = useState(null);
 
     useEffect(() => {
-        console.log('User object:', user); // Log the user object
+        console.log('Admin object:', admin); // Log the admin object
         const fetchCats = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/admin/cats?secretKey=${user.secretKey}`);
+                const response = await fetch(`http://localhost:8080/admin/cats?secretKey=${admin.secretKey}`);
                 if (!response.ok) {
                     throw new Error(`Network response was not ok: ${response.statusText}`);
                 }
@@ -33,10 +33,10 @@ const EditCatsPage = () => {
             }
         };
 
-        if (user) {
+        if (admin) {
             fetchCats();
         }
-    }, [user]);
+    }, [admin]);
 
     const handleXClick = (catId, e) => {
         e.preventDefault();
@@ -47,7 +47,7 @@ const EditCatsPage = () => {
 
     const handleDeleteConfirm = async () => {
         try {
-            const response = await fetch(`http://localhost:8080/admin/deleteCat?secretKey=${user.secretKey}&id=${catToDelete}`, {
+            const response = await fetch(`http://localhost:8080/admin/deleteCat?secretKey=${admin.secretKey}&id=${catToDelete}`, {
                 method: 'DELETE',
             });
             if (response.ok) {
@@ -98,7 +98,7 @@ const EditCatsPage = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="fav-cats">
-                            <div className="fav-cats-text">All cats from {user ? user.shelterName : ''}:</div>
+                            <div className="fav-cats-text">All cats from {admin ? admin.shelterName : ''}:</div>
                         </div>
                     </div>
                 </div>

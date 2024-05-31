@@ -36,10 +36,10 @@ const AdminLogInPage = () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
-            const data = await response.text(); // Assuming the secret key is returned as plain text
+            const data = await response.text();
 
             if (data) {
-                login(data); // Pass the secret key to the login function
+                login(data, 'admin');
                 navigate('/editCats');
             } else {
                 setError('Invalid ID or password. Please try again.');
@@ -114,4 +114,3 @@ const AdminLogInPage = () => {
 };
 
 export default AdminLogInPage;
-

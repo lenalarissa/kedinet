@@ -1,6 +1,7 @@
 package kedinet.kedinet.controller;
 
 import kedinet.kedinet.dto.CatDTO;
+import kedinet.kedinet.dto.UserDTO;
 import kedinet.kedinet.model.Cat;
 import kedinet.kedinet.model.User;
 import kedinet.kedinet.model.Image;
@@ -28,6 +29,19 @@ public class UserController {
     @Autowired
     private ImageRepo imageRepo;
 
+
+    @GetMapping("/details")
+    public ResponseEntity<UserDTO> getUserDetails(@RequestParam String secretKey) {
+        Optional<User> userOpt = userRepo.findBySecretKey(secretKey);
+        if (!userOpt.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+        }
+        User user = userOpt.get();
+        UserDTO userDTO = new UserDTO(user);
+        return new ResponseEntity<>(userDTO, HttpStatus.OK);
+    }
+
+
     @PostMapping("/createUser")
     public ResponseEntity<String> createUser(@RequestBody User newUser) {
         Optional<User> user = userRepo.findByEmail(newUser.getEmail());
@@ -54,6 +68,7 @@ public class UserController {
         }
         return new ResponseEntity<>("User with this e-mail does not exist.", HttpStatus.CONFLICT);
     }
+
     @PostMapping("/updatePassword")
     public ResponseEntity<String> updatePassword(@RequestBody Map<String, String> request) {
         String email = request.get("email");
@@ -92,6 +107,7 @@ public class UserController {
         }
         return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
     }
+
     @GetMapping("/favorites")
     public ResponseEntity<List<CatDTO>> getFavoriteCats(@RequestParam String secretKey) {
         Optional<User> user = userRepo.findBySecretKey(secretKey);
@@ -126,5 +142,4 @@ public class UserController {
         }
         return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
     }
-
 }
