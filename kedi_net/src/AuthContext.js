@@ -11,11 +11,13 @@ export const AuthProvider = ({ children }) => {
             const secretKey = localStorage.getItem(key);
             if (secretKey) {
                 try {
+                    console.log(`Fetching details for ${key} with secretKey:`, secretKey); // Log the secretKey
                     const response = await fetch(`${url}?secretKey=${secretKey}`);
                     if (!response.ok) {
                         throw new Error(`Network response was not ok: ${response.statusText}`);
                     }
                     const data = await response.json();
+                    console.log(`Fetched data for ${key}:`, data); // Log the fetched data
                     setter(data);
                 } catch (error) {
                     console.error(`Error fetching ${key} details:`, error);
@@ -27,9 +29,9 @@ export const AuthProvider = ({ children }) => {
         fetchDetails('admin_secret_key', setAdmin, 'http://localhost:8080/admin/details');
     }, []);
 
-    const login = (secretKey, role) => {
+    const login = (secretKey, role, shelterName) => {
         if (role === 'admin') {
-            setAdmin({ secretKey });
+            setAdmin({ secretKey, shelterName });
             localStorage.setItem('admin_secret_key', secretKey);
         } else {
             setUser({ secretKey });

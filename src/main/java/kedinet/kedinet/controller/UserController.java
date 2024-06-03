@@ -71,10 +71,10 @@ public class UserController {
 
     @PostMapping("/updatePassword")
     public ResponseEntity<String> updatePassword(@RequestBody Map<String, String> request) {
-        String email = request.get("email");
+        String secretKey = request.get("secretKey");
         String newPassword = request.get("newPassword");
-
-        Optional<User> userOptional = userRepo.findByEmail(email);
+        Optional<User> userOptional = userRepo.findBySecretKey(secretKey);
+        System.out.println(secretKey);
         if (userOptional.isPresent()) {
             User user = userOptional.get();
             user.setPassword(newPassword);
@@ -84,6 +84,7 @@ public class UserController {
             return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
         }
     }
+
 
     @PostMapping("/addFavorite")
     public ResponseEntity<String> addFavorite(@RequestParam String secretKey, @RequestParam Integer catId) {

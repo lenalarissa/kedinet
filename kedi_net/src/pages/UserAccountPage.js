@@ -1,5 +1,5 @@
 import '../styles/SignUp.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { useAuth } from '../AuthContext';
@@ -11,6 +11,10 @@ const UserAccountPage = () => {
     const [error, setError] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+
+    useEffect(() => {
+        console.log("User object in UserAccountPage:", user);
+    }, [user]);
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
@@ -30,12 +34,13 @@ const UserAccountPage = () => {
             setError('Password must be at least 8 characters long');
         } else {
             try {
+                console.log("Sending secretKey:", user.secretKey);
                 const response = await fetch("http://localhost:8080/user/updatePassword", {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ email: user.email, newPassword: password }),
+                    body: JSON.stringify({ secretKey: user.secretKey, newPassword: password }),
                 });
 
                 if (response.ok) {
@@ -116,3 +121,4 @@ const UserAccountPage = () => {
 };
 
 export default UserAccountPage;
+

@@ -1,13 +1,14 @@
-import {useState} from 'react';
+import React, { useState } from 'react';
 import '../styles/AddCat.css';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import NavBarAdmin from "../components/NavBarAdmin";
-import breeds from '../constants/Breeds'
+import breeds from '../constants/Breeds';
 
 const AddCatPage = () => {
     const navigate = useNavigate();
 
-    // all information needed to add a cat
+    const colors = ["Black", "White", "Grey", "Brown", "Orange"];
+
     const [formData, setFormData] = useState({
         name: '',
         gender: '',
@@ -16,53 +17,89 @@ const AddCatPage = () => {
         indoorCat: '',
         size: '',
         coatLength: '',
-        canLiveWith: [],
+        canLiveWith: '',
         disease: '',
         information: '',
-        images: []
+        images: [],
+        color: ''
     });
+
+    const [imagePreviews, setImagePreviews] = useState([]);
+
     const canLiveWithOptions = ["Calm people only", "Children", "Dogs", "Cats"];
 
-    // adds the data when something was clicked / written
     const handleChange = (e) => {
-        const {name, value} = e.target;
+        const { name, value } = e.target;
         setFormData(prevState => ({
             ...prevState,
             [name]: value
         }));
     };
-    // only for Indoor Cat
+
     const handleCheckboxChange = (e) => {
-        const {name, checked} = e.target;
+        const { name, checked } = e.target;
         setFormData(prevState => ({
             ...prevState,
             [name]: checked ? 'yes' : 'no'
         }));
     };
-    // only for 'Can Live with'
-    const handleCanLiveWithChange = (e) => {
-        const {value} = e.target;
-        const updatedCanLiveWith = [...formData.canLiveWith];
-        if (updatedCanLiveWith.includes(value)) {
-            updatedCanLiveWith.splice(updatedCanLiveWith.indexOf(value), 1); //splice removes element when it is already in the array
+
+    const handleImageChange = (e) => {
+        const newFiles = Array.from(e.target.files);
+        const combinedFiles = [...formData.images, ...newFiles];
+        if (combinedFiles.length > 5) {
+            alert('You can upload a maximum of 5 images.');
         } else {
-            updatedCanLiveWith.push(value);
+            const newImagePreviews = newFiles.map(file => URL.createObjectURL(file));
+            setFormData(prevState => ({
+                ...prevState,
+                images: combinedFiles
+            }));
+            setImagePreviews(prevState => [...prevState, ...newImagePreviews]);
         }
+    };
+
+    const handleImageDelete = (index) => {
+        setImagePreviews(prevState => prevState.filter((_, i) => i !== index));
         setFormData(prevState => ({
             ...prevState,
-            canLiveWith: updatedCanLiveWith
+            images: prevState.images.filter((_, i) => i !== index)
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // the data would be added to the database now
-        navigate('/editCats');
+        const data = new FormData();
+        Object.keys(formData).forEach(key => {
+            if (key === 'images') {
+                formData[key].forEach(image => {
+                    data.append('images', image);
+                });
+            } else {
+                data.append(key, formData[key]);
+            }
+        });
+        data.append('secretKey', '78ij9012-34kl-56mn-7890-opqr123456st'); // Add secret key
+
+        try {
+            const response = await fetch('http://localhost:8080/admin/addCat', {
+                method: 'POST',
+                body: data,
+            });
+
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.statusText}`);
+            }
+
+            navigate('/editCats');
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
     };
 
     return (
         <div>
-            <NavBarAdmin/>
+            <NavBarAdmin />
             <div className="add-cat-form">
                 <h2>Add a Cat</h2>
                 <form onSubmit={handleSubmit}>
@@ -74,7 +111,7 @@ const AddCatPage = () => {
                             value={formData.name}
                             onChange={handleChange}
                             maxLength={30}
-                            pattern="[A-Za-z]+"
+                            pattern="[A-Za-z\s]+"
                             title="Name must only contain alphabetical characters"
                             required
                         />
@@ -92,7 +129,7 @@ const AddCatPage = () => {
                         <select name="breed" value={formData.breed} onChange={handleChange} required>
                             <option value="" disabled>Select Breed</option>
                             {breeds.map((breed, index) => (
-                                <option key={index} value={breed}>{breed}</option>
+                                <option key={index} value={breed.toUpperCase().replace(" ", "_")}>{breed}</option>
                             ))}
                         </select>
                     </div>
@@ -120,35 +157,40 @@ const AddCatPage = () => {
                         </div>
                     </div>
                     <div className="form-group-add">
+                        <label>Color:</label>
+                        <select name="color" value={formData.color} onChange={handleChange} required>
+                            <option value="" disabled>Select Color</option>
+                            {colors.map((color, index) => (
+                                <option key={index} value={color.toUpperCase()}>{color}</option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="form-group-add">
                         <label>Size:</label>
                         <select name="size" value={formData.size} onChange={handleChange} required>
                             <option value="" disabled>Select Size</option>
-                            <option value="small">Small</option>
-                            <option value="medium">Medium</option>
-                            <option value="big">Big</option>
+                            <option value="SMALL">Small</option>
+                            <option value="MEDIUM">Medium</option>
+                            <option value="BIG">Big</option>
                         </select>
                     </div>
                     <div className="form-group-add">
                         <label>Coat Length:</label>
                         <select name="coatLength" value={formData.coatLength} onChange={handleChange} required>
                             <option value="" disabled>Select Coat Length</option>
-                            <option value="short">Short</option>
-                            <option value="medium">Medium</option>
-                            <option value="long">Long</option>
+                            <option value="SHORT">Short</option>
+                            <option value="MEDIUM">Medium</option>
+                            <option value="LONG">Long</option>
                         </select>
                     </div>
                     <div className="form-group-add">
                         <label>Can Live With:</label>
-                        <div className="can-live-with-options">
+                        <select name="canLiveWith" value={formData.canLiveWith} onChange={handleChange} required>
+                            <option value="" disabled>Select an Option</option>
                             {canLiveWithOptions.map((option, index) => (
-                                <div className="can-live-with-option" key={index}>
-                                    <input type="checkbox" name="canLiveWith" value={option}
-                                           checked={formData.canLiveWith.includes(option)}
-                                           onChange={handleCanLiveWithChange}/>
-                                    <label>{option}</label>
-                                </div>
+                                <option key={index} value={option.toUpperCase().replace(" ", "_")}>{option}</option>
                             ))}
-                        </div>
+                        </select>
                     </div>
                     <div className="form-group-add">
                         <label>Disease:</label>
@@ -158,7 +200,6 @@ const AddCatPage = () => {
                             value={formData.disease}
                             onChange={handleChange}
                             maxLength={50}
-                            required
                         />
                     </div>
                     <div className="form-group-add">
@@ -179,15 +220,16 @@ const AddCatPage = () => {
                             name="images"
                             accept="image/*"
                             multiple
-                            onChange={(e) => {
-                                const selectedImages = Array.from(e.target.files).slice(0, 5);
-                                setFormData(prevState => ({
-                                    ...prevState,
-                                    images: [...prevState.images, ...selectedImages]
-                                }));
-                            }}
-                            required
+                            onChange={handleImageChange}
                         />
+                        <div className="image-previews">
+                            {imagePreviews.map((image, index) => (
+                                <div key={index} className="image-preview-box">
+                                    <img src={image} alt={`Preview ${index}`} className="image-preview" />
+                                    <button type="button" className="delete-image-button" onClick={() => handleImageDelete(index)}>X</button>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     <button type="submit">Submit</button>
                 </form>
@@ -197,3 +239,5 @@ const AddCatPage = () => {
 };
 
 export default AddCatPage;
+
+

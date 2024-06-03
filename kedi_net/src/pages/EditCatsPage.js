@@ -16,7 +16,7 @@ const EditCatsPage = () => {
     const [catToDelete, setCatToDelete] = useState(null);
 
     useEffect(() => {
-        console.log('Admin object:', admin); // Log the admin object
+        console.log('Admin object:', admin);
         const fetchCats = async () => {
             try {
                 const response = await fetch(`http://localhost:8080/admin/cats?secretKey=${admin.secretKey}`);
@@ -79,7 +79,7 @@ const EditCatsPage = () => {
     };
 
     const formatText = (text) => {
-        if (!text) return ''; // return an empty string if text is undefined or null
+        if (!text) return '';
         return text.toLowerCase().replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
     };
 

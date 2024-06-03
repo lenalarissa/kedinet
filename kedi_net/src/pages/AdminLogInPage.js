@@ -36,10 +36,16 @@ const AdminLogInPage = () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
-            const data = await response.text();
+            const secretKey = await response.text();
 
-            if (data) {
-                login(data, 'admin');
+            if (secretKey) {
+                const detailsResponse = await fetch(`http://localhost:8080/admin/details?secretKey=${secretKey}`);
+                if (!detailsResponse.ok) {
+                    throw new Error(`HTTP error! status: ${detailsResponse.status}`);
+                }
+
+                const adminDetails = await detailsResponse.json();
+                login(adminDetails.secretKey, 'admin', adminDetails.shelterName);
                 navigate('/editCats');
             } else {
                 setError('Invalid ID or password. Please try again.');
@@ -49,6 +55,7 @@ const AdminLogInPage = () => {
             setError('Invalid ID or password. Please try again.');
         }
     };
+
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
