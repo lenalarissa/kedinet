@@ -44,8 +44,8 @@ const SignUpPage = () => {
                     body: JSON.stringify(userData),
                 });
                 if (response.ok) {
-                    const secretKey = await response.text(); // assuming the backend returns only the secret key
-                    login(secretKey, 'user'); // log the user in with the secret key and role 'user'
+                    const secretKey = await response.text();
+                    login(secretKey, 'user');
                     navigate('/', { state: { loginSuccess: true } });
                 } else {
                     const data = await response.json();

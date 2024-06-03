@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { useAuth } from "../AuthContext";
-import { loadCatImage } from '../utils/ImageLoader'; // Assuming you have a utility function to load images
+import { loadCatImage } from '../utils/ImageLoader';
 
 const FavCatsPage = () => {
     const { user } = useAuth();

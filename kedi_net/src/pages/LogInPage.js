@@ -35,7 +35,7 @@ const LogInPage = () => {
 
             if (response.ok) {
                 const secretKey = await response.text();
-                login(secretKey, 'user'); // Pass the role as 'user'
+                login(secretKey, 'user');
                 navigate('/');
             } else {
                 setError('Invalid email or password. Please try again.');

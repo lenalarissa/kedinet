@@ -1,16 +1,16 @@
-import matar1 from "../assets/cat_img/matar1.jpg";
-import matar2 from "../assets/cat_img/matar2.JPG";
-import matar3 from "../assets/cat_img/matar3.JPG";
-import matar4 from "../assets/cat_img/matar4.JPG";
-import matar5 from "../assets/cat_img/matar5.JPG";
-import cat2 from "../assets/cat_img/2.jpeg";
-import cat3 from "../assets/cat_img/3.jpeg";
-import cat4 from "../assets/cat_img/4.jpeg";
-import cat5 from "../assets/cat_img/5.jpg";
-import cat6 from "../assets/cat_img/6.jpg";
-import cat7 from "../assets/cat_img/7.jpeg";
+import matar1 from "../assets/demo_cat_images/matar1.jpg";
+import matar2 from "../assets/demo_cat_images/matar2.JPG";
+import matar3 from "../assets/demo_cat_images/matar3.JPG";
+import matar4 from "../assets/demo_cat_images/matar4.JPG";
+import matar5 from "../assets/demo_cat_images/matar5.JPG";
+import cat2 from "../assets/demo_cat_images/2.jpeg";
+import cat3 from "../assets/demo_cat_images/3.jpeg";
+import cat4 from "../assets/demo_cat_images/4.jpeg";
+import cat5 from "../assets/demo_cat_images/5.jpg";
+import cat6 from "../assets/demo_cat_images/6.jpg";
+import cat7 from "../assets/demo_cat_images/7.jpeg";
 
-// some mock cats as objects since there is no connection to the database yet
+// some mock cats as objects for demo purposes
 const cats = [{
     id: 1,
     name: 'Matar',

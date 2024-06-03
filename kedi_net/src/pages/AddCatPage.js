@@ -79,7 +79,7 @@ const AddCatPage = () => {
                 data.append(key, formData[key]);
             }
         });
-        data.append('secretKey', '78ij9012-34kl-56mn-7890-opqr123456st'); // Add secret key
+        data.append('secretKey', '78ij9012-34kl-56mn-7890-opqr123456st');
 
         try {
             const response = await fetch('http://localhost:8080/admin/addCat', {

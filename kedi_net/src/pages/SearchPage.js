@@ -305,7 +305,7 @@ const SearchPage = () => {
 
         if (isLoggedIn && user) {
             const isFavorite = favorites.has(catId);
-            const secretKey = user.secretKey;  // Ensure secretKey is a string
+            const secretKey = user.secretKey;
             const url = new URL(isFavorite ? "http://localhost:8080/user/removeFavorite" : "http://localhost:8080/user/addFavorite");
             url.searchParams.append("secretKey", secretKey);
             url.searchParams.append("catId", catId);
@@ -339,7 +339,7 @@ const SearchPage = () => {
         }
     };
     const formatText = (text) => {
-        if (!text) return ''; // return an empty string if text is undefined or null
+        if (!text) return '';
         return text.toLowerCase().replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
     };
 

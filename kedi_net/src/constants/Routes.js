@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import SearchPage from '../pages/SearchPage';
 import CatProfileForUserPage from '../pages/CatProfileForUserPage';
 import SignUpPage from '../pages/SignUpPage';

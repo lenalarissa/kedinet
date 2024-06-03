@@ -8,7 +8,7 @@ import DeleteConfirmationPopup from "../components/DeleteConfirmationPopup";
 import { useAuth } from "../AuthContext";
 
 const EditCatsPage = () => {
-    const { admin } = useAuth(); // Use admin state here
+    const { admin } = useAuth();
     const [cats, setCats] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import { useAuth } from '../AuthContext';
 
 const UserAccountPage = () => {
-    const { user } = useAuth(); // Get user information from context
+    const { user } = useAuth();
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');

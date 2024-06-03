@@ -11,13 +11,13 @@ export const AuthProvider = ({ children }) => {
             const secretKey = localStorage.getItem(key);
             if (secretKey) {
                 try {
-                    console.log(`Fetching details for ${key} with secretKey:`, secretKey); // Log the secretKey
+                    console.log(`Fetching details for ${key} with secretKey:`, secretKey);
                     const response = await fetch(`${url}?secretKey=${secretKey}`);
                     if (!response.ok) {
                         throw new Error(`Network response was not ok: ${response.statusText}`);
                     }
                     const data = await response.json();
-                    console.log(`Fetched data for ${key}:`, data); // Log the fetched data
+                    console.log(`Fetched data for ${key}:`, data);
                     setter(data);
                 } catch (error) {
                     console.error(`Error fetching ${key} details:`, error);

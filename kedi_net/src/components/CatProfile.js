@@ -1,17 +1,17 @@
 import '../styles/CatProfile.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { useParams } from 'react-router-dom';
-import { Carousel } from 'react-responsive-carousel';
+import {useParams} from 'react-router-dom';
+import {Carousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { useState, useEffect } from 'react';
-import { useAuth } from "../AuthContext";
+import {useState, useEffect} from 'react';
+import {useAuth} from "../AuthContext";
 import CatsProfilePopup from "../components/CatsProfilePopup";
-import { loadCatImage } from '../utils/ImageLoader';
+import {loadCatImage} from '../utils/ImageLoader';
 
-const CatProfile = ({ showHeartButton }) => {
-    const { isLoggedIn, user } = useAuth();
-    const { catId } = useParams();
+const CatProfile = ({showHeartButton}) => {
+    const {isLoggedIn, user} = useAuth();
+    const {catId} = useParams();
     const [cat, setCat] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -91,7 +91,7 @@ const CatProfile = ({ showHeartButton }) => {
                         }
                         return updatedFavorites;
                     });
-                    setHeartClicked(!isFavorite); // Update heartClicked state
+                    setHeartClicked(!isFavorite);
                 } else {
                     console.error(`Failed to ${isFavorite ? 'remove' : 'add'} favorite`);
                 }
@@ -131,7 +131,7 @@ const CatProfile = ({ showHeartButton }) => {
                                     <button
                                         type="button"
                                         className="profile-heart-button"
-                                        style={{ color: heartClicked ? 'black' : 'white', zIndex: 1 }}
+                                        style={{color: heartClicked ? 'black' : 'white', zIndex: 1}}
                                         onClick={handleHeartClick}
                                     >
                                         <i className={heartClicked ? 'fas fa-heart' : 'far fa-heart'}></i>
@@ -159,7 +159,8 @@ const CatProfile = ({ showHeartButton }) => {
                                         return (
                                             imagePath && (
                                                 <div key={index}>
-                                                    <img src={imagePath} alt={`Slide ${index + 1}`} style={{ height: '310px', width: 'auto' }} />
+                                                    <img src={imagePath} alt={`Slide ${index + 1}`}
+                                                         style={{height: '310px', width: 'auto'}}/>
                                                 </div>
                                             )
                                         );
@@ -204,7 +205,8 @@ const CatProfile = ({ showHeartButton }) => {
                                         <p className="box-text">Region: {formatText(cat.shelter.region)}</p>
                                         <p className="box-text">Address: {cat.shelter.address}</p>
                                         <p className="box-text">
-                                            Website: <a href={cat.shelter.website} target="_blank" rel="noopener noreferrer">{cat.shelter.website}</a>
+                                            Website: <a href={cat.shelter.website} target="_blank"
+                                                        rel="noopener noreferrer">{cat.shelter.website}</a>
                                         </p>
                                         <p className="box-text">E-mail: {cat.shelter.email}</p>
                                         <p className="box-text">Phone: {cat.shelter.phone}</p>
@@ -215,7 +217,7 @@ const CatProfile = ({ showHeartButton }) => {
                     </div>
                 </div>
             </div>
-            <CatsProfilePopup showLoginPrompt={showLoginPrompt} setShowLoginPrompt={setShowLoginPrompt} />
+            <CatsProfilePopup showLoginPrompt={showLoginPrompt} setShowLoginPrompt={setShowLoginPrompt}/>
         </div>
     );
 }
