@@ -86,7 +86,7 @@ public class Cat {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id); // Use a field that uniquely identifies the entity
+        return Objects.hash(id);
     }
 
     @Override
@@ -94,6 +94,6 @@ public class Cat {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Cat cat = (Cat) obj;
-        return Objects.equals(id, cat.id); // Compare only the unique identifier
+        return Objects.equals(id, cat.id);
     }
 }

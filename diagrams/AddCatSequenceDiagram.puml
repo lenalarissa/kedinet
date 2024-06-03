@@ -1,0 +1,35 @@
+@startuml
+actor Admin
+participant "AdminController" as AC
+participant "AdminRepo" as AR
+participant "CatRepo" as CR
+participant "ImageRepo" as IR
+participant "FileUploadUtil" as FU
+participant "Cat" as C
+participant "Image" as I
+
+Admin -> AC: addCat(catData, images)
+AC -> AR: findBySecretKey(secretKey)
+
+alt Admin valid
+    AR -> Admin: return Admin
+    AC -> C: create new Cat instance
+    AC -> CR: save Cat
+    CR -> C: return saved Cat
+
+    loop for each image
+        AC -> FU: saveFile(uploadDir, fileName, image)
+        FU --> AC: return filePath
+        AC -> I: create new Image instance
+        AC -> IR: save Image
+        IR -> I: return saved Image
+    end
+
+    AC -> Admin: return success message
+
+else Admin invalid
+    AR -> Admin: return null
+    AC -> Admin: return error message (invalid secretKey)
+end
+
+@enduml

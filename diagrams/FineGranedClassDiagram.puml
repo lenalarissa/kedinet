@@ -1,0 +1,332 @@
+@startuml
+package kedinet.kedinet {
+    class KedinetApplication {
+        {static} +void main(String[] args)
+    }
+}
+
+package kedinet.kedinet.config {
+    class WebConfig {
+        +void addCorsMappings(CorsRegistry registry)
+        +void addFormatters(FormatterRegistry registry)
+    }
+}
+
+package kedinet.kedinet.controller {
+    class AdminController {
+        -Logger logger
+        -AdminRepo adminRepo
+        -CatRepo catRepo
+        -ImageRepo imageRepo
+        -UserRepo userRepo
+
+        +ResponseEntity<String> login(int loginId, String password)
+        +ResponseEntity<AdminDTO> getAdminDetails(String secretKey)
+        +ResponseEntity<List<CatDTO>> getCatsByAdmin(String secretKey)
+        +ResponseEntity<Void> deleteCat(String secretKey, Integer id)
+        +ResponseEntity<Void> updateCat(Integer id, Map<String, String> catData, MultipartFile[] images)
+        +ResponseEntity<Void> deleteImageByName(String imageName, String secretKey)
+        +ResponseEntity<String> addCat(Map<String, String> catData, MultipartFile[] images)
+    }
+
+    class CatController {
+        -CatService catService
+        -CatRepo catRepo
+        -ImageRepo imageRepo
+        -AdminRepo adminRepo
+
+        +ResponseEntity<List<CatDTO>> readSearchedCats(Integer ageFrom, Integer ageTo, List<Breed> breeds, List<CanLiveWith> canLiveWithList, List<CoatLength> coatLengths, List<Color> colors, List<Gender> genders, Boolean isIndoorCat, List<Region> regions, List<Size> sizes, String sortOption)
+        +ResponseEntity<CatDTO> readCat(int id)
+        +ResponseEntity<CatDTO> getCatById(Integer id)
+    }
+
+    class UserController {
+        -UserRepo userRepo
+        -CatRepo catRepo
+        -ImageRepo imageRepo
+
+        +ResponseEntity<String> createUser(User newUser)
+        +ResponseEntity<String> login(Map<String, String> loginData)
+        +ResponseEntity<String> updatePassword(Map<String, String> request)
+        +ResponseEntity<String> addFavorite(String secretKey, Integer catId)
+        +ResponseEntity<List<CatDTO>> getFavoriteCats(String secretKey)
+        +ResponseEntity<String> removeFavorite(String secretKey, Integer catId)
+    }
+}
+
+package kedinet.kedinet.converter {
+    class StringToBreedListConverter {
+        +List<Breed> convert(String source)
+    }
+
+    class StringToCanLiveWithListConverter {
+        +List<CanLiveWith> convert(String source)
+    }
+
+    class StringToCoatLengthListConverter {
+        +List<CoatLength> convert(String source)
+    }
+
+    class StringToColorListConverter {
+        +List<Color> convert(String source)
+    }
+
+    class StringToGenderListConverter {
+        +List<Gender> convert(String source)
+    }
+
+    class StringToRegionListConverter {
+        +List<Region> convert(String source)
+    }
+
+    class StringToSizeListConverter {
+        +List<Size> convert(String source)
+    }
+}
+
+package kedinet.kedinet.dto {
+    class AdminDTO {
+        +Integer id
+        +Integer loginId
+        +String secretKey
+        +String shelterName
+        +Integer shelterId
+    }
+
+    class CatDTO {
+        +Integer id
+        +String name
+        +Breed breed
+        +Gender gender
+        +String about
+        +Integer age
+        +Boolean isIndoorCat
+        +Size size
+        +CoatLength coatLength
+        +CanLiveWith canLiveWith
+        +Color color
+        +String disease
+        +Set<String> imageNames
+        +ShelterDTO shelter
+        +LocalDate dateAdded
+    }
+
+    class ShelterDTO {
+        +Integer id
+        +String name
+        +String region
+        +String address
+        +String website
+        +String email
+        +String phone
+    }
+
+    class UserDTO {
+        +Integer id
+        +String email
+        +String secretKey
+        +Set<Integer> favCatIds
+    }
+}
+
+package kedinet.kedinet.model {
+    class Admin {
+        +Integer id
+        +Integer loginId
+        +String password
+        +String secretKey
+        +Shelter shelter
+
+        +void setKey(String secretKey)
+    }
+
+    class Cat {
+        +Integer id
+        +String name
+        +Breed breed
+        +Gender gender
+        +String about
+        +Integer age
+        +Boolean isIndoorCat
+        +Size size
+        +CoatLength coatLength
+        +CanLiveWith canLiveWith
+        +Color color
+        +String disease
+        +Shelter shelter
+        +Set<User> users
+        +Set<Image> images
+        +LocalDate dateAdded
+
+        +void onCreate()
+        +int hashCode()
+        +boolean equals(Object obj)
+    }
+
+    class Image {
+        +Integer id
+        +String name
+        +Cat cat
+    }
+
+    class Shelter {
+        +Integer id
+        +String name
+        +Region region
+        +String address
+        +String website
+        +String email
+        +String phone
+        +Admin admin
+        +Set<Cat> cats
+    }
+
+    class User {
+        +Integer id
+        +String email
+        +String password
+        +String secretKey
+        +Set<Cat> favCats
+
+        +void setKey(String secretKey)
+        +int hashCode()
+        +boolean equals(Object obj)
+    }
+}
+
+package kedinet.kedinet.model.enums {
+    enum Breed {
+        ABYSSINIAN, AEGEAN_CAT, AMERICAN_BOBTAIL, AMERICAN_CURL, AMERICAN_SHORTHAIR, AMERICAN_WIREHAIR, ARABIAN_MAU, ASIAN_CAT, AUSTRALIAN_MIST, BALINESE_CAT, BENGAL_CAT, BIRMAN, BOHEMIAN_REX, BOMBAY_CAT, BRAZILIAN_SHORTHAIR, BRITISH_LONGHAIR, BRITISH_SHORTHAIR, BURMESE_CAT, BURMILLA, CALIFORNIA_SPANGLED, CASHMERE_CAT, CHANTILLY_TIFFANY, CHARTREUX, CHAUSIE, COLORPOINT_SHORTHAIR, CORNISH_REX, CYMRIC_CAT, CYPRUS_CAT, DEVON_REX, DOMESTIC_CAT, DONSKOY_CAT, DRAGON_LI, EGYPTIAN_MAU, EUROPEAN_SHORTHAIR, EXOTIC_SHORTHAIR, FOLDEX_CAT, FOREIGN_WHITE, GERMAN_REX, HAVANA_BROWN, HIGHLANDER_CAT, HIMALAYAN_CAT, ISLE_OF_MAN_LONGHAIR_CAT, ISLE_OF_MAN_SHORTHAIR_CAT, JAPANESE_BOBTAIL, JAVANESE_CAT, KANAANI_CAT, KARELIAN_BOBTAIL, KHAO_MANEE, KORAT, KORN_JA, KURILIAN_BOBTAIL, LAPERM, LYKOI, MAINE_COON, MANX_CAT, MEKONG_BOBTAIL, MEXICAN_HAIRLESS_CAT, MINSKIN, MINUET_CAT, MUNCHKIN_CAT, NEBELUNG, OCICAT, OJOS_AZULES, ORIENTAL_BICOLOUR, ORIENTAL_LONGHAIR, ORIENTAL_SHORTHAIR, PERSIAN_CAT, PETERBALD, PITTSBURGH_REFRIGERATOR_CAT, PIXIE_BOB, RAGAMUFFIN_CAT, RAGDOLL, RUSSIAN_BLUE, RUSSIAN_WHITE, SAVANNAH_CAT, SCOTTISH_FOLD, SELKIRK_REX, SERENGETI_CAT, SIAMESE_CAT, NEVA_MASQUERADE, SIBERIAN_CAT, SINGAPURA_CAT, SNOWSHOE_CAT, SOKOKE, SOMALI_CAT, SPHYNX_CAT, SUPHALAK, THAI_CAT, THAI_LILAC, TIFFANIE_CAT, TONKINESE_CAT, TOYBOB, TOYGER, TRADITIONAL_PERSIAN, TRADITIONAL_SIAMESE_CAT, TURKISH_ANGORA, TURKISH_VAN, UKRAINIAN_LEVKOY, YORK_CHOCOLATE
+    }
+
+    enum CanLiveWith {
+        CALM_PEOPLE_ONLY, CHILDREN, DOGS, CATS
+    }
+
+    enum CoatLength {
+        SHORT, MEDIUM, LONG
+    }
+
+    enum Color {
+        BLACK, WHITE, GREY, BROWN, ORANGE
+    }
+
+    enum Gender {
+        FEMALE, MALE
+    }
+
+    enum Region {
+        ADALAR, ARNAVUTKOY, ATASEHIR, AVCILAR, BAGCILAR, BAHCELIEVLER, BAKIRKOY, BASAKSEHIR, BAYRAMPASA, BESIKTAS, BEYKOZ, BEYLIKDUZU, BEYOGLU, BUYUKCEKMECE, CATALCA, CEKMEKOY, ESENLER, ESENYURT, EYUPSULTAN, FATIH, GAZIOSMANPASA, GUNGOREN, KADIKOY, KAGITHANE, KARTAL, KUCUKCEKMECE, MALTEPE, PENDIK, SANCAKTEPE, SARIYER, SILE, SILIVRI, SISLI, SULTANBEYLI, SULTANGAZI, TUZLA, UMRANIYE, USKUDAR, ZEYTINBURNU
+    }
+
+    enum Size {
+        SMALL, MEDIUM, BIG
+    }
+}
+
+package kedinet.kedinet.repository {
+    interface AdminRepo {
+        +Optional<Admin> findAdminByLoginId(Integer loginId)
+        +Optional<Admin> findAdminByLoginIdAndPassword(Integer loginId, String password)
+        +Optional<Admin> findBySecretKey(String secretKey)
+    }
+
+    interface CatRepo {
+        +List<Cat> findByShelterId(Integer shelterId)
+    }
+
+    interface CatRepoCustom {
+        +List<Cat> findFilteredCats(Integer ageFrom, Integer ageTo, List<Breed> breeds, List<CanLiveWith> canLiveWithList, List<CoatLength> coatLengths, List<Color> colors, List<Gender> genders, Boolean isIndoorCat, List<Region> regions, List<Size> sizes)
+    }
+
+    interface ImageRepo {
+        +List<Image> findByName(String name)
+        +Set<Image> findByCatId(Integer catId)
+    }
+
+    interface UserRepo {
+        +Optional<User> findByEmail(String email)
+        +Optional<User> findByEmailAndPassword(String email, String password)
+        +Optional<User> findBySecretKey(String secretKey)
+        +void deleteCatFromFavorites(Integer catId)
+    }
+}
+
+package kedinet.kedinet.service {
+    class CatRepoImpl {
+        -EntityManager entityManager
+
+        +List<Cat> findFilteredCats(Integer ageFrom, Integer ageTo, List<Breed> breeds, List<CanLiveWith> canLiveWithList, List<CoatLength> coatLengths, List<Color> colors, List<Gender> genders, Boolean isIndoorCat, List<Region> regions, List<Size> sizes)
+    }
+
+    class CatService {
+        -CatRepo catRepo
+        -ImageRepo imageRepo
+
+        +List<CatDTO> getFilteredCats(Integer ageFrom, Integer ageTo, List<Breed> breeds, List<CanLiveWith> canLiveWithList, List<CoatLength> coatLengths, List<Color> colors, List<Gender> genders, Boolean isIndoorCat, List<Region> regions, List<Size> sizes)
+        +List<CatDTO> getSortedCats(String sortBy, Integer ageFrom, Integer ageTo, List<Breed> breeds, List<CanLiveWith> canLiveWithList, List<CoatLength> coatLengths, List<Color> colors, List<Gender> genders, Boolean isIndoorCat, List<Region> regions, List<Size> sizes)
+    }
+}
+
+package kedinet.kedinet.util {
+    class FileUploadUtil {
+        +void saveFile(String uploadDir, String fileName, MultipartFile multipartFile)
+    }
+}
+
+KedinetApplication --> WebConfig
+
+WebConfig --> StringToSizeListConverter
+WebConfig --> StringToBreedListConverter
+WebConfig --> StringToCanLiveWithListConverter
+WebConfig --> StringToCoatLengthListConverter
+WebConfig --> StringToColorListConverter
+WebConfig --> StringToGenderListConverter
+WebConfig --> StringToRegionListConverter
+
+AdminController --> AdminRepo
+AdminController --> CatRepo
+AdminController --> ImageRepo
+AdminController --> UserRepo
+
+CatController --> CatService
+CatController --> CatRepo
+CatController --> ImageRepo
+CatController --> AdminRepo
+
+UserController --> UserRepo
+UserController --> CatRepo
+UserController --> ImageRepo
+
+CatRepoImpl --> EntityManager
+CatService --> CatRepo
+CatService --> ImageRepo
+
+Admin --> Shelter
+Cat --> Shelter
+Cat --> Image
+Cat --> User
+User --> Cat
+
+AdminRepo --> Admin
+CatRepo --> Cat
+CatRepoCustom --> CatRepo
+ImageRepo --> Image
+UserRepo --> User
+CatRepoImpl --> CatRepoCustom
+
+AdminDTO --> Admin
+CatDTO --> Cat
+CatDTO --> ShelterDTO
+ShelterDTO --> Shelter
+UserDTO --> User
+
+StringToSizeListConverter --> Size
+StringToBreedListConverter --> Breed
+StringToCanLiveWithListConverter --> CanLiveWith
+StringToCoatLengthListConverter --> CoatLength
+StringToColorListConverter --> Color
+StringToGenderListConverter --> Gender
+StringToRegionListConverter --> Region
+
+@enduml

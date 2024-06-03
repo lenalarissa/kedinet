@@ -1,6 +1,5 @@
 package kedinet.kedinet.controller;
 
-import kedinet.kedinet.model.Admin;
 import kedinet.kedinet.model.Image;
 import kedinet.kedinet.dto.CatDTO;
 import kedinet.kedinet.model.Cat;
@@ -35,14 +34,14 @@ public class CatController {
     @Autowired
     AdminRepo adminRepo;
 
-    @GetMapping("/readFavCats")
+    // for testing
+    /*@GetMapping("/readFavCats")
     public ResponseEntity<Iterable<Cat>> readAllCats(@RequestHeader("secretKey") String secretKey){
         System.out.println(secretKey);
         Iterable<Cat> cats = catRepo.findAll();
         return new ResponseEntity<Iterable<Cat>>(cats, HttpStatus.OK);
-    }
+    }*/
 
-    // TODO: TEST SORTING ADDITION
     @GetMapping("/readSearchedCats")
     public ResponseEntity<List<CatDTO>> readSearchedCats(
             @RequestParam(value = "minAge", required = false) Integer ageFrom,
@@ -80,6 +79,7 @@ public class CatController {
     }
 
 
+    // for cat profile
     @GetMapping("/readCat")
     public ResponseEntity<CatDTO> readCat(@RequestParam(value = "id") int id) {
         Optional<Cat> cat = catRepo.findById(id);
@@ -91,6 +91,7 @@ public class CatController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    // for edit cats page
     @GetMapping("/cat/{id}")
     public ResponseEntity<CatDTO> getCatById(@PathVariable Integer id) {
         Optional<Cat> catOpt = catRepo.findById(id);
@@ -102,8 +103,8 @@ public class CatController {
         return new ResponseEntity<>(catDTO, HttpStatus.OK);
     }
 
-    // TODO: TEST ESP. IF DATE WAS ADDED
-    @PostMapping("/createCat")
+    // For tesing
+/*    @PostMapping("/createCat")
     public ResponseEntity<Cat> createCat(@RequestBody Cat cat) {
         catRepo.save(cat);
         return new ResponseEntity<Cat>(cat, HttpStatus.CREATED);
@@ -137,4 +138,5 @@ public class CatController {
                 .collect(Collectors.toList());
         return new ResponseEntity<>(catDTOs, HttpStatus.OK);
     }
+ */
 }

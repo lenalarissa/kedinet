@@ -1,0 +1,21 @@
+@startuml
+actor Admin
+participant "AdminController" as AC
+participant "AdminRepo" as AR
+participant "CatRepo" as CR
+participant "CatDTO" as CD
+participant "ImageRepo" as IR
+
+Admin -> AC: getCatsByAdmin(secretKey)
+AC -> AR: findBySecretKey(secretKey)
+AR -> Admin: return Admin (if valid)
+AC -> CR: findByShelterId(admin.shelter.id)
+CR -> AC: return List<Cat>
+loop for each Cat
+    AC -> IR: findByCatId(cat.id)
+    IR -> AC: return Set<Image>
+    AC -> CD: create new CatDTO
+end
+AC -> Admin: return List<CatDTO>
+
+@enduml

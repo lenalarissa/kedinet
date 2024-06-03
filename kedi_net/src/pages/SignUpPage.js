@@ -45,7 +45,7 @@ const SignUpPage = () => {
                 });
                 if (response.ok) {
                     const secretKey = await response.text(); // assuming the backend returns only the secret key
-                    login({ email, secretKey }); // pass user data including secret key
+                    login(secretKey, 'user'); // log the user in with the secret key and role 'user'
                     navigate('/', { state: { loginSuccess: true } });
                 } else {
                     const data = await response.json();
@@ -80,6 +80,7 @@ const SignUpPage = () => {
                                         placeholder="Enter your e-mail"
                                         value={email}
                                         onChange={handleEmailChange}
+                                        required
                                     />
                                     <p></p>
                                 </div>
@@ -92,6 +93,7 @@ const SignUpPage = () => {
                                         placeholder="Enter your password"
                                         value={password}
                                         onChange={handlePasswordChange}
+                                        required
                                     />
                                     <p></p>
                                 </div>
@@ -104,6 +106,7 @@ const SignUpPage = () => {
                                         placeholder="Confirm your password"
                                         value={confirmPassword}
                                         onChange={handleConfirmPasswordChange}
+                                        required
                                     />
                                     <p></p>
                                 </div>

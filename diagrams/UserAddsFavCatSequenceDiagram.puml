@@ -1,0 +1,29 @@
+@startuml
+actor User
+participant "UserController" as UC
+participant "UserRepo" as UR
+participant "CatRepo" as CR
+participant "User" as U
+participant "Cat" as C
+
+User -> UC: addFavorite(secretKey, catId)
+UC -> UR: findBySecretKey(secretKey)
+UR -> U: return User
+
+alt User is valid
+    UC -> CR: findById(catId)
+    CR -> C: return Cat
+
+    alt Cat exists
+        UC -> U: add Cat to User's favCats
+        UC -> UR: save User
+        UR -> U: return saved User
+        UC -> User: return success message
+    else Cat does not exist
+        UC -> User: return error message (Cat not found)
+    end
+else User is not valid
+    UC -> User: return error message (Invalid secretKey)
+end
+
+@enduml

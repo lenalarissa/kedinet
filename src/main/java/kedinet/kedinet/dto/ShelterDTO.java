@@ -22,7 +22,7 @@ public class ShelterDTO {
     public ShelterDTO(Shelter shelter) {
         this.id = shelter.getId();
         this.name = shelter.getName();
-        this.region = shelter.getRegion().toString(); // Assuming Region is an enum
+        this.region = shelter.getRegion().toString();
         this.address = shelter.getAddress();
         this.website = shelter.getWebsite();
         this.email = shelter.getEmail();

@@ -1,0 +1,62 @@
+@startuml
+!define TABLE(tableName, description) class tableName as "tableName\n\n{description}" << (T,#FFAAAA) >>
+
+TABLE(Admin, "Admin Table") {
+    + Integer id
+    + Integer loginId
+    + String password
+    + String secretKey
+    + Integer shelterId
+}
+
+TABLE(Cat, "Cat Table") {
+    + Integer id
+    + String name
+    + String breed
+    + String gender
+    + String about
+    + Integer age
+    + Boolean isIndoorCat
+    + String size
+    + String coatLength
+    + String canLiveWith
+    + String color
+    + String disease
+    + Integer shelterId
+    + LocalDate dateAdded
+}
+
+TABLE(Image, "Image Table") {
+    + Integer id
+    + String name
+    + Integer catId
+}
+
+TABLE(Shelter, "Shelter Table") {
+    + Integer id
+    + String name
+    + String region
+    + String address
+    + String website
+    + String email
+    + String phone
+}
+
+TABLE(User, "User Table") {
+    + Integer id
+    + String email
+    + String password
+    + String secretKey
+}
+
+TABLE(UserFavorites, "UserFavorites Table") {
+    + Integer userId
+    + Integer catId
+}
+Admin ||--|| Shelter : "manages"
+Shelter ||--o{ Cat : "shelters"
+Cat ||--o{ Image : "includes"
+User ||--o{ UserFavorites : "includes"
+Cat ||--o{ UserFavorites : "included in"
+
+@enduml

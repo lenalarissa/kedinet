@@ -1,0 +1,21 @@
+@startuml
+actor Admin
+participant "AdminController" as AC
+participant "AdminRepo" as AR
+participant "Admin" as A
+
+Admin -> AC: login(loginId, password)
+AC -> AR: findAdminByLoginIdAndPassword(loginId, password)
+AR -> A: Admin instance
+
+alt Admin exists
+    AR <-- A: return Admin
+    AC <-- AR: return Admin
+    AC -> Admin: return secretKey (login successful)
+else Admin does not exist
+    AR <-- A: return null
+    AC <-- AR: return null
+    AC -> Admin: return error message (login failed)
+end
+
+@enduml

@@ -1,0 +1,119 @@
+@startuml
+package kedinet.kedinet {
+    class KedinetApplication
+}
+
+package kedinet.kedinet.config {
+    class WebConfig
+}
+
+package kedinet.kedinet.controller {
+    class AdminController
+    class CatController
+    class UserController
+}
+
+package kedinet.kedinet.converter {
+    class StringToBreedListConverter
+    class StringToCanLiveWithListConverter
+    class StringToCoatLengthListConverter
+    class StringToColorListConverter
+    class StringToGenderListConverter
+    class StringToRegionListConverter
+    class StringToSizeListConverter
+}
+
+package kedinet.kedinet.dto {
+    class AdminDTO
+    class CatDTO
+    class ShelterDTO
+    class UserDTO
+}
+
+package kedinet.kedinet.model {
+    class Admin
+    class Cat
+    class Image
+    class Shelter
+    class User
+}
+
+package kedinet.kedinet.model.enums {
+    enum Breed
+    enum CanLiveWith
+    enum CoatLength
+    enum Color
+    enum Gender
+    enum Region
+    enum Size
+}
+
+package kedinet.kedinet.repository {
+    interface AdminRepo
+    interface CatRepo
+    interface CatRepoCustom
+    interface ImageRepo
+    interface UserRepo
+}
+
+package kedinet.kedinet.service {
+    class CatRepoImpl
+    class CatService
+}
+
+KedinetApplication --> WebConfig
+
+WebConfig --> StringToSizeListConverter
+WebConfig --> StringToBreedListConverter
+WebConfig --> StringToCanLiveWithListConverter
+WebConfig --> StringToCoatLengthListConverter
+WebConfig --> StringToColorListConverter
+WebConfig --> StringToGenderListConverter
+WebConfig --> StringToRegionListConverter
+
+AdminController --> AdminRepo
+AdminController --> CatRepo
+AdminController --> ImageRepo
+AdminController --> UserRepo
+
+CatController --> CatService
+CatController --> CatRepo
+CatController --> ImageRepo
+CatController --> AdminRepo
+
+UserController --> UserRepo
+UserController --> CatRepo
+UserController --> ImageRepo
+
+CatRepoImpl --> EntityManager
+CatService --> CatRepo
+CatService --> ImageRepo
+
+Admin --> Shelter
+Cat --> Shelter
+Cat --> Image
+Cat --> User
+User --> Cat
+
+AdminRepo --> Admin
+CatRepo --> Cat
+CatRepoCustom --> CatRepo
+ImageRepo --> Image
+UserRepo --> User
+CatRepoImpl --> CatRepoCustom
+
+AdminDTO --> Admin
+CatDTO --> Cat
+CatDTO --> ShelterDTO
+ShelterDTO --> Shelter
+UserDTO --> User
+
+StringToSizeListConverter --> Size
+StringToBreedListConverter --> Breed
+StringToCanLiveWithListConverter --> CanLiveWith
+StringToCoatLengthListConverter --> CoatLength
+StringToColorListConverter --> Color
+StringToGenderListConverter --> Gender
+StringToRegionListConverter --> Region
+
+@enduml

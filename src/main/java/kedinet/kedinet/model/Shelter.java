@@ -1,7 +1,6 @@
 package kedinet.kedinet.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import kedinet.kedinet.model.enums.Region;
 import lombok.AllArgsConstructor;

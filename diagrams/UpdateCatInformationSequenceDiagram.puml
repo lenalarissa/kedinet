@@ -1,0 +1,45 @@
+@startuml
+actor Admin
+participant "AdminController" as AC
+participant "CatService" as CS
+participant "CatRepo" as CR
+participant "ImageRepo" as IR
+participant "FileUploadUtil" as FU
+participant "Cat" as C
+participant "Image" as I
+
+Admin -> AC: updateCat(id, catData, images, secretKey)
+AC -> AdminRepo: findBySecretKey(secretKey)
+AdminRepo -> Admin: return Admin
+
+alt Admin is valid
+    AC -> CS: updateCat(id, catData, images)
+
+    CS -> CR: findById(id)
+    CR -> C: return Cat
+
+    alt Cat exists
+        CS -> C: updateCatDetails(catData)
+        CS -> CR: save(cat)
+
+        loop for each new image
+            CS -> FU: saveFile(uploadDir, fileName, image)
+            FU --> CS: return filePath
+            CS -> I: create new Image instance
+            CS -> IR: save Image
+            IR -> I: return saved Image
+        end
+
+        loop for each deleted image
+            CS -> IR: deleteByName(imageName)
+        end
+
+        CS -> AC: return success message
+    else Cat does not exist
+        CS -> AC: return error message
+    end
+else Admin is not valid
+    AC -> Admin: return error message
+end
+
+@enduml

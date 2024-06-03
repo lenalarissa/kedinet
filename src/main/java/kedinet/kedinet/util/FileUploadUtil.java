@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.UUID;
 
 public class FileUploadUtil {
 
@@ -20,7 +19,6 @@ public class FileUploadUtil {
         Path filePath = uploadPath.resolve(fileName);
         String newFileName = fileName;
 
-        // Check if the file already exists and rename it if necessary
         int counter = 1;
         while (Files.exists(filePath)) {
             String fileBaseName = fileName.substring(0, fileName.lastIndexOf('.'));

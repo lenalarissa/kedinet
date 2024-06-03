@@ -1,7 +1,6 @@
 package kedinet.kedinet.controller;
 
 import kedinet.kedinet.dto.CatDTO;
-import kedinet.kedinet.dto.UserDTO;
 import kedinet.kedinet.model.Cat;
 import kedinet.kedinet.model.User;
 import kedinet.kedinet.model.Image;
@@ -30,6 +29,8 @@ public class UserController {
     private ImageRepo imageRepo;
 
 
+    // for testing
+/*
     @GetMapping("/details")
     public ResponseEntity<UserDTO> getUserDetails(@RequestParam String secretKey) {
         Optional<User> userOpt = userRepo.findBySecretKey(secretKey);
@@ -40,6 +41,7 @@ public class UserController {
         UserDTO userDTO = new UserDTO(user);
         return new ResponseEntity<>(userDTO, HttpStatus.OK);
     }
+*/
 
 
     @PostMapping("/createUser")
@@ -53,7 +55,7 @@ public class UserController {
         return new ResponseEntity<>("User exists already", HttpStatus.CONFLICT);
     }
 
-    @PostMapping("/loginUser") // Changed to POST
+    @PostMapping("/loginUser")
     public ResponseEntity<String> login(@RequestBody Map<String, String> loginData) {
         String email = loginData.get("email");
         String password = loginData.get("password");

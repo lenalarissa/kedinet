@@ -1,6 +1,5 @@
 package kedinet.kedinet.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -47,7 +46,7 @@ public class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id); // Use a field that uniquely identifies the entity
+        return Objects.hash(id);
     }
 
     @Override
@@ -55,6 +54,6 @@ public class User {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         User user = (User) obj;
-        return Objects.equals(id, user.id); // Compare only the unique identifier
+        return Objects.equals(id, user.id);
     }
 }

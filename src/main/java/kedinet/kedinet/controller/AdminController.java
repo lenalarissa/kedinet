@@ -31,6 +31,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/admin")
 public class AdminController {
 
+    // for debugging
     private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
 
     @Autowired
@@ -45,7 +46,8 @@ public class AdminController {
     @Autowired
     private UserRepo userRepo;
 
-    @PostMapping("/createAdmin")
+    // For testing
+    /*@PostMapping("/createAdmin")
     public ResponseEntity<String> createAdmin(@RequestBody Admin newAdmin) {
         Optional<Admin> admin = adminRepo.findAdminByLoginId(newAdmin.getLoginId());
         if (!admin.isPresent()) {
@@ -54,7 +56,8 @@ public class AdminController {
             return new ResponseEntity<>(newAdmin.getSecretKey(), HttpStatus.CREATED);
         }
         return new ResponseEntity<>("Admin exists already", HttpStatus.CONFLICT);
-    }
+    }*/
+
 
     @GetMapping("/login")
     public ResponseEntity<String> login(@RequestParam int loginId, @RequestParam String password) {
@@ -107,12 +110,8 @@ public class AdminController {
         if (!catOpt.isPresent()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-
-        // Delete references in the fav_cats table
         Cat cat = catOpt.get();
         userRepo.deleteCatFromFavorites(cat.getId());
-
-        // Delete the cat
         catRepo.delete(cat);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
@@ -157,7 +156,6 @@ public class AdminController {
                 if (!image.isEmpty()) {
                     try {
                         String fileName = StringUtils.cleanPath(image.getOriginalFilename());
-                        //Path uploadDir = Paths.get("/Users/lenaheisel/Git/kedinet/kedi_net/src/assets/cat_images").toAbsolutePath();
                         Path uploadDir = Paths.get("../kedinet/kedi_net/src/assets/cat_images").toAbsolutePath();
                         FileUploadUtil.saveFile(uploadDir.toString(), fileName, image);
 
@@ -233,13 +231,11 @@ public class AdminController {
             }
             cat.setShelter(shelter);
 
-            // Handle CanLiveWith
             String canLiveWithValue = catData.get("canLiveWith").toUpperCase().replace(" ", "_");
             cat.setCanLiveWith(CanLiveWith.valueOf(canLiveWithValue));
 
             catRepo.save(cat);
 
-            // Handle image upload
             if (images != null) {
                 for (MultipartFile image : images) {
                     if (!image.isEmpty()) {

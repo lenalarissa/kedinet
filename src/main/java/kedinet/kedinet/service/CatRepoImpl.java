@@ -15,7 +15,6 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO: TEST
 @Component
 public class CatRepoImpl implements CatRepoCustom {
 
@@ -61,9 +60,6 @@ public class CatRepoImpl implements CatRepoCustom {
         }
 
         query.select(cat).where(predicates.toArray(new Predicate[0]));
-
-        // Log the constructed query and predicates
-        System.out.println("Executing query with predicates: " + predicates);
 
         return entityManager.createQuery(query).getResultList();
     }
