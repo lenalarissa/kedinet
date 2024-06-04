@@ -8,14 +8,19 @@ participant "ImageRepo" as IR
 
 Admin -> AC: getCatsByAdmin(secretKey)
 AC -> AR: findBySecretKey(secretKey)
-AR -> Admin: return Admin (if valid)
-AC -> CR: findByShelterId(admin.shelter.id)
-CR -> AC: return List<Cat>
+alt Admin exists
+    AR -> Admin: return Admin
+    AC -> CR: findByShelterId(admin.shelter.id)
+    CR -> AC: return List<Cat>
 loop for each Cat
     AC -> IR: findByCatId(cat.id)
     IR -> AC: return Set<Image>
     AC -> CD: create new CatDTO
 end
 AC -> Admin: return List<CatDTO>
+else Admin does not exist
+    AC <-- AR: return null
+    AC -> Admin: return error message (login failed)
+end
 
 @enduml

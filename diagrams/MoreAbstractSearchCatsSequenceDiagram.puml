@@ -1,0 +1,21 @@
+@startuml
+actor User
+participant "CatController" as CC
+participant "CatService" as CS
+participant "CatRepo" as CR
+participant "CatRepoCustom" as CRC
+participant "CatDTO" as CD
+
+User -> CC: searchCats(allFilterOptions, sortOption)
+CC -> CS: getFilteredCats(allFilterOptions, sortOption)
+CS -> CRC: findFilteredCats(allFilterOptions)
+CRC -> CR: Custom query execution with criteria
+CR -> CRC: Return filtered list of cats
+CRC -> CS: Return list of Cat entities
+CS -> CS: sortCats(cats, sortOption)
+CS -> CD: Convert Cat entities to CatDTOs
+CS -> CC: Return list of CatDTO
+CC -> User: Return list of CatDTO
+
+@enduml
+
