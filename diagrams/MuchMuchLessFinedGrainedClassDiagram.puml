@@ -1,0 +1,224 @@
+@startuml
+package kedinet.kedinet.controller {
+    class AdminController {
+        +login(int loginId, String password)
+        +getAdminDetails(String secretKey)
+        +getCatsByAdmin(String secretKey)
+        +deleteCat(String secretKey, Integer id)
+        +updateCat(Integer id, Map<String, String> catData, MultipartFile[] images)
+        +deleteImageByName(String imageName, String secretKey)
+        +addCat(Map<String, String> catData, MultipartFile[] images)
+    }
+
+    class CatController {
+        +readSearchedCats(allFilters, String sortOption)
+        +readCat(int id)
+        +getCatById(Integer id)
+    }
+
+    class UserController {
+        +createUser(User newUser)
+        +login(Map<String, String> loginData)
+        +updatePassword(Map<String, String> request)
+        +addFavorite(String secretKey, Integer catId)
+        +getFavoriteCats(String secretKey)
+        +removeFavorite(String secretKey, Integer catId)
+    }
+}
+
+package kedinet.kedinet.dto {
+    class AdminDTO {
+        +id: Integer
+        +loginId: Integer
+        +secretKey: String
+        +shelterName: String
+        +shelterId: Integer
+    }
+
+    class CatDTO {
+        +id: Integer
+        +name: String
+        +breed: Breed
+        +gender: Gender
+        +about: String
+        +age: Integer
+        +isIndoorCat: Boolean
+        +size: Size
+        +coatLength: CoatLength
+        +canLiveWith: CanLiveWith
+        +color: Color
+        +disease: String
+        +imageNames: Set<String>
+        +shelter: ShelterDTO
+        +dateAdded: LocalDate
+    }
+
+    class ShelterDTO {
+        +id: Integer
+        +name: String
+        +region: String
+        +address: String
+        +website: String
+        +email: String
+        +phone: String
+    }
+
+    class UserDTO {
+        +id: Integer
+        +email: String
+        +secretKey: String
+        +favCatIds: Set<Integer>
+    }
+}
+
+package kedinet.kedinet.model {
+    class Admin {
+        +id: Integer
+        +loginId: Integer
+        +secretKey: String
+        +shelter: Shelter
+    }
+
+    class Cat {
+        +id: Integer
+        +name: String
+        +breed: Breed
+        +gender: Gender
+        +about: String
+        +age: Integer
+        +isIndoorCat: Boolean
+        +size: Size
+        +coatLength: CoatLength
+        +canLiveWith: CanLiveWith
+        +color: Color
+        +disease: String
+        +shelter: Shelter
+        +users: Set<User>
+        +images: Set<Image>
+        +dateAdded: LocalDate
+    }
+
+    class Image {
+        +id: Integer
+        +name: String
+        +cat: Cat
+    }
+
+    class Shelter {
+        +id: Integer
+        +name: String
+        +region: Region
+        +address: String
+        +website: String
+        +email: String
+        +phone: String
+        +admin: Admin
+        +cats: Set<Cat>
+    }
+
+    class User {
+        +id: Integer
+        +email: String
+        +password: String
+        +secretKey: String
+        +favCats: Set<Cat>
+    }
+}
+/'
+package kedinet.kedinet.model.enums {
+    enum Breed {
+
+    }
+
+    enum CanLiveWith {
+
+    }
+
+    enum CoatLength {
+
+    }
+
+    enum Color {
+
+    }
+
+    enum Gender {
+
+    }
+
+    enum Region {
+
+    }
+
+    enum Size {
+
+    }
+}'/
+
+package kedinet.kedinet.repository {
+    interface AdminRepo {
+        +findAdminByLoginId(Integer loginId)
+        +findAdminByLoginIdAndPassword(Integer loginId, String password)
+        +findBySecretKey(String secretKey)
+    }
+
+    interface CatRepo {
+        +findByShelterId(Integer shelterId)
+    }
+
+    interface ImageRepo {
+        +findByName(String name)
+        +findByCatId(Integer catId)
+    }
+
+    interface UserRepo {
+        +findByEmail(String email)
+        +findByEmailAndPassword(String email, String password)
+        +findBySecretKey(String secretKey)
+        +deleteCatFromFavorites(Integer catId)
+    }
+}
+
+package kedinet.kedinet.service {
+    class CatService {
+        +getFilteredCats(allFilters)
+        +getSortedCats(String sortBy, allFilters)
+    }
+}
+
+AdminController --> AdminRepo
+AdminController --> CatRepo
+AdminController --> ImageRepo
+AdminController --> UserRepo
+
+CatController --> CatService
+CatController --> CatRepo
+CatController --> ImageRepo
+CatController --> AdminRepo
+
+UserController --> UserRepo
+UserController --> CatRepo
+UserController --> ImageRepo
+
+CatService --> CatRepo
+CatService --> ImageRepo
+
+Admin --> Shelter
+Cat --> Shelter
+Cat --> Image
+Cat --> User
+User --> Cat
+
+AdminRepo --> Admin
+CatRepo --> Cat
+ImageRepo --> Image
+UserRepo --> User
+
+AdminDTO --> Admin
+CatDTO --> Cat
+CatDTO --> ShelterDTO
+ShelterDTO --> Shelter
+UserDTO --> User
+
+@enduml
+duml
