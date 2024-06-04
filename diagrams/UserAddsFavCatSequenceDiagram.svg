@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   contentStyleType="text/css"
+   height="597px"
+   preserveAspectRatio="none"
+   style="width:753px;height:597px;background:#FFFFFF;"
+   version="1.1"
+   viewBox="0 0 753 597"
+   width="753px"
+   zoomAndPan="magnify"
+   id="svg164"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="g162">
+    <rect
+       fill="none"
+       height="313.0156"
+       style="stroke:#000000;stroke-width:1.5;"
+       width="736.5"
+       x="10"
+       y="186.4199"
+       id="rect4" />
+    <rect
+       fill="none"
+       height="178.8184"
+       style="stroke:#000000;stroke-width:1.5;"
+       width="679.5"
+       x="20"
+       y="269.3516"
+       id="rect6" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="48"
+       x2="48"
+       y1="81.4883"
+       y2="516.4355"
+       id="line8" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="321"
+       x2="321"
+       y1="81.4883"
+       y2="516.4355"
+       id="line10" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="512.5"
+       x2="512.5"
+       y1="81.4883"
+       y2="516.4355"
+       id="line12" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="598.5"
+       x2="598.5"
+       y1="81.4883"
+       y2="516.4355"
+       id="line14" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="666.5"
+       x2="666.5"
+       y1="81.4883"
+       y2="516.4355"
+       id="line16" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="717.5"
+       x2="717.5"
+       y1="81.4883"
+       y2="516.4355"
+       id="line18" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="31"
+       x="30"
+       y="78.5352"
+       id="text20">User</text>
+    <ellipse
+       cx="48.5"
+       cy="13.5"
+       fill="#E2E2F0"
+       rx="8"
+       ry="8"
+       style="stroke:#181818;stroke-width:0.5;"
+       id="ellipse22" />
+    <path
+       d="M48.5,21.5 L48.5,48.5 M35.5,29.5 L61.5,29.5 M48.5,48.5 L35.5,63.5 M48.5,48.5 L61.5,63.5 "
+       fill="none"
+       style="stroke:#181818;stroke-width:0.5;"
+       id="path24" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="31"
+       x="30"
+       y="528.9707"
+       id="text26">User</text>
+    <ellipse
+       cx="48.5"
+       cy="540.4238"
+       fill="#E2E2F0"
+       rx="8"
+       ry="8"
+       style="stroke:#181818;stroke-width:0.5;"
+       id="ellipse28" />
+    <path
+       d="M48.5,548.4238 L48.5,575.4238 M35.5,556.4238 L61.5,556.4238 M48.5,575.4238 L35.5,590.4238 M48.5,575.4238 L61.5,590.4238 "
+       fill="none"
+       style="stroke:#181818;stroke-width:0.5;"
+       id="path30" />
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="115"
+       x="264"
+       y="50"
+       id="rect32" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="101"
+       x="271"
+       y="70.5352"
+       id="text34">UserController</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="115"
+       x="264"
+       y="515.4355"
+       id="rect36" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="101"
+       x="271"
+       y="535.9707"
+       id="text38">UserController</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="80"
+       x="472.5"
+       y="50"
+       id="rect40" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="66"
+       x="479.5"
+       y="70.5352"
+       id="text42">UserRepo</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="80"
+       x="472.5"
+       y="515.4355"
+       id="rect44" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="66"
+       x="479.5"
+       y="535.9707"
+       id="text46">UserRepo</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="72"
+       x="562.5"
+       y="50"
+       id="rect48" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="58"
+       x="569.5"
+       y="70.5352"
+       id="text50">CatRepo</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="72"
+       x="562.5"
+       y="515.4355"
+       id="rect52" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="58"
+       x="569.5"
+       y="535.9707"
+       id="text54">CatRepo</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="45"
+       x="644.5"
+       y="50"
+       id="rect56" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="31"
+       x="651.5"
+       y="70.5352"
+       id="text58">User</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="45"
+       x="644.5"
+       y="515.4355"
+       id="rect60" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="31"
+       x="651.5"
+       y="535.9707"
+       id="text62">User</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="37"
+       x="699.5"
+       y="50"
+       id="rect64" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="23"
+       x="706.5"
+       y="70.5352"
+       id="text66">Cat</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="37"
+       x="699.5"
+       y="515.4355"
+       id="rect68" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="23"
+       x="706.5"
+       y="535.9707"
+       id="text70">Cat</text>
+    <polygon
+       fill="#181818"
+       points="309.5,108.7988,319.5,112.7988,309.5,116.7988,313.5,112.7988"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon72" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="48.5"
+       x2="315.5"
+       y1="112.7988"
+       y2="112.7988"
+       id="line74" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="180"
+       x="55.5"
+       y="108.0566"
+       id="text76">addFavorite(secretKey, catId)</text>
+    <polygon
+       fill="#181818"
+       points="500.5,138.1094,510.5,142.1094,500.5,146.1094,504.5,142.1094"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon78" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="321.5"
+       x2="506.5"
+       y1="142.1094"
+       y2="142.1094"
+       id="line80" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="167"
+       x="328.5"
+       y="137.3672"
+       id="text82">findBySecretKey(secretKey)</text>
+    <polygon
+       fill="#181818"
+       points="655,167.4199,665,171.4199,655,175.4199,659,171.4199"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon84" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="512.5"
+       x2="661"
+       y1="171.4199"
+       y2="171.4199"
+       id="line86" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="70"
+       x="519.5"
+       y="166.6777"
+       id="text88">return User</text>
+    <path
+       d="M10,186.4199 L72,186.4199 L72,193.7305 L62,203.7305 L10,203.7305 L10,186.4199 "
+       fill="#EEEEEE"
+       style="stroke:#000000;stroke-width:1.5;"
+       id="path90" />
+    <rect
+       fill="none"
+       height="313.0156"
+       style="stroke:#000000;stroke-width:1.5;"
+       width="736.5"
+       x="10"
+       y="186.4199"
+       id="rect92" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="17"
+       x="25"
+       y="199.9883"
+       id="text94">alt</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="11"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="79"
+       x="87"
+       y="199.0547"
+       id="text96">[User is valid]</text>
+    <polygon
+       fill="#181818"
+       points="586.5,221.041,596.5,225.041,586.5,229.041,590.5,225.041"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon98" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="321.5"
+       x2="592.5"
+       y1="225.041"
+       y2="225.041"
+       id="line100" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="90"
+       x="328.5"
+       y="220.2988"
+       id="text102">findById(catId)</text>
+    <polygon
+       fill="#181818"
+       points="706,250.3516,716,254.3516,706,258.3516,710,254.3516"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon104" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="598.5"
+       x2="712"
+       y1="254.3516"
+       y2="254.3516"
+       id="line106" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="63"
+       x="605.5"
+       y="249.6094"
+       id="text108">return Cat</text>
+    <path
+       d="M20,269.3516 L82,269.3516 L82,276.6621 L72,286.6621 L20,286.6621 L20,269.3516 "
+       fill="#EEEEEE"
+       style="stroke:#000000;stroke-width:1.5;"
+       id="path110" />
+    <rect
+       fill="none"
+       height="178.8184"
+       style="stroke:#000000;stroke-width:1.5;"
+       width="679.5"
+       x="20"
+       y="269.3516"
+       id="rect112" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="17"
+       x="35"
+       y="282.9199"
+       id="text114">alt</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="11"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="62"
+       x="97"
+       y="281.9863"
+       id="text116">[Cat exists]</text>
+    <polygon
+       fill="#181818"
+       points="655,303.9727,665,307.9727,655,311.9727,659,307.9727"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon118" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="321.5"
+       x2="661"
+       y1="307.9727"
+       y2="307.9727"
+       id="line120" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="158"
+       x="328.5"
+       y="303.2305"
+       id="text122">add Cat to User's favCats</text>
+    <polygon
+       fill="#181818"
+       points="500.5,333.2832,510.5,337.2832,500.5,341.2832,504.5,337.2832"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon124" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="321.5"
+       x2="506.5"
+       y1="337.2832"
+       y2="337.2832"
+       id="line126" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="60"
+       x="328.5"
+       y="332.541"
+       id="text128">save User</text>
+    <polygon
+       fill="#181818"
+       points="655,362.5938,665,366.5938,655,370.5938,659,366.5938"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon130" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="512.5"
+       x2="661"
+       y1="366.5938"
+       y2="366.5938"
+       id="line132" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="110"
+       x="519.5"
+       y="361.8516"
+       id="text134">return saved User</text>
+    <polygon
+       fill="#181818"
+       points="59.5,391.9043,49.5,395.9043,59.5,399.9043,55.5,395.9043"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon136" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="53.5"
+       x2="320.5"
+       y1="395.9043"
+       y2="395.9043"
+       id="line138" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="151"
+       x="65.5"
+       y="391.1621"
+       id="text140">return success message</text>
+    <line
+       style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;"
+       x1="20"
+       x2="699.5"
+       y1="404.9043"
+       y2="404.9043"
+       id="line142" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="11"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="108"
+       x="25"
+       y="415.5391"
+       id="text144">[Cat does not exist]</text>
+    <polygon
+       fill="#181818"
+       points="59.5,436.1699,49.5,440.1699,59.5,444.1699,55.5,440.1699"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon146" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="53.5"
+       x2="320.5"
+       y1="440.1699"
+       y2="440.1699"
+       id="line148" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="230"
+       x="65.5"
+       y="435.4277"
+       id="text150">return error message (Cat not found)</text>
+    <line
+       style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;"
+       x1="10"
+       x2="746.5"
+       y1="456.1699"
+       y2="456.1699"
+       id="line152" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="11"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="101"
+       x="15"
+       y="466.8047"
+       id="text154">[User is not valid]</text>
+    <polygon
+       fill="#181818"
+       points="59.5,487.4355,49.5,491.4355,59.5,495.4355,55.5,491.4355"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon156" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="53.5"
+       x2="320.5"
+       y1="491.4355"
+       y2="491.4355"
+       id="line158" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="249"
+       x="65.5"
+       y="486.6934"
+       id="text160">return error message (Invalid secretKey)</text>
+    <!--SRC=[VPB1QeGm48RlUOfXBxNGle277XeeI6ykFi1WnXAmYMIYTD- -oSJLLc4zYCx__VzCHh6FFa375DI48ThUJkWYN795UnU37qSA5q26Jf-HbYPVnFQ_g35kccxFnc8wUGglL4RWzItrh06D-S351nkfOke3nK-wlK2FiJ7FgjF2jJKCrfdts_LEx6o2Me5gI8Kvk79UXMEK9x0C2uxMA4XN2THRO6EgjLLMjIJfBIdDh4J8OUa5wCToP2djQPsSGlJefUSJmu1BAfpGr9XneJBZfXqEa0bpG8ezbNPgxdjYXkzqmoyIb4Oc6SHuOd1-dVXH38MG_f4r1Afiphx1psxT2ZcZ9FY-pgmVL_eeit52mvzlbZD_0G00]-->
+  </g>
+</svg>

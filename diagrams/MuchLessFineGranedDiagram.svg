@@ -1,0 +1,3093 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   contentStyleType="text/css"
+   height="606px"
+   preserveAspectRatio="none"
+   style="width:1170px;height:606px;background:#FFFFFF;"
+   version="1.1"
+   viewBox="0 0 1170 606"
+   width="1170px"
+   zoomAndPan="magnify"
+   id="svg752"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="g750">
+    <!--cluster kedinet-->
+    <g
+       id="cluster_kedinet">
+      <path
+         d="M3.4,2.4 L25.4,2.4 A1.5,1.5 0 0 1 26.4,3.4 L29.2,11.3953 L1166.2,11.3953 A1,1 0 0 1 1167.2,12.3953 L1167.2,602.572 A1,1 0 0 1 1166.2,603.572 L3.4,603.572 A1,1 0 0 1 2.4,602.572 L2.4,3.4 A1,1 0 0 1 3.4,2.4 "
+         fill="none"
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         id="path4" />
+      <line
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         x1="2.4"
+         x2="29.2"
+         y1="11.3953"
+         y2="11.3953"
+         id="line6" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         font-weight="bold"
+         lengthAdjust="spacing"
+         textLength="21.6"
+         x="4"
+         y="8.6141"
+         id="text8">kedinet</text>
+    </g>
+    <!--cluster kedinet-->
+    <g
+       id="g17">
+      <path
+         d="M13,19.6 L35,19.6 A1.5,1.5 0 0 1 36,20.6 L38.8,28.5953 L1156.6,28.5953 A1,1 0 0 1 1157.6,29.5953 L1157.6,592.972 A1,1 0 0 1 1156.6,593.972 L13,593.972 A1,1 0 0 1 12,592.972 L12,20.6 A1,1 0 0 1 13,19.6 "
+         fill="none"
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         id="path11" />
+      <line
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         x1="12"
+         x2="38.8"
+         y1="28.5953"
+         y2="28.5953"
+         id="line13" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         font-weight="bold"
+         lengthAdjust="spacing"
+         textLength="21.6"
+         x="13.6"
+         y="25.8141"
+         id="text15">kedinet</text>
+    </g>
+    <!--cluster controller-->
+    <g
+       id="cluster_controller">
+      <path
+         d="M22.6,36.8 L51,36.8 A1.5,1.5 0 0 1 52,37.8 L54.8,45.7953 L1147,45.7953 A1,1 0 0 1 1148,46.7953 L1148,121.568 A1,1 0 0 1 1147,122.568 L22.6,122.568 A1,1 0 0 1 21.6,121.568 L21.6,37.8 A1,1 0 0 1 22.6,36.8 "
+         fill="none"
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         id="path19" />
+      <line
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         x1="21.6"
+         x2="54.8"
+         y1="45.7953"
+         y2="45.7953"
+         id="line21" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         font-weight="bold"
+         lengthAdjust="spacing"
+         textLength="28"
+         x="23.2"
+         y="43.0141"
+         id="text23">controller</text>
+    </g>
+    <!--cluster dto-->
+    <g
+       id="cluster_dto">
+      <path
+         d="M693.4,194.56 L703.4,194.56 A1.5,1.5 0 0 1 704.4,195.56 L707.2,203.5553 L954.2,203.5553 A1,1 0 0 1 955.2,204.5553 L955.2,451.136 A1,1 0 0 1 954.2,452.136 L693.4,452.136 A1,1 0 0 1 692.4,451.136 L692.4,195.56 A1,1 0 0 1 693.4,194.56 "
+         fill="none"
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         id="path26" />
+      <line
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         x1="692.4"
+         x2="707.2"
+         y1="203.5553"
+         y2="203.5553"
+         id="line28" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         font-weight="bold"
+         lengthAdjust="spacing"
+         textLength="9.6"
+         x="694"
+         y="200.7741"
+         id="text30">dto</text>
+    </g>
+    <!--cluster model-->
+    <g
+       id="cluster_model">
+      <path
+         d="M486.2,336.688 L504.6,336.688 A1.5,1.5 0 0 1 505.6,337.688 L508.4,345.6833 L681.8,345.6833 A1,1 0 0 1 682.8,346.6833 L682.8,583.372 A1,1 0 0 1 681.8,584.372 L486.2,584.372 A1,1 0 0 1 485.2,583.372 L485.2,337.688 A1,1 0 0 1 486.2,336.688 "
+         fill="none"
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         id="path33" />
+      <line
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         x1="485.2"
+         x2="508.4"
+         y1="345.6833"
+         y2="345.6833"
+         id="line35" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         font-weight="bold"
+         lengthAdjust="spacing"
+         textLength="18"
+         x="486.8"
+         y="342.9021"
+         id="text37">model</text>
+    </g>
+    <!--cluster repository-->
+    <g
+       id="cluster_repository">
+      <path
+         d="M85.4,230.832 L115.4,230.832 A1.5,1.5 0 0 1 116.4,231.832 L119.2,239.8273 L677.8,239.8273 A1,1 0 0 1 678.8,240.8273 L678.8,295.816 A1,1 0 0 1 677.8,296.816 L85.4,296.816 A1,1 0 0 1 84.4,295.816 L84.4,231.832 A1,1 0 0 1 85.4,230.832 "
+         fill="none"
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         id="path40" />
+      <line
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         x1="84.4"
+         x2="119.2"
+         y1="239.8273"
+         y2="239.8273"
+         id="line42" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         font-weight="bold"
+         lengthAdjust="spacing"
+         textLength="29.6"
+         x="86"
+         y="237.0461"
+         id="text44">repository</text>
+    </g>
+    <!--cluster service-->
+    <g
+       id="cluster_service">
+      <path
+         d="M313.4,132.168 L333.8,132.168 A1.5,1.5 0 0 1 334.8,133.168 L337.6,141.1633 L1033.8,141.1633 A1,1 0 0 1 1034.8,142.1633 L1034.8,183.96 A1,1 0 0 1 1033.8,184.96 L313.4,184.96 A1,1 0 0 1 312.4,183.96 L312.4,133.168 A1,1 0 0 1 313.4,132.168 "
+         fill="none"
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         id="path47" />
+      <line
+         style="stroke:#000000;stroke-width:0.6000000000000001;"
+         x1="312.4"
+         x2="337.6"
+         y1="141.1633"
+         y2="141.1633"
+         id="line49" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         font-weight="bold"
+         lengthAdjust="spacing"
+         textLength="20"
+         x="314"
+         y="138.3821"
+         id="text51">service</text>
+    </g>
+    <!--class AdminController-->
+    <g
+       id="elem_AdminController">
+      <rect
+         codeLine="2"
+         fill="#F1F1F1"
+         height="65.3672"
+         id="AdminController"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="213.6"
+         x="28"
+         y="50.8" />
+      <ellipse
+         cx="110.1"
+         cy="57.2"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse55" />
+      <path
+         d="M111.2893,59.4572 Q111.0568,59.5768 110.8012,59.6365 Q110.5455,59.6963 110.2633,59.6963 Q109.2605,59.6963 108.7326,59.0355 Q108.2047,58.3748 108.2047,57.1264 Q108.2047,55.8746 108.7326,55.2139 Q109.2605,54.5531 110.2633,54.5531 Q110.5455,54.5531 110.8045,54.6129 Q111.0635,54.6727 111.2893,54.7922 L111.2893,55.8813 Q111.0369,55.6488 110.7995,55.5409 Q110.5621,55.433 110.3098,55.433 Q109.7719,55.433 109.4979,55.8597 Q109.224,56.2863 109.224,57.1264 Q109.224,57.9631 109.4979,58.3897 Q109.7719,58.8164 110.3098,58.8164 Q110.5621,58.8164 110.7995,58.7085 Q111.0369,58.6006 111.2893,58.3682 Z "
+         fill="#000000"
+         id="path57" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="46"
+         x="118.3"
+         y="59.3164"
+         id="text59">AdminController</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="28.4"
+         x2="241.2"
+         y1="63.6"
+         y2="63.6"
+         id="line61" />
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="28.4"
+         x2="241.2"
+         y1="66.8"
+         y2="66.8"
+         id="line63" />
+      <ellipse
+         cx="32.4"
+         cy="72.2977"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse65" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="93.6"
+         x="36"
+         y="73.8141"
+         id="text67">login(int loginId, String password)</text>
+      <ellipse
+         cx="32.4"
+         cy="78.893"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse69" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="93.2"
+         x="36"
+         y="80.4094"
+         id="text71">getAdminDetails(String secretKey)</text>
+      <ellipse
+         cx="32.4"
+         cy="85.4883"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse73" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="92.8"
+         x="36"
+         y="87.0047"
+         id="text75">getCatsByAdmin(String secretKey)</text>
+      <ellipse
+         cx="32.4"
+         cy="92.0836"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse77" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="103.6"
+         x="36"
+         y="93.6"
+         id="text79">deleteCat(String secretKey, Integer id)</text>
+      <ellipse
+         cx="32.4"
+         cy="98.6789"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse81" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="203.2"
+         x="36"
+         y="100.1953"
+         id="text83">updateCat(Integer id, Map&lt;String, String&gt; catData, MultipartFile[] images)</text>
+      <ellipse
+         cx="32.4"
+         cy="105.2742"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse85" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="156.8"
+         x="36"
+         y="106.7906"
+         id="text87">deleteImageByName(String imageName, String secretKey)</text>
+      <ellipse
+         cx="32.4"
+         cy="111.8695"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse89" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="164.8"
+         x="36"
+         y="113.3859"
+         id="text91">addCat(Map&lt;String, String&gt; catData, MultipartFile[] images)</text>
+    </g>
+    <!--class CatController-->
+    <g
+       id="elem_CatController">
+      <rect
+         codeLine="12"
+         fill="#F1F1F1"
+         height="38.9859"
+         id="CatController"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="733.2"
+         x="255.8"
+         y="63.992" />
+      <ellipse
+         cx="602.1"
+         cy="70.392"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse95" />
+      <path
+         d="M603.2893,72.6492 Q603.0568,72.7688 602.8012,72.8285 Q602.5455,72.8883 602.2633,72.8883 Q601.2605,72.8883 600.7326,72.2275 Q600.2047,71.5668 600.2047,70.3184 Q600.2047,69.0666 600.7326,68.4059 Q601.2605,67.7451 602.2633,67.7451 Q602.5455,67.7451 602.8045,67.8049 Q603.0635,67.8647 603.2893,67.9842 L603.2893,69.0733 Q603.0369,68.8408 602.7995,68.7329 Q602.5621,68.625 602.3098,68.625 Q601.7719,68.625 601.4979,69.0517 Q601.224,69.4783 601.224,70.3184 Q601.224,71.1551 601.4979,71.5817 Q601.7719,72.0084 602.3098,72.0084 Q602.5621,72.0084 602.7995,71.9005 Q603.0369,71.7926 603.2893,71.5602 Z "
+         fill="#000000"
+         id="path97" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="37.2"
+         x="610.3"
+         y="72.5084"
+         id="text99">CatController</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="256.2"
+         x2="988.6"
+         y1="76.792"
+         y2="76.792"
+         id="line101" />
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="256.2"
+         x2="988.6"
+         y1="79.992"
+         y2="79.992"
+         id="line103" />
+      <ellipse
+         cx="260.2"
+         cy="85.4897"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse105" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="722.8"
+         x="263.8"
+         y="87.0061"
+         id="text107">readSearchedCats(Integer ageFrom, Integer ageTo, List&lt;Breed&gt; breeds, List&lt;CanLiveWith&gt; canLiveWithList, List&lt;CoatLength&gt; coatLengths, List&lt;Color&gt; colors, List&lt;Gender&gt; genders, Boolean isIndoorCat, List&lt;Region&gt; regions, List&lt;Size&gt; sizes, String sortOption)</text>
+      <ellipse
+         cx="260.2"
+         cy="92.085"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse109" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="39.6"
+         x="263.8"
+         y="93.6014"
+         id="text111">readCat(int id)</text>
+      <ellipse
+         cx="260.2"
+         cy="98.6803"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse113" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="59.6"
+         x="263.8"
+         y="100.1967"
+         id="text115">getCatById(Integer id)</text>
+    </g>
+    <!--class UserController-->
+    <g
+       id="elem_UserController">
+      <rect
+         codeLine="18"
+         fill="#F1F1F1"
+         height="58.7719"
+         id="UserController"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="138.4"
+         x="1003.2"
+         y="54.1" />
+      <ellipse
+         cx="1050.5"
+         cy="60.5"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse119" />
+      <path
+         d="M1051.6893,62.7572 Q1051.4568,62.8768 1051.2012,62.9365 Q1050.9455,62.9963 1050.6633,62.9963 Q1049.6605,62.9963 1049.1326,62.3355 Q1048.6047,61.6748 1048.6047,60.4264 Q1048.6047,59.1746 1049.1326,58.5139 Q1049.6605,57.8531 1050.6633,57.8531 Q1050.9455,57.8531 1051.2045,57.9129 Q1051.4635,57.9727 1051.6893,58.0922 L1051.6893,59.1813 Q1051.4369,58.9488 1051.1995,58.8409 Q1050.9621,58.733 1050.7098,58.733 Q1050.1719,58.733 1049.8979,59.1597 Q1049.624,59.5863 1049.624,60.4264 Q1049.624,61.2631 1049.8979,61.6897 Q1050.1719,62.1164 1050.7098,62.1164 Q1050.9621,62.1164 1051.1995,62.0085 Q1051.4369,61.9006 1051.6893,61.6682 Z "
+         fill="#000000"
+         id="path121" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="40.4"
+         x="1058.7"
+         y="62.6164"
+         id="text123">UserController</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="1003.6"
+         x2="1141.2"
+         y1="66.9"
+         y2="66.9"
+         id="line125" />
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="1003.6"
+         x2="1141.2"
+         y1="70.1"
+         y2="70.1"
+         id="line127" />
+      <ellipse
+         cx="1007.6"
+         cy="75.5977"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse129" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="70.8"
+         x="1011.2"
+         y="77.1141"
+         id="text131">createUser(User newUser)</text>
+      <ellipse
+         cx="1007.6"
+         cy="82.193"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse133" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="102.4"
+         x="1011.2"
+         y="83.7094"
+         id="text135">login(Map&lt;String, String&gt; loginData)</text>
+      <ellipse
+         cx="1007.6"
+         cy="88.7883"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse137" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="128"
+         x="1011.2"
+         y="90.3047"
+         id="text139">updatePassword(Map&lt;String, String&gt; request)</text>
+      <ellipse
+         cx="1007.6"
+         cy="95.3836"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse141" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="118"
+         x="1011.2"
+         y="96.9"
+         id="text143">addFavorite(String secretKey, Integer catId)</text>
+      <ellipse
+         cx="1007.6"
+         cy="101.9789"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse145" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="90.8"
+         x="1011.2"
+         y="103.4953"
+         id="text147">getFavoriteCats(String secretKey)</text>
+      <ellipse
+         cx="1007.6"
+         cy="108.5742"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse149" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="128"
+         x="1011.2"
+         y="110.0906"
+         id="text151">removeFavorite(String secretKey, Integer catId)</text>
+    </g>
+    <!--class AdminDTO-->
+    <g
+       id="elem_AdminDTO">
+      <rect
+         codeLine="29"
+         fill="#F1F1F1"
+         height="52.1766"
+         id="AdminDTO"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="64.4"
+         x="698.6"
+         y="241.536" />
+      <ellipse
+         cx="714.32"
+         cy="247.936"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse155" />
+      <path
+         d="M715.5093,250.1932 Q715.2768,250.3128 715.0212,250.3725 Q714.7655,250.4323 714.4833,250.4323 Q713.4805,250.4323 712.9526,249.7715 Q712.4247,249.1108 712.4247,247.8624 Q712.4247,246.6106 712.9526,245.9499 Q713.4805,245.2891 714.4833,245.2891 Q714.7655,245.2891 715.0245,245.3489 Q715.2835,245.4087 715.5093,245.5282 L715.5093,246.6173 Q715.2569,246.3848 715.0195,246.2769 Q714.7821,246.169 714.5298,246.169 Q713.9919,246.169 713.7179,246.5957 Q713.444,247.0223 713.444,247.8624 Q713.444,248.6991 713.7179,249.1257 Q713.9919,249.5524 714.5298,249.5524 Q714.7821,249.5524 715.0195,249.4445 Q715.2569,249.3366 715.5093,249.1042 Z "
+         fill="#000000"
+         id="path157" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="30"
+         x="722.08"
+         y="250.0524"
+         id="text159">AdminDTO</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="699"
+         x2="762.6"
+         y1="254.336"
+         y2="254.336"
+         id="line161" />
+      <ellipse
+         cx="703"
+         cy="259.8337"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse163" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="28"
+         x="706.6"
+         y="261.3501"
+         id="text165">id: Integer</text>
+      <ellipse
+         cx="703"
+         cy="266.429"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse167" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="42"
+         x="706.6"
+         y="267.9454"
+         id="text169">loginId: Integer</text>
+      <ellipse
+         cx="703"
+         cy="273.0243"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse171" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="45.6"
+         x="706.6"
+         y="274.5407"
+         id="text173">secretKey: String</text>
+      <ellipse
+         cx="703"
+         cy="279.6196"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse175" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="54"
+         x="706.6"
+         y="281.136"
+         id="text177">shelterName: String</text>
+      <ellipse
+         cx="703"
+         cy="286.2149"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse179" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="46.8"
+         x="706.6"
+         y="287.7313"
+         id="text181">shelterId: Integer</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="699"
+         x2="762.6"
+         y1="290.5126"
+         y2="290.5126"
+         id="line183" />
+    </g>
+    <!--class CatDTO-->
+    <g
+       id="elem_CatDTO">
+      <rect
+         codeLine="37"
+         fill="#F1F1F1"
+         height="118.1297"
+         id="CatDTO"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="82.4"
+         x="776.8"
+         y="208.56" />
+      <ellipse
+         cx="805.7"
+         cy="214.96"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse187" />
+      <path
+         d="M806.8893,217.2172 Q806.6568,217.3368 806.4012,217.3965 Q806.1455,217.4563 805.8633,217.4563 Q804.8605,217.4563 804.3326,216.7955 Q803.8047,216.1348 803.8047,214.8864 Q803.8047,213.6346 804.3326,212.9739 Q804.8605,212.3131 805.8633,212.3131 Q806.1455,212.3131 806.4045,212.3729 Q806.6635,212.4327 806.8893,212.5522 L806.8893,213.6413 Q806.6369,213.4088 806.3995,213.3009 Q806.1621,213.193 805.9098,213.193 Q805.3719,213.193 805.0979,213.6197 Q804.824,214.0463 804.824,214.8864 Q804.824,215.7231 805.0979,216.1497 Q805.3719,216.5764 805.9098,216.5764 Q806.1621,216.5764 806.3995,216.4685 Q806.6369,216.3606 806.8893,216.1282 Z "
+         fill="#000000"
+         id="path189" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="21.2"
+         x="813.9"
+         y="217.0764"
+         id="text191">CatDTO</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="777.2"
+         x2="858.8"
+         y1="221.36"
+         y2="221.36"
+         id="line193" />
+      <ellipse
+         cx="781.2"
+         cy="226.8577"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse195" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="28"
+         x="784.8"
+         y="228.3741"
+         id="text197">id: Integer</text>
+      <ellipse
+         cx="781.2"
+         cy="233.453"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse199" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="34.8"
+         x="784.8"
+         y="234.9694"
+         id="text201">name: String</text>
+      <ellipse
+         cx="781.2"
+         cy="240.0483"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse203" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="34.8"
+         x="784.8"
+         y="241.5647"
+         id="text205">breed: Breed</text>
+      <ellipse
+         cx="781.2"
+         cy="246.6436"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse207" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="42.8"
+         x="784.8"
+         y="248.16"
+         id="text209">gender: Gender</text>
+      <ellipse
+         cx="781.2"
+         cy="253.2389"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse211" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="35.6"
+         x="784.8"
+         y="254.7553"
+         id="text213">about: String</text>
+      <ellipse
+         cx="781.2"
+         cy="259.8342"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse215" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="32.8"
+         x="784.8"
+         y="261.3506"
+         id="text217">age: Integer</text>
+      <ellipse
+         cx="781.2"
+         cy="266.4295"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse219" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="57.2"
+         x="784.8"
+         y="267.9459"
+         id="text221">isIndoorCat: Boolean</text>
+      <ellipse
+         cx="781.2"
+         cy="273.0248"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse223" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="25.2"
+         x="784.8"
+         y="274.5413"
+         id="text225">size: Size</text>
+      <ellipse
+         cx="781.2"
+         cy="279.6202"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse227" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="65.2"
+         x="784.8"
+         y="281.1366"
+         id="text229">coatLength: CoatLength</text>
+      <ellipse
+         cx="781.2"
+         cy="286.2155"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse231" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="68.4"
+         x="784.8"
+         y="287.7319"
+         id="text233">canLiveWith: CanLiveWith</text>
+      <ellipse
+         cx="781.2"
+         cy="292.8108"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse235" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="32.4"
+         x="784.8"
+         y="294.3272"
+         id="text237">color: Color</text>
+      <ellipse
+         cx="781.2"
+         cy="299.4061"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse239" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="40"
+         x="784.8"
+         y="300.9225"
+         id="text241">disease: String</text>
+      <ellipse
+         cx="781.2"
+         cy="306.0014"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse243" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="72"
+         x="784.8"
+         y="307.5178"
+         id="text245">imageNames: Set&lt;String&gt;</text>
+      <ellipse
+         cx="781.2"
+         cy="312.5967"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse247" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="53.2"
+         x="784.8"
+         y="314.1131"
+         id="text249">shelter: ShelterDTO</text>
+      <ellipse
+         cx="781.2"
+         cy="319.192"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse251" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="59.6"
+         x="784.8"
+         y="320.7084"
+         id="text253">dateAdded: LocalDate</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="777.2"
+         x2="858.8"
+         y1="323.4897"
+         y2="323.4897"
+         id="line255" />
+    </g>
+    <!--class ShelterDTO-->
+    <g
+       id="elem_ShelterDTO">
+      <rect
+         codeLine="55"
+         fill="#F1F1F1"
+         height="65.3672"
+         id="ShelterDTO"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="51.6"
+         x="770.2"
+         y="380.368" />
+      <ellipse
+         cx="779.62"
+         cy="386.768"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse259" />
+      <path
+         d="M780.8093,389.0252 Q780.5768,389.1448 780.3212,389.2045 Q780.0655,389.2643 779.7833,389.2643 Q778.7805,389.2643 778.2526,388.6035 Q777.7247,387.9428 777.7247,386.6944 Q777.7247,385.4426 778.2526,384.7819 Q778.7805,384.1211 779.7833,384.1211 Q780.0655,384.1211 780.3245,384.1809 Q780.5835,384.2407 780.8093,384.3602 L780.8093,385.4493 Q780.5569,385.2168 780.3195,385.1089 Q780.0821,385.001 779.8298,385.001 Q779.2919,385.001 779.0179,385.4277 Q778.744,385.8543 778.744,386.6944 Q778.744,387.5311 779.0179,387.9577 Q779.2919,388.3844 779.8298,388.3844 Q780.0821,388.3844 780.3195,388.2765 Q780.5569,388.1686 780.8093,387.9362 Z "
+         fill="#000000"
+         id="path261" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="31.2"
+         x="785.98"
+         y="388.8844"
+         id="text263">ShelterDTO</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="770.6"
+         x2="821.4"
+         y1="393.168"
+         y2="393.168"
+         id="line265" />
+      <ellipse
+         cx="774.6"
+         cy="398.6657"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse267" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="28"
+         x="778.2"
+         y="400.1821"
+         id="text269">id: Integer</text>
+      <ellipse
+         cx="774.6"
+         cy="405.261"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse271" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="34.8"
+         x="778.2"
+         y="406.7774"
+         id="text273">name: String</text>
+      <ellipse
+         cx="774.6"
+         cy="411.8563"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse275" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="37.6"
+         x="778.2"
+         y="413.3727"
+         id="text277">region: String</text>
+      <ellipse
+         cx="774.6"
+         cy="418.4516"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse279" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="41.2"
+         x="778.2"
+         y="419.968"
+         id="text281">address: String</text>
+      <ellipse
+         cx="774.6"
+         cy="425.0469"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse283" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="40.4"
+         x="778.2"
+         y="426.5633"
+         id="text285">website: String</text>
+      <ellipse
+         cx="774.6"
+         cy="431.6422"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse287" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="34.4"
+         x="778.2"
+         y="433.1586"
+         id="text289">email: String</text>
+      <ellipse
+         cx="774.6"
+         cy="438.2375"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse291" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="37.2"
+         x="778.2"
+         y="439.7539"
+         id="text293">phone: String</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="770.6"
+         x2="821.4"
+         y1="442.5352"
+         y2="442.5352"
+         id="line295" />
+    </g>
+    <!--class UserDTO-->
+    <g
+       id="elem_UserDTO">
+      <rect
+         codeLine="65"
+         fill="#F1F1F1"
+         height="45.5813"
+         id="UserDTO"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="75.6"
+         x="873"
+         y="244.832" />
+      <ellipse
+         cx="896.9"
+         cy="251.232"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse299" />
+      <path
+         d="M898.0893,253.4892 Q897.8568,253.6088 897.6012,253.6685 Q897.3455,253.7283 897.0633,253.7283 Q896.0605,253.7283 895.5326,253.0675 Q895.0047,252.4068 895.0047,251.1584 Q895.0047,249.9066 895.5326,249.2459 Q896.0605,248.5851 897.0633,248.5851 Q897.3455,248.5851 897.6045,248.6449 Q897.8635,248.7047 898.0893,248.8242 L898.0893,249.9133 Q897.8369,249.6808 897.5995,249.5729 Q897.3621,249.465 897.1098,249.465 Q896.5719,249.465 896.2979,249.8917 Q896.024,250.3183 896.024,251.1584 Q896.024,251.9951 896.2979,252.4217 Q896.5719,252.8484 897.1098,252.8484 Q897.3621,252.8484 897.5995,252.7405 Q897.8369,252.6326 898.0893,252.4002 Z "
+         fill="#000000"
+         id="path301" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="24.4"
+         x="905.1"
+         y="253.3484"
+         id="text303">UserDTO</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="873.4"
+         x2="948.2"
+         y1="257.632"
+         y2="257.632"
+         id="line305" />
+      <ellipse
+         cx="877.4"
+         cy="263.1297"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse307" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="28"
+         x="881"
+         y="264.6461"
+         id="text309">id: Integer</text>
+      <ellipse
+         cx="877.4"
+         cy="269.725"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse311" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="34.4"
+         x="881"
+         y="271.2414"
+         id="text313">email: String</text>
+      <ellipse
+         cx="877.4"
+         cy="276.3203"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse315" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="45.6"
+         x="881"
+         y="277.8367"
+         id="text317">secretKey: String</text>
+      <ellipse
+         cx="877.4"
+         cy="282.9156"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse319" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="65.2"
+         x="881"
+         y="284.432"
+         id="text321">favCatIds: Set&lt;Integer&gt;</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="873.4"
+         x2="948.2"
+         y1="287.2133"
+         y2="287.2133"
+         id="line323" />
+    </g>
+    <!--class Admin-->
+    <g
+       id="elem_Admin">
+      <rect
+         codeLine="74"
+         fill="#F1F1F1"
+         height="45.5813"
+         id="Admin"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="56"
+         x="620.4"
+         y="390.26" />
+      <ellipse
+         cx="637.74"
+         cy="396.66"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse327" />
+      <path
+         d="M638.9293,398.9172 Q638.6968,399.0368 638.4412,399.0965 Q638.1855,399.1563 637.9033,399.1563 Q636.9005,399.1563 636.3726,398.4955 Q635.8447,397.8348 635.8447,396.5864 Q635.8447,395.3346 636.3726,394.6739 Q636.9005,394.0131 637.9033,394.0131 Q638.1855,394.0131 638.4445,394.0729 Q638.7035,394.1327 638.9293,394.2522 L638.9293,395.3413 Q638.6769,395.1088 638.4395,395.0009 Q638.2021,394.893 637.9498,394.893 Q637.4119,394.893 637.1379,395.3197 Q636.864,395.7463 636.864,396.5864 Q636.864,397.4231 637.1379,397.8497 Q637.4119,398.2764 637.9498,398.2764 Q638.2021,398.2764 638.4395,398.1685 Q638.6769,398.0606 638.9293,397.8282 Z "
+         fill="#000000"
+         id="path329" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="18"
+         x="645.86"
+         y="398.7764"
+         id="text331">Admin</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="620.8"
+         x2="676"
+         y1="403.06"
+         y2="403.06"
+         id="line333" />
+      <ellipse
+         cx="624.8"
+         cy="408.5577"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse335" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="28"
+         x="628.4"
+         y="410.0741"
+         id="text337">id: Integer</text>
+      <ellipse
+         cx="624.8"
+         cy="415.153"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse339" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="42"
+         x="628.4"
+         y="416.6694"
+         id="text341">loginId: Integer</text>
+      <ellipse
+         cx="624.8"
+         cy="421.7483"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse343" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="45.6"
+         x="628.4"
+         y="423.2647"
+         id="text345">secretKey: String</text>
+      <ellipse
+         cx="624.8"
+         cy="428.3436"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse347" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="41.2"
+         x="628.4"
+         y="429.86"
+         id="text349">shelter: Shelter</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="620.8"
+         x2="676"
+         y1="432.6413"
+         y2="432.6413"
+         id="line351" />
+    </g>
+    <!--class Cat-->
+    <g
+       id="elem_Cat">
+      <rect
+         codeLine="81"
+         fill="#F1F1F1"
+         height="124.725"
+         id="Cat"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="78.8"
+         x="527.8"
+         y="350.688" />
+      <ellipse
+         cx="560.9"
+         cy="357.088"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse355" />
+      <path
+         d="M562.0893,359.3452 Q561.8568,359.4648 561.6012,359.5245 Q561.3455,359.5843 561.0633,359.5843 Q560.0605,359.5843 559.5326,358.9235 Q559.0047,358.2628 559.0047,357.0144 Q559.0047,355.7626 559.5326,355.1019 Q560.0605,354.4411 561.0633,354.4411 Q561.3455,354.4411 561.6045,354.5009 Q561.8635,354.5607 562.0893,354.6802 L562.0893,355.7693 Q561.8369,355.5368 561.5995,355.4289 Q561.3621,355.321 561.1098,355.321 Q560.5719,355.321 560.2979,355.7477 Q560.024,356.1743 560.024,357.0144 Q560.024,357.8511 560.2979,358.2777 Q560.5719,358.7044 561.1098,358.7044 Q561.3621,358.7044 561.5995,358.5965 Q561.8369,358.4886 562.0893,358.2562 Z "
+         fill="#000000"
+         id="path357" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="9.2"
+         x="569.1"
+         y="359.2044"
+         id="text359">Cat</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="528.2"
+         x2="606.2"
+         y1="363.488"
+         y2="363.488"
+         id="line361" />
+      <ellipse
+         cx="532.2"
+         cy="368.9857"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse363" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="28"
+         x="535.8"
+         y="370.5021"
+         id="text365">id: Integer</text>
+      <ellipse
+         cx="532.2"
+         cy="375.581"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse367" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="34.8"
+         x="535.8"
+         y="377.0974"
+         id="text369">name: String</text>
+      <ellipse
+         cx="532.2"
+         cy="382.1763"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse371" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="34.8"
+         x="535.8"
+         y="383.6927"
+         id="text373">breed: Breed</text>
+      <ellipse
+         cx="532.2"
+         cy="388.7716"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse375" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="42.8"
+         x="535.8"
+         y="390.288"
+         id="text377">gender: Gender</text>
+      <ellipse
+         cx="532.2"
+         cy="395.3669"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse379" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="35.6"
+         x="535.8"
+         y="396.8833"
+         id="text381">about: String</text>
+      <ellipse
+         cx="532.2"
+         cy="401.9622"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse383" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="32.8"
+         x="535.8"
+         y="403.4786"
+         id="text385">age: Integer</text>
+      <ellipse
+         cx="532.2"
+         cy="408.5575"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse387" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="57.2"
+         x="535.8"
+         y="410.0739"
+         id="text389">isIndoorCat: Boolean</text>
+      <ellipse
+         cx="532.2"
+         cy="415.1528"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse391" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="25.2"
+         x="535.8"
+         y="416.6693"
+         id="text393">size: Size</text>
+      <ellipse
+         cx="532.2"
+         cy="421.7482"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse395" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="65.2"
+         x="535.8"
+         y="423.2646"
+         id="text397">coatLength: CoatLength</text>
+      <ellipse
+         cx="532.2"
+         cy="428.3435"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse399" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="68.4"
+         x="535.8"
+         y="429.8599"
+         id="text401">canLiveWith: CanLiveWith</text>
+      <ellipse
+         cx="532.2"
+         cy="434.9388"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse403" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="32.4"
+         x="535.8"
+         y="436.4552"
+         id="text405">color: Color</text>
+      <ellipse
+         cx="532.2"
+         cy="441.5341"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse407" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="40"
+         x="535.8"
+         y="443.0505"
+         id="text409">disease: String</text>
+      <ellipse
+         cx="532.2"
+         cy="448.1294"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse411" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="41.2"
+         x="535.8"
+         y="449.6458"
+         id="text413">shelter: Shelter</text>
+      <ellipse
+         cx="532.2"
+         cy="454.7247"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse415" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="47.6"
+         x="535.8"
+         y="456.2411"
+         id="text417">users: Set&lt;User&gt;</text>
+      <ellipse
+         cx="532.2"
+         cy="461.32"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse419" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="56.8"
+         x="535.8"
+         y="462.8364"
+         id="text421">images: Set&lt;Image&gt;</text>
+      <ellipse
+         cx="532.2"
+         cy="467.9153"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse423" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="59.6"
+         x="535.8"
+         y="469.4318"
+         id="text425">dateAdded: LocalDate</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="528.2"
+         x2="606.2"
+         y1="472.213"
+         y2="472.213"
+         id="line427" />
+    </g>
+    <!--class Image-->
+    <g
+       id="elem_Image">
+      <rect
+         codeLine="100"
+         fill="#F1F1F1"
+         height="38.9859"
+         id="Image"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="45.2"
+         x="491.4"
+         y="519.2" />
+      <ellipse
+         cx="504.42"
+         cy="525.6"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse431" />
+      <path
+         d="M505.6093,527.8572 Q505.3768,527.9768 505.1212,528.0365 Q504.8655,528.0963 504.5833,528.0963 Q503.5805,528.0963 503.0526,527.4355 Q502.5247,526.7748 502.5247,525.5264 Q502.5247,524.2746 503.0526,523.6139 Q503.5805,522.9531 504.5833,522.9531 Q504.8655,522.9531 505.1245,523.0129 Q505.3835,523.0727 505.6093,523.1922 L505.6093,524.2813 Q505.3569,524.0488 505.1195,523.9409 Q504.8821,523.833 504.6298,523.833 Q504.0919,523.833 503.8179,524.2597 Q503.544,524.6863 503.544,525.5264 Q503.544,526.3631 503.8179,526.7897 Q504.0919,527.2164 504.6298,527.2164 Q504.8821,527.2164 505.1195,527.1085 Q505.3569,527.0006 505.6093,526.7682 Z "
+         fill="#000000"
+         id="path433" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="16.8"
+         x="511.58"
+         y="527.7164"
+         id="text435">Image</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="491.8"
+         x2="536.2"
+         y1="532"
+         y2="532"
+         id="line437" />
+      <ellipse
+         cx="495.8"
+         cy="537.4977"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse439" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="28"
+         x="499.4"
+         y="539.0141"
+         id="text441">id: Integer</text>
+      <ellipse
+         cx="495.8"
+         cy="544.093"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse443" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="34.8"
+         x="499.4"
+         y="545.6094"
+         id="text445">name: String</text>
+      <ellipse
+         cx="495.8"
+         cy="550.6883"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse447" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="20.4"
+         x="499.4"
+         y="552.2047"
+         id="text449">cat: Cat</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="491.8"
+         x2="536.2"
+         y1="554.9859"
+         y2="554.9859"
+         id="line451" />
+    </g>
+    <!--class Shelter-->
+    <g
+       id="elem_Shelter">
+      <rect
+         codeLine="106"
+         fill="#F1F1F1"
+         height="78.5578"
+         id="Shelter"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="51.6"
+         x="624.6"
+         y="499.416" />
+      <ellipse
+         cx="639.42"
+         cy="505.816"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse455" />
+      <path
+         d="M640.6093,508.0732 Q640.3768,508.1928 640.1212,508.2525 Q639.8655,508.3123 639.5833,508.3123 Q638.5805,508.3123 638.0526,507.6515 Q637.5247,506.9908 637.5247,505.7424 Q637.5247,504.4906 638.0526,503.8299 Q638.5805,503.1691 639.5833,503.1691 Q639.8655,503.1691 640.1245,503.2289 Q640.3835,503.2887 640.6093,503.4082 L640.6093,504.4973 Q640.3569,504.2648 640.1195,504.1569 Q639.8821,504.049 639.6298,504.049 Q639.0919,504.049 638.8179,504.4757 Q638.544,504.9023 638.544,505.7424 Q638.544,506.5791 638.8179,507.0057 Q639.0919,507.4324 639.6298,507.4324 Q639.8821,507.4324 640.1195,507.3245 Q640.3569,507.2166 640.6093,506.9842 Z "
+         fill="#000000"
+         id="path457" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="19.2"
+         x="646.98"
+         y="507.9324"
+         id="text459">Shelter</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="625"
+         x2="675.8"
+         y1="512.216"
+         y2="512.216"
+         id="line461" />
+      <ellipse
+         cx="629"
+         cy="517.7137"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse463" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="28"
+         x="632.6"
+         y="519.2301"
+         id="text465">id: Integer</text>
+      <ellipse
+         cx="629"
+         cy="524.309"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse467" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="34.8"
+         x="632.6"
+         y="525.8254"
+         id="text469">name: String</text>
+      <ellipse
+         cx="629"
+         cy="530.9043"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse471" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="40.4"
+         x="632.6"
+         y="532.4207"
+         id="text473">region: Region</text>
+      <ellipse
+         cx="629"
+         cy="537.4996"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse475" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="41.2"
+         x="632.6"
+         y="539.016"
+         id="text477">address: String</text>
+      <ellipse
+         cx="629"
+         cy="544.0949"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse479" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="40.4"
+         x="632.6"
+         y="545.6113"
+         id="text481">website: String</text>
+      <ellipse
+         cx="629"
+         cy="550.6902"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse483" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="34.4"
+         x="632.6"
+         y="552.2066"
+         id="text485">email: String</text>
+      <ellipse
+         cx="629"
+         cy="557.2855"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse487" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="37.2"
+         x="632.6"
+         y="558.8019"
+         id="text489">phone: String</text>
+      <ellipse
+         cx="629"
+         cy="563.8808"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse491" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="38.4"
+         x="632.6"
+         y="565.3973"
+         id="text493">admin: Admin</text>
+      <ellipse
+         cx="629"
+         cy="570.4762"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse495" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="40.4"
+         x="632.6"
+         y="571.9926"
+         id="text497">cats: Set&lt;Cat&gt;</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="625"
+         x2="675.8"
+         y1="574.7738"
+         y2="574.7738"
+         id="line499" />
+    </g>
+    <!--class User-->
+    <g
+       id="elem_User">
+      <rect
+         codeLine="118"
+         fill="#F1F1F1"
+         height="52.1766"
+         id="User"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="60"
+         x="550.4"
+         y="512.604" />
+      <ellipse
+         cx="572.5"
+         cy="519.004"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse503" />
+      <path
+         d="M573.6893,521.2612 Q573.4568,521.3808 573.2012,521.4405 Q572.9455,521.5003 572.6633,521.5003 Q571.6605,521.5003 571.1326,520.8395 Q570.6047,520.1788 570.6047,518.9304 Q570.6047,517.6786 571.1326,517.0179 Q571.6605,516.3571 572.6633,516.3571 Q572.9455,516.3571 573.2045,516.4169 Q573.4635,516.4767 573.6893,516.5962 L573.6893,517.6853 Q573.4369,517.4528 573.1995,517.3449 Q572.9621,517.237 572.7098,517.237 Q572.1719,517.237 571.8979,517.6637 Q571.624,518.0903 571.624,518.9304 Q571.624,519.7671 571.8979,520.1937 Q572.1719,520.6204 572.7098,520.6204 Q572.9621,520.6204 573.1995,520.5125 Q573.4369,520.4046 573.6893,520.1722 Z "
+         fill="#000000"
+         id="path505" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="12.4"
+         x="580.7"
+         y="521.1204"
+         id="text507">User</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="550.8"
+         x2="610"
+         y1="525.404"
+         y2="525.404"
+         id="line509" />
+      <ellipse
+         cx="554.8"
+         cy="530.9017"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse511" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="28"
+         x="558.4"
+         y="532.4181"
+         id="text513">id: Integer</text>
+      <ellipse
+         cx="554.8"
+         cy="537.497"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse515" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="34.4"
+         x="558.4"
+         y="539.0134"
+         id="text517">email: String</text>
+      <ellipse
+         cx="554.8"
+         cy="544.0923"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse519" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="46"
+         x="558.4"
+         y="545.6087"
+         id="text521">password: String</text>
+      <ellipse
+         cx="554.8"
+         cy="550.6876"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse523" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="45.6"
+         x="558.4"
+         y="552.204"
+         id="text525">secretKey: String</text>
+      <ellipse
+         cx="554.8"
+         cy="557.2829"
+         fill="none"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse527" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="49.6"
+         x="558.4"
+         y="558.7993"
+         id="text529">favCats: Set&lt;Cat&gt;</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="550.8"
+         x2="610"
+         y1="561.5806"
+         y2="561.5806"
+         id="line531" />
+    </g>
+    <!--class AdminRepo-->
+    <g
+       id="elem_AdminRepo">
+      <rect
+         codeLine="158"
+         fill="#F1F1F1"
+         height="38.9859"
+         id="AdminRepo"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="194.8"
+         x="91"
+         y="248.132" />
+      <ellipse
+         cx="170.7"
+         cy="254.532"
+         fill="#B4A7E5"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse535" />
+      <path
+         d="M169.0711,252.8381 L169.0711,251.9748 L172.0229,251.9748 L172.0229,252.8381 L171.0367,252.8381 L171.0367,256.0687 L172.0229,256.0687 L172.0229,256.932 L169.0711,256.932 L169.0711,256.0687 L170.0572,256.0687 L170.0572,252.8381 Z "
+         fill="#000000"
+         id="path537" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         font-style="italic"
+         lengthAdjust="spacing"
+         textLength="32"
+         x="178.9"
+         y="256.6484"
+         id="text539">AdminRepo</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="91.4"
+         x2="285.4"
+         y1="260.932"
+         y2="260.932"
+         id="line541" />
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="91.4"
+         x2="285.4"
+         y1="264.132"
+         y2="264.132"
+         id="line543" />
+      <ellipse
+         cx="95.4"
+         cy="269.6297"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse545" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="99.6"
+         x="99"
+         y="271.1461"
+         id="text547">findAdminByLoginId(Integer loginId)</text>
+      <ellipse
+         cx="95.4"
+         cy="276.225"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse549" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="184.4"
+         x="99"
+         y="277.7414"
+         id="text551">findAdminByLoginIdAndPassword(Integer loginId, String password)</text>
+      <ellipse
+         cx="95.4"
+         cy="282.8203"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse553" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="91.2"
+         x="99"
+         y="284.3367"
+         id="text555">findBySecretKey(String secretKey)</text>
+    </g>
+    <!--class CatRepo-->
+    <g
+       id="elem_CatRepo">
+      <rect
+         codeLine="164"
+         fill="#F1F1F1"
+         height="25.7953"
+         id="CatRepo"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="100.8"
+         x="571.6"
+         y="254.728" />
+      <ellipse
+         cx="608.7"
+         cy="261.128"
+         fill="#B4A7E5"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse559" />
+      <path
+         d="M607.0711,259.4341 L607.0711,258.5708 L610.0229,258.5708 L610.0229,259.4341 L609.0367,259.4341 L609.0367,262.6647 L610.0229,262.6647 L610.0229,263.528 L607.0711,263.528 L607.0711,262.6647 L608.0572,262.6647 L608.0572,259.4341 Z "
+         fill="#000000"
+         id="path561" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         font-style="italic"
+         lengthAdjust="spacing"
+         textLength="23.2"
+         x="616.9"
+         y="263.2444"
+         id="text563">CatRepo</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="572"
+         x2="672"
+         y1="267.528"
+         y2="267.528"
+         id="line565" />
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="572"
+         x2="672"
+         y1="270.728"
+         y2="270.728"
+         id="line567" />
+      <ellipse
+         cx="576"
+         cy="276.2257"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse569" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="90.4"
+         x="579.6"
+         y="277.7421"
+         id="text571">findByShelterId(Integer shelterId)</text>
+    </g>
+    <!--class ImageRepo-->
+    <g
+       id="elem_ImageRepo">
+      <rect
+         codeLine="168"
+         fill="#F1F1F1"
+         height="32.3906"
+         id="ImageRepo"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="80"
+         x="477.6"
+         y="251.428" />
+      <ellipse
+         cx="500.5"
+         cy="257.828"
+         fill="#B4A7E5"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse575" />
+      <path
+         d="M498.8711,256.1341 L498.8711,255.2708 L501.8229,255.2708 L501.8229,256.1341 L500.8367,256.1341 L500.8367,259.3647 L501.8229,259.3647 L501.8229,260.228 L498.8711,260.228 L498.8711,259.3647 L499.8572,259.3647 L499.8572,256.1341 Z "
+         fill="#000000"
+         id="path577" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         font-style="italic"
+         lengthAdjust="spacing"
+         textLength="30.8"
+         x="508.7"
+         y="259.9444"
+         id="text579">ImageRepo</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="478"
+         x2="557.2"
+         y1="264.228"
+         y2="264.228"
+         id="line581" />
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="478"
+         x2="557.2"
+         y1="267.428"
+         y2="267.428"
+         id="line583" />
+      <ellipse
+         cx="482"
+         cy="272.9257"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse585" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="69.6"
+         x="485.6"
+         y="274.4421"
+         id="text587">findByName(String name)</text>
+      <ellipse
+         cx="482"
+         cy="279.521"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse589" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="69.6"
+         x="485.6"
+         y="281.0374"
+         id="text591">findByCatId(Integer catId)</text>
+    </g>
+    <!--class UserRepo-->
+    <g
+       id="elem_UserRepo">
+      <rect
+         codeLine="173"
+         fill="#F1F1F1"
+         height="45.5813"
+         id="UserRepo"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="163.6"
+         x="299.8"
+         y="244.832" />
+      <ellipse
+         cx="366.7"
+         cy="251.232"
+         fill="#B4A7E5"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse595" />
+      <path
+         d="M365.0711,249.5381 L365.0711,248.6748 L368.0229,248.6748 L368.0229,249.5381 L367.0367,249.5381 L367.0367,252.7687 L368.0229,252.7687 L368.0229,253.632 L365.0711,253.632 L365.0711,252.7687 L366.0572,252.7687 L366.0572,249.5381 Z "
+         fill="#000000"
+         id="path597" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         font-style="italic"
+         lengthAdjust="spacing"
+         textLength="26.4"
+         x="374.9"
+         y="253.3484"
+         id="text599">UserRepo</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="300.2"
+         x2="463"
+         y1="257.632"
+         y2="257.632"
+         id="line601" />
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="300.2"
+         x2="463"
+         y1="260.832"
+         y2="260.832"
+         id="line603" />
+      <ellipse
+         cx="304.2"
+         cy="266.3297"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse605" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="68.4"
+         x="307.8"
+         y="267.8461"
+         id="text607">findByEmail(String email)</text>
+      <ellipse
+         cx="304.2"
+         cy="272.925"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse609" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="153.2"
+         x="307.8"
+         y="274.4414"
+         id="text611">findByEmailAndPassword(String email, String password)</text>
+      <ellipse
+         cx="304.2"
+         cy="279.5203"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse613" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="91.2"
+         x="307.8"
+         y="281.0367"
+         id="text615">findBySecretKey(String secretKey)</text>
+      <ellipse
+         cx="304.2"
+         cy="286.1156"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse617" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="103.6"
+         x="307.8"
+         y="287.632"
+         id="text619">deleteCatFromFavorites(Integer catId)</text>
+    </g>
+    <!--class CatService-->
+    <g
+       id="elem_CatService">
+      <rect
+         codeLine="182"
+         fill="#F1F1F1"
+         height="32.3906"
+         id="CatService"
+         rx="1"
+         ry="1"
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         width="709.6"
+         x="318.8"
+         y="146.168" />
+      <ellipse
+         cx="657.7"
+         cy="152.568"
+         fill="#ADD1B2"
+         rx="4.4"
+         ry="4.4"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="ellipse623" />
+      <path
+         d="M658.8893,154.8252 Q658.6568,154.9448 658.4012,155.0045 Q658.1455,155.0643 657.8633,155.0643 Q656.8605,155.0643 656.3326,154.4035 Q655.8047,153.7428 655.8047,152.4944 Q655.8047,151.2426 656.3326,150.5819 Q656.8605,149.9211 657.8633,149.9211 Q658.1455,149.9211 658.4045,149.9809 Q658.6635,150.0407 658.8893,150.1602 L658.8893,151.2493 Q658.6369,151.0168 658.3995,150.9089 Q658.1621,150.801 657.9098,150.801 Q657.3719,150.801 657.0979,151.2277 Q656.824,151.6543 656.824,152.4944 Q656.824,153.3311 657.0979,153.7577 Q657.3719,154.1844 657.9098,154.1844 Q658.1621,154.1844 658.3995,154.0765 Q658.6369,153.9686 658.8893,153.7362 Z "
+         fill="#000000"
+         id="path625" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="28.4"
+         x="665.9"
+         y="154.6844"
+         id="text627">CatService</text>
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="319.2"
+         x2="1028"
+         y1="158.968"
+         y2="158.968"
+         id="line629" />
+      <line
+         style="stroke:#181818;stroke-width:0.20000000000000004;"
+         x1="319.2"
+         x2="1028"
+         y1="162.168"
+         y2="162.168"
+         id="line631" />
+      <ellipse
+         cx="323.2"
+         cy="167.6657"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse633" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="664"
+         x="326.8"
+         y="169.1821"
+         id="text635">getFilteredCats(Integer ageFrom, Integer ageTo, List&lt;Breed&gt; breeds, List&lt;CanLiveWith&gt; canLiveWithList, List&lt;CoatLength&gt; coatLengths, List&lt;Color&gt; colors, List&lt;Gender&gt; genders, Boolean isIndoorCat, List&lt;Region&gt; regions, List&lt;Size&gt; sizes)</text>
+      <ellipse
+         cx="323.2"
+         cy="174.261"
+         fill="#84BE84"
+         rx="1.2"
+         ry="1.2"
+         style="stroke:#038048;stroke-width:0.4000000000000001;"
+         id="ellipse637" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="5.6"
+         lengthAdjust="spacing"
+         textLength="699.2"
+         x="326.8"
+         y="175.7774"
+         id="text639">getSortedCats(String sortBy, Integer ageFrom, Integer ageTo, List&lt;Breed&gt; breeds, List&lt;CanLiveWith&gt; canLiveWithList, List&lt;CoatLength&gt; coatLengths, List&lt;Color&gt; colors, List&lt;Gender&gt; genders, Boolean isIndoorCat, List&lt;Region&gt; regions, List&lt;Size&gt; sizes)</text>
+    </g>
+    <!--link AdminController to AdminRepo-->
+    <g
+       id="link_AdminController_AdminRepo">
+      <path
+         codeLine="188"
+         d="M137.512,116.364 C139.836,137.216 143.992,164.684 151.2,188.16 C157.744,209.476 167.9011,230.2715 176.3331,245.9115 "
+         fill="none"
+         id="AdminController-to-AdminRepo"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="177.472,248.024,177.172,244.0959,176.5229,246.2635,174.3552,245.6145,177.472,248.024"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon643" />
+    </g>
+    <!--link AdminController to CatRepo-->
+    <g
+       id="link_AdminController_CatRepo">
+      <path
+         codeLine="189"
+         d="M195.3,116.308 C202.36,120.432 209.396,124.708 216,128.968 C253.044,152.876 253.832,174.056 295.6,188.16 C309.772,192.944 551.452,184.608 564.8,191.36 C591.22,204.724 607.7222,234.4576 615.8182,252.3416 "
+         fill="none"
+         id="AdminController-to-CatRepo"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="616.808,254.528,616.7809,250.5885,615.9832,252.706,613.8657,251.9082,616.808,254.528"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon647" />
+    </g>
+    <!--link AdminController to ImageRepo-->
+    <g
+       id="link_AdminController_ImageRepo">
+      <path
+         codeLine="190"
+         d="M170.644,116.26 C175.18,120.492 179.724,124.808 184,128.968 C210.208,154.492 207.624,173.636 241.2,188.16 C252.888,193.216 459.312,185.096 470.4,191.36 C493.228,204.252 505.6896,230.9193 512.0656,249.0953 "
+         fill="none"
+         id="AdminController-to-ImageRepo"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="512.86,251.36,513.1781,247.4333,512.198,249.4727,510.1585,248.4926,512.86,251.36"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon651" />
+    </g>
+    <!--link AdminController to UserRepo-->
+    <g
+       id="link_AdminController_UserRepo">
+      <path
+         codeLine="191"
+         d="M147.424,116.284 C158.84,140.744 178.216,172.648 206.4,188.16 C214.816,192.792 283.852,187.868 292.8,191.36 C321.136,202.416 345.1429,224.7793 361.4989,242.8793 "
+         fill="none"
+         id="AdminController-to-UserRepo"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="363.108,244.66,361.8815,240.9163,361.7671,243.1761,359.5072,243.0617,363.108,244.66"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon655" />
+    </g>
+    <!--link CatController to CatService-->
+    <g
+       id="link_CatController_CatService">
+      <path
+         codeLine="193"
+         d="M634.992,103.084 C643.636,116.272 653.6641,131.5609 661.8121,143.9889 "
+         fill="none"
+         id="CatController-to-CatService"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="663.128,145.996,662.4922,142.1081,662.0314,144.3234,659.8161,143.8626,663.128,145.996"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon659" />
+    </g>
+    <!--link CatController to CatRepo-->
+    <g
+       id="link_CatController_CatRepo">
+      <path
+         codeLine="194"
+         d="M365.564,103.144 C341.176,109.516 321.964,117.916 312.4,128.968 C295.188,148.864 293.916,169.44 312.4,188.16 C317.328,193.148 558.544,188.192 564.8,191.36 C591.216,204.736 607.718,234.4657 615.814,252.3457 "
+         fill="none"
+         id="CatController-to-CatRepo"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="616.804,254.532,616.7766,250.5926,615.979,252.7101,613.8615,251.9125,616.804,254.532"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon663" />
+    </g>
+    <!--link CatController to ImageRepo-->
+    <g
+       id="link_CatController_ImageRepo">
+      <path
+         codeLine="195"
+         d="M404.732,103.176 C350.116,110.188 304.372,118.904 295.6,128.968 C278.316,148.8 277.168,169.388 295.6,188.16 C302.404,195.092 461.952,186.564 470.4,191.36 C493.2,204.3 505.6676,230.952 512.0556,249.112 "
+         fill="none"
+         id="CatController-to-ImageRepo"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="512.852,251.376,513.1668,247.4491,512.1883,249.4893,510.1481,248.5109,512.852,251.376"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon667" />
+    </g>
+    <!--link CatController to AdminRepo-->
+    <g
+       id="link_CatController_AdminRepo">
+      <path
+         codeLine="196"
+         d="M368.68,103.176 C329.616,109.512 296.42,117.896 278.8,128.968 C233.76,157.276 207.3721,214.9053 195.7881,245.7373 "
+         fill="none"
+         id="CatController-to-AdminRepo"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="194.944,247.984,197.7079,245.1767,195.6474,246.1118,194.7124,244.0513,194.944,247.984"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon671" />
+    </g>
+    <!--link UserController to UserRepo-->
+    <g
+       id="link_UserController_UserRepo">
+      <path
+         codeLine="198"
+         d="M1052.38,113.012 C1049.488,118.16 1046.812,123.596 1044.8,128.968 C1035.444,153.952 1055.128,170.88 1034.8,188.16 C1028.828,193.236 477.748,188.624 470.4,191.36 C441.704,202.04 417.5646,224.7241 401.2766,243.0041 "
+         fill="none"
+         id="UserController-to-UserRepo"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="399.68,244.796,403.2695,243.1726,401.0105,243.3028,400.8803,241.0438,399.68,244.796"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon675" />
+    </g>
+    <!--link UserController to CatRepo-->
+    <g
+       id="link_UserController_CatRepo">
+      <path
+         codeLine="199"
+         d="M1078.608,113.04 C1081.808,136.956 1081.504,169.76 1061.2,188.16 C1053.608,195.04 701.772,187.224 692.4,191.36 C662.812,204.42 641.2745,234.5691 630.3545,252.5371 "
+         fill="none"
+         id="UserController-to-CatRepo"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="629.108,254.588,632.345,252.3426,630.1467,252.8789,629.6104,250.6806,629.108,254.588"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon679" />
+    </g>
+    <!--link UserController to ImageRepo-->
+    <g
+       id="link_UserController_ImageRepo">
+      <path
+         codeLine="200"
+         d="M1063.86,113.044 C1062.384,118.328 1060.908,123.804 1059.6,128.968 C1052.984,155.096 1067.376,171.232 1046.4,188.16 C1035.988,196.56 576.472,184.824 564.8,191.36 C541.928,204.168 529.4756,230.8623 523.1156,249.0663 "
+         fill="none"
+         id="UserController-to-ImageRepo"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="522.324,251.332,525.0218,248.4612,522.9836,249.4439,522.0009,247.4057,522.324,251.332"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon683" />
+    </g>
+    <!--link CatService to CatRepo-->
+    <g
+       id="link_CatService_CatRepo">
+      <path
+         codeLine="202"
+         d="M665.708,178.744 C655.432,199.548 638.7392,233.3403 629.3312,252.3803 "
+         fill="none"
+         id="CatService-to-CatRepo"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="628.268,254.532,631.2972,252.0133,629.154,252.7389,628.4283,250.5957,628.268,254.532"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon687" />
+    </g>
+    <!--link CatService to ImageRepo-->
+    <g
+       id="link_CatService_ImageRepo">
+      <path
+         codeLine="203"
+         d="M587.288,178.736 C579.292,182.16 571.636,186.316 564.8,191.36 C544.08,206.648 531.2895,231.7854 524.2215,249.1334 "
+         fill="none"
+         id="CatService-to-ImageRepo"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="523.316,251.356,526.1561,248.6258,524.0706,249.5038,523.1926,247.4184,523.316,251.356"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon691" />
+    </g>
+    <!--link Admin to Shelter-->
+    <g
+       id="link_Admin_Shelter">
+      <path
+         codeLine="205"
+         d="M648.76,435.916 C649.04,453.5 649.4018,475.9843 649.7338,496.8163 "
+         fill="none"
+         id="Admin-to-Shelter"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="649.772,499.216,651.3144,495.591,649.7401,497.2163,648.1148,495.642,649.772,499.216"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon695" />
+    </g>
+    <!--link Cat to Shelter-->
+    <g
+       id="link_Cat_Shelter">
+      <path
+         codeLine="206"
+         d="M606.728,472.764 C612.768,481.824 617.5329,488.9749 623.1769,497.4429 "
+         fill="none"
+         id="Cat-to-Shelter"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="624.508,499.44,623.8428,495.557,623.3988,497.7758,621.18,497.3318,624.508,499.44"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon699" />
+    </g>
+    <!--link Cat to Image-->
+    <g
+       id="link_Cat_Image">
+      <path
+         codeLine="207"
+         d="M540.756,475.508 C534,491.356 528.1771,505.0282 523.1371,516.8522 "
+         fill="none"
+         id="Cat-to-Image"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="522.196,519.06,525.0795,516.3757,522.9802,517.2202,522.1358,515.1209,522.196,519.06"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon703" />
+    </g>
+    <!--link Cat to User-->
+    <g
+       id="link_Cat_User">
+      <path
+         codeLine="208"
+         d="M568.512,475.508 C569.892,488.604 571.1959,499.3509 572.9519,510.1829 "
+         fill="none"
+         id="Cat-to-User"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="573.336,512.552,574.3393,508.7424,573.016,510.5778,571.1805,509.2544,573.336,512.552"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon707" />
+    </g>
+    <!--link User to Cat-->
+    <g
+       id="link_User_Cat">
+      <path
+         codeLine="209"
+         d="M582.02,512.552 C581.488,501.72 580.653,490.9906 579.265,477.8946 "
+         fill="none"
+         id="User-to-Cat"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="579.012,475.508,577.8003,479.2566,579.2228,477.4969,580.9825,478.9193,579.012,475.508"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon711" />
+    </g>
+    <!--link AdminRepo to Admin-->
+    <g
+       id="link_AdminRepo_Admin">
+      <path
+         codeLine="211"
+         d="M214.176,287.284 C234.396,301.164 263.868,318.788 292.8,326.688 C309.996,331.384 598.776,323.588 613.6,333.488 C632.512,346.124 640.7287,369.1805 644.6927,387.8165 "
+         fill="none"
+         id="AdminRepo-to-Admin"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="645.192,390.164,646.008,386.3099,644.7759,388.2078,642.878,386.9757,645.192,390.164"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon715" />
+    </g>
+    <!--link CatRepo to Cat-->
+    <g
+       id="link_CatRepo_Cat">
+      <path
+         codeLine="212"
+         d="M617.232,280.608 C611.268,296.344 601.4825,322.1758 591.5425,348.4038 "
+         fill="none"
+         id="CatRepo-to-Cat"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="590.692,350.648,593.464,347.8487,591.4008,348.7778,590.4716,346.7146,590.692,350.648"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon719" />
+    </g>
+    <!--link ImageRepo to Image-->
+    <g
+       id="link_ImageRepo_Image">
+      <path
+         codeLine="213"
+         d="M517.388,283.92 C516.764,330.768 514.9681,465.7682 514.2881,516.6522 "
+         fill="none"
+         id="ImageRepo-to-Image"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="514.256,519.052,515.904,515.4737,514.2827,517.0522,512.7042,515.4309,514.256,519.052"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon723" />
+    </g>
+    <!--link UserRepo to User-->
+    <g
+       id="link_UserRepo_User">
+      <path
+         codeLine="214"
+         d="M394.964,290.528 C418.512,329.548 469.76,411.708 520.8,475.416 C530,486.896 533.476,488.74 543.6,499.416 C547.596,503.628 550.186,506.3612 554.31,510.7172 "
+         fill="none"
+         id="UserRepo-to-User"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="555.96,512.46,554.6469,508.7457,554.585,511.0076,552.3231,510.9458,555.96,512.46"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon727" />
+    </g>
+    <!--link AdminDTO to Admin-->
+    <g
+       id="link_AdminDTO_Admin">
+      <path
+         codeLine="216"
+         d="M715.432,293.908 C708.352,305.912 699.88,320.388 692.4,333.488 C681.524,352.536 670.5938,372.2297 661.8418,388.1217 "
+         fill="none"
+         id="AdminDTO-to-Admin"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="660.684,390.224,663.8222,387.8424,661.6488,388.4721,661.0191,386.2987,660.684,390.224"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon731" />
+    </g>
+    <!--link CatDTO to Cat-->
+    <g
+       id="link_CatDTO_Cat">
+      <path
+         codeLine="217"
+         d="M776.668,322.78 C774.516,324.224 772.296,325.54 770,326.688 C738.892,342.264 643.4,315.544 613.6,333.488 C606.3,337.884 601.5146,342.023 596.1546,348.787 "
+         fill="none"
+         id="CatDTO-to-Cat"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="594.664,350.668,598.1539,348.8402,595.9061,349.1005,595.6458,346.8528,594.664,350.668"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon735" />
+    </g>
+    <!--link CatDTO to ShelterDTO-->
+    <g
+       id="link_CatDTO_ShelterDTO">
+      <path
+         codeLine="218"
+         d="M809.052,326.848 C806.28,345.072 803.6892,362.1033 801.2932,377.8433 "
+         fill="none"
+         id="CatDTO-to-ShelterDTO"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="800.932,380.216,803.0555,376.8978,801.233,378.2388,799.892,376.4162,800.932,380.216"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon739" />
+    </g>
+    <!--link ShelterDTO to Shelter-->
+    <g
+       id="link_ShelterDTO_Shelter">
+      <path
+         codeLine="219"
+         d="M770.136,435.628 C743.7,458.292 704.6941,491.742 678.2101,514.446 "
+         fill="none"
+         id="ShelterDTO-to-Shelter"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="676.388,516.008,680.1625,514.8797,677.9064,514.7063,678.0798,512.4502,676.388,516.008"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon743" />
+    </g>
+    <!--link UserDTO to User-->
+    <g
+       id="link_UserDTO_User">
+      <path
+         codeLine="220"
+         d="M899.856,290.504 C892.264,303.464 880.852,318.724 866,326.688 C845.824,337.512 782.576,321.292 763.2,333.488 C701.92,372.06 738.388,428.54 683.2,475.416 C659.536,495.512 643.584,482.424 617.6,499.416 C612.048,503.044 608.4223,505.9642 603.6103,510.7242 "
+         fill="none"
+         id="UserDTO-to-User"
+         style="stroke:#181818;stroke-width:0.4000000000000001;" />
+      <polygon
+         fill="#181818"
+         points="601.904,512.412,605.5886,511.0178,603.3259,511.0055,603.3382,508.7428,601.904,512.412"
+         style="stroke:#181818;stroke-width:0.4000000000000001;"
+         id="polygon747" />
+    </g>
+    <!--SRC=[xLXDZzis4BthL_0M6zqaToCGiDxj5aRTfeXJv53qm1LdlKHaKYLfBznY_tk754bH8krc7RI7e3xeWsyud1dE6mtTqUOptGBv38mBC6_2lP72ADcseCXV5S5VqrAjoJNRSN4pnUplkrPkkPXnOOXxMh4hiZ6AYotfSEQJL6m-26_1E5MtO2XlzSnBQcWKc1_XE1QzeKOlZsx2EKa6BHX0uKpeYgo4WIqQp5ChzXsZ_OG1lY8_qUvTho1uK9E6cbjgA8Bxrl2EAdF7M_ZjTy9t63sT6R6omylZptG7mHWdQGTYN4e-KCQiFHVRy5mbkuMQodkbWB8DKDKyWbrEH_zHqPsIko5UEF1HNf4rr-RTKW6mcjpRc_PZDrIi-G4-SVDeBOml5WmYaferYAsJYCzHWMobiW3UmjWF81ZWuDRTSNGfPGjK4AvNWacfq6Ol-W6sN8gQA7SF2ZRyJwY9ngiUeYsLUTyPb9gF0s7ZRTEMiophbiSLcqrJPnJYNpMeSennRp6vB3wp5oBWoTxdKyQKjjeXThEpPFt5SwauJS4VUz1cd4vtz20LDt2659XPgudpOPRBZZFvgc0d3_2oDPuh365tel0m8_EAS_lnVHfQpXP1xoIQgn8IhLduI2NG8xG6bANbIN2gSqgnBp5E51TmJ5eGnwiq-ZRh5wHdGRANzt9lSYKOnCA22LCMWJw9PyWCr8JN95yZDHTae6o23-H6WU4brO0SjfFnbXH4he7gWlUn86h4mFXihhFu8ze_OA0JjKY6QyPi_DQoeIso1VBj6MPUk4LzNIb4dJ45MkV04znhP48Em0w_TFbmzoZ5M3ghBrzY_GdjPrB_WHvkB2TzzBt6-fyPkfFuZSiv-gyIDEP0aO7_q-y2-XKZstzfCETyLjZqgoUK3GbZd-kN4jBDkd2_6XjCZEX9cdybn_jUuZ_XkDUFj5dqx1bvwIEChjRbYd1fEGYT-0M58hVfkNhxwdoHU0DYlzFUMFlSSmq7KhSSa6Hq4OwCAAEOyYMWvt09wVUwX5XQ3kFFhzwUheGAEec98DNH-uXj9AW7sa2_gHyGJxVgWGlcWELntHV3s5pwuZW_9tmjM6p_9lFEdRMiekLn4pRuH3VdGp1uW3jTiXyrXROe6X4RfHEg7EdBoj8JacLdPhVxHisANUHa5KkCyYBVMpQ4LHmrvaMHDC2fzDT7Ttm-jKUiq3BhsKixP7Jpm1iOVO5HwMOq7FjuRdVccp_bZGyl6ppgUPUJmz_oE7Bucuo0IvpfdpIlNzT3FIgYdkj5B9AtY0RILTNupmQlrITb6NJpScHOCCS6Dwh9oNjaJ04BwnMWOS4guT74o7GucT2tldOmj56s7oszkqdnpPhXR0dhU5MkW4LFgr24Wz1GIGULiUv5lLKyD8yqXG6hA7bDJbV9SIbr8Hn2uW9_0m00]-->
+  </g>
+</svg>

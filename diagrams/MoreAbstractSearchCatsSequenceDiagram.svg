@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   contentStyleType="text/css"
+   height="488px"
+   preserveAspectRatio="none"
+   style="width:1177px;height:488px;background:#FFFFFF;"
+   version="1.1"
+   viewBox="0 0 1177 488"
+   width="1177px"
+   zoomAndPan="magnify"
+   id="svg134"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="g132">
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="23"
+       x2="23"
+       y1="81.4883"
+       y2="407.5938"
+       id="line4" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="297"
+       x2="297"
+       y1="81.4883"
+       y2="407.5938"
+       id="line6" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="597"
+       x2="597"
+       y1="81.4883"
+       y2="407.5938"
+       id="line8" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="774.5"
+       x2="774.5"
+       y1="81.4883"
+       y2="407.5938"
+       id="line10" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="1031"
+       x2="1031"
+       y1="81.4883"
+       y2="407.5938"
+       id="line12" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="1137"
+       x2="1137"
+       y1="81.4883"
+       y2="407.5938"
+       id="line14" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="31"
+       x="5"
+       y="78.5352"
+       id="text16">User</text>
+    <ellipse
+       cx="23.5"
+       cy="13.5"
+       fill="#E2E2F0"
+       rx="8"
+       ry="8"
+       style="stroke:#181818;stroke-width:0.5;"
+       id="ellipse18" />
+    <path
+       d="M23.5,21.5 L23.5,48.5 M10.5,29.5 L36.5,29.5 M23.5,48.5 L10.5,63.5 M23.5,48.5 L36.5,63.5 "
+       fill="none"
+       style="stroke:#181818;stroke-width:0.5;"
+       id="path20" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="31"
+       x="5"
+       y="420.1289"
+       id="text22">User</text>
+    <ellipse
+       cx="23.5"
+       cy="431.582"
+       fill="#E2E2F0"
+       rx="8"
+       ry="8"
+       style="stroke:#181818;stroke-width:0.5;"
+       id="ellipse24" />
+    <path
+       d="M23.5,439.582 L23.5,466.582 M10.5,447.582 L36.5,447.582 M23.5,466.582 L10.5,481.582 M23.5,466.582 L36.5,481.582 "
+       fill="none"
+       style="stroke:#181818;stroke-width:0.5;"
+       id="path26" />
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="107"
+       x="244"
+       y="50"
+       id="rect28" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="93"
+       x="251"
+       y="70.5352"
+       id="text30">CatController</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="107"
+       x="244"
+       y="406.5938"
+       id="rect32" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="93"
+       x="251"
+       y="427.1289"
+       id="text34">CatController</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="85"
+       x="555"
+       y="50"
+       id="rect36" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="71"
+       x="562"
+       y="70.5352"
+       id="text38">CatService</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="85"
+       x="555"
+       y="406.5938"
+       id="rect40" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="71"
+       x="562"
+       y="427.1289"
+       id="text42">CatService</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="72"
+       x="738.5"
+       y="50"
+       id="rect44" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="58"
+       x="745.5"
+       y="70.5352"
+       id="text46">CatRepo</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="72"
+       x="738.5"
+       y="406.5938"
+       id="rect48" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="58"
+       x="745.5"
+       y="427.1289"
+       id="text50">CatRepo</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="125"
+       x="969"
+       y="50"
+       id="rect52" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="111"
+       x="976"
+       y="70.5352"
+       id="text54">CatRepoCustom</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="125"
+       x="969"
+       y="406.5938"
+       id="rect56" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="111"
+       x="976"
+       y="427.1289"
+       id="text58">CatRepoCustom</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="67"
+       x="1104"
+       y="50"
+       id="rect60" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="53"
+       x="1111"
+       y="70.5352"
+       id="text62">CatDTO</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="67"
+       x="1104"
+       y="406.5938"
+       id="rect64" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="53"
+       x="1111"
+       y="427.1289"
+       id="text66">CatDTO</text>
+    <polygon
+       fill="#181818"
+       points="285.5,108.7988,295.5,112.7988,285.5,116.7988,289.5,112.7988"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon68" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="23.5"
+       x2="291.5"
+       y1="112.7988"
+       y2="112.7988"
+       id="line70" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="250"
+       x="30.5"
+       y="108.0566"
+       id="text72">searchCats(allFilterOptions, sortOption)</text>
+    <polygon
+       fill="#181818"
+       points="585.5,138.1094,595.5,142.1094,585.5,146.1094,589.5,142.1094"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon74" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="297.5"
+       x2="591.5"
+       y1="142.1094"
+       y2="142.1094"
+       id="line76" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="276"
+       x="304.5"
+       y="137.3672"
+       id="text78">getFilteredCats(allFilterOptions, sortOption)</text>
+    <polygon
+       fill="#181818"
+       points="1019.5,167.4199,1029.5,171.4199,1019.5,175.4199,1023.5,171.4199"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon80" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="597.5"
+       x2="1025.5"
+       y1="171.4199"
+       y2="171.4199"
+       id="line82" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="205"
+       x="604.5"
+       y="166.6777"
+       id="text84">findFilteredCats(allFilterOptions)</text>
+    <polygon
+       fill="#181818"
+       points="785.5,196.7305,775.5,200.7305,785.5,204.7305,781.5,200.7305"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon86" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="779.5"
+       x2="1030.5"
+       y1="200.7305"
+       y2="200.7305"
+       id="line88" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="233"
+       x="791.5"
+       y="195.9883"
+       id="text90">Custom query execution with criteria</text>
+    <polygon
+       fill="#181818"
+       points="1019.5,226.041,1029.5,230.041,1019.5,234.041,1023.5,230.041"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon92" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="774.5"
+       x2="1025.5"
+       y1="230.041"
+       y2="230.041"
+       id="line94" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="161"
+       x="781.5"
+       y="225.2988"
+       id="text96">Return filtered list of cats</text>
+    <polygon
+       fill="#181818"
+       points="608.5,255.3516,598.5,259.3516,608.5,263.3516,604.5,259.3516"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon98" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="602.5"
+       x2="1030.5"
+       y1="259.3516"
+       y2="259.3516"
+       id="line100" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="158"
+       x="614.5"
+       y="254.6094"
+       id="text102">Return list of Cat entities</text>
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="597.5"
+       x2="639.5"
+       y1="288.6621"
+       y2="288.6621"
+       id="line104" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="639.5"
+       x2="639.5"
+       y1="288.6621"
+       y2="301.6621"
+       id="line106" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="598.5"
+       x2="639.5"
+       y1="301.6621"
+       y2="301.6621"
+       id="line108" />
+    <polygon
+       fill="#181818"
+       points="608.5,297.6621,598.5,301.6621,608.5,305.6621,604.5,301.6621"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon110" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="163"
+       x="604.5"
+       y="283.9199"
+       id="text112">sortCats(cats, sortOption)</text>
+    <polygon
+       fill="#181818"
+       points="1125.5,326.9727,1135.5,330.9727,1125.5,334.9727,1129.5,330.9727"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon114" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="597.5"
+       x2="1131.5"
+       y1="330.9727"
+       y2="330.9727"
+       id="line116" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="202"
+       x="604.5"
+       y="326.2305"
+       id="text118">Convert Cat entities to CatDTOs</text>
+    <polygon
+       fill="#181818"
+       points="308.5,356.2832,298.5,360.2832,308.5,364.2832,304.5,360.2832"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon120" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="302.5"
+       x2="596.5"
+       y1="360.2832"
+       y2="360.2832"
+       id="line122" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="135"
+       x="314.5"
+       y="355.541"
+       id="text124">Return list of CatDTO</text>
+    <polygon
+       fill="#181818"
+       points="34.5,385.5938,24.5,389.5938,34.5,393.5938,30.5,389.5938"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon126" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="28.5"
+       x2="296.5"
+       y1="389.5938"
+       y2="389.5938"
+       id="line128" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="135"
+       x="40.5"
+       y="384.8516"
+       id="text130">Return list of CatDTO</text>
+    <!--SRC=[ZP5DJiCm48NtESMeAv3W0bcmSSIsabqEOBbJEfAnmtXIuFQCupOIIa0ie_Uzdt5yaCpmKf2xqRDGeD4dWPtnOd8IpZ4Yxy0NC6P5EEGB1MooMyaMnzmqkwcPgKX-knBhzE6mRzhGTNKWF3xfY1uAUWvd1SgTZ_6PeY3lHw6SoWEKpD8-xZjZPelhuHMbSNZyZy_DFgjT9qh7FvrAsrPZUsW7mVk4_0NuYM6g37oGd24mgOkyyakwHPauQKahW4X589yWQDEIwnRk9kiGm2GaXEKsLgbwmhonsZSl6dHYJXTa-P41ag6zzn9djaeLkBvf_Hs_4Ty0]-->
+  </g>
+</svg>

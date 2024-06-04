@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   contentStyleType="text/css"
+   height="492px"
+   preserveAspectRatio="none"
+   style="width:810px;height:492px;background:#FFFFFF;"
+   version="1.1"
+   viewBox="0 0 810 492"
+   width="810px"
+   zoomAndPan="magnify"
+   id="svg118"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="g116">
+    <rect
+       fill="none"
+       height="208.1289"
+       style="stroke:#000000;stroke-width:1.5;"
+       width="793"
+       x="10"
+       y="186.4199"
+       id="rect4" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="45"
+       x2="45"
+       y1="81.4883"
+       y2="411.5488"
+       id="line6" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="286"
+       x2="286"
+       y1="81.4883"
+       y2="411.5488"
+       id="line8" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="641.5"
+       x2="641.5"
+       y1="81.4883"
+       y2="411.5488"
+       id="line10" />
+    <line
+       style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;"
+       x1="763"
+       x2="763"
+       y1="81.4883"
+       y2="411.5488"
+       id="line12" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="45"
+       x="20"
+       y="78.5352"
+       id="text14">Admin</text>
+    <ellipse
+       cx="45.5"
+       cy="13.5"
+       fill="#E2E2F0"
+       rx="8"
+       ry="8"
+       style="stroke:#181818;stroke-width:0.5;"
+       id="ellipse16" />
+    <path
+       d="M45.5,21.5 L45.5,48.5 M32.5,29.5 L58.5,29.5 M45.5,48.5 L32.5,63.5 M45.5,48.5 L58.5,63.5 "
+       fill="none"
+       style="stroke:#181818;stroke-width:0.5;"
+       id="path18" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="45"
+       x="20"
+       y="424.084"
+       id="text20">Admin</text>
+    <ellipse
+       cx="45.5"
+       cy="435.5371"
+       fill="#E2E2F0"
+       rx="8"
+       ry="8"
+       style="stroke:#181818;stroke-width:0.5;"
+       id="ellipse22" />
+    <path
+       d="M45.5,443.5371 L45.5,470.5371 M32.5,451.5371 L58.5,451.5371 M45.5,470.5371 L32.5,485.5371 M45.5,470.5371 L58.5,485.5371 "
+       fill="none"
+       style="stroke:#181818;stroke-width:0.5;"
+       id="path24" />
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="129"
+       x="222"
+       y="50"
+       id="rect26" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="115"
+       x="229"
+       y="70.5352"
+       id="text28">AdminController</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="129"
+       x="222"
+       y="410.5488"
+       id="rect30" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="115"
+       x="229"
+       y="431.084"
+       id="text32">AdminController</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="94"
+       x="594.5"
+       y="50"
+       id="rect34" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="80"
+       x="601.5"
+       y="70.5352"
+       id="text36">AdminRepo</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="94"
+       x="594.5"
+       y="410.5488"
+       id="rect38" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="80"
+       x="601.5"
+       y="431.084"
+       id="text40">AdminRepo</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="59"
+       x="734"
+       y="50"
+       id="rect42" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="45"
+       x="741"
+       y="70.5352"
+       id="text44">Admin</text>
+    <rect
+       fill="#E2E2F0"
+       height="30.4883"
+       rx="2.5"
+       ry="2.5"
+       style="stroke:#181818;stroke-width:0.5;"
+       width="59"
+       x="734"
+       y="410.5488"
+       id="rect46" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14"
+       lengthAdjust="spacing"
+       textLength="45"
+       x="741"
+       y="431.084"
+       id="text48">Admin</text>
+    <polygon
+       fill="#181818"
+       points="274.5,108.7988,284.5,112.7988,274.5,116.7988,278.5,112.7988"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon50" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="45.5"
+       x2="280.5"
+       y1="112.7988"
+       y2="112.7988"
+       id="line52" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="152"
+       x="52.5"
+       y="108.0566"
+       id="text54">login(loginId, password)</text>
+    <polygon
+       fill="#181818"
+       points="629.5,138.1094,639.5,142.1094,629.5,146.1094,633.5,142.1094"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon56" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="286.5"
+       x2="635.5"
+       y1="142.1094"
+       y2="142.1094"
+       id="line58" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="331"
+       x="293.5"
+       y="137.3672"
+       id="text60">findAdminByLoginIdAndPassword(loginId, password)</text>
+    <polygon
+       fill="#181818"
+       points="751.5,167.4199,761.5,171.4199,751.5,175.4199,755.5,171.4199"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon62" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="641.5"
+       x2="757.5"
+       y1="171.4199"
+       y2="171.4199"
+       id="line64" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="98"
+       x="648.5"
+       y="166.6777"
+       id="text66">Admin instance</text>
+    <path
+       d="M10,186.4199 L72,186.4199 L72,193.7305 L62,203.7305 L10,203.7305 L10,186.4199 "
+       fill="#EEEEEE"
+       style="stroke:#000000;stroke-width:1.5;"
+       id="path68" />
+    <rect
+       fill="none"
+       height="208.1289"
+       style="stroke:#000000;stroke-width:1.5;"
+       width="793"
+       x="10"
+       y="186.4199"
+       id="rect70" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="17"
+       x="25"
+       y="199.9883"
+       id="text72">alt</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="11"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="81"
+       x="87"
+       y="199.0547"
+       id="text74">[Admin exists]</text>
+    <polygon
+       fill="#181818"
+       points="652.5,221.041,642.5,225.041,652.5,229.041,648.5,225.041"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon76" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;"
+       x1="646.5"
+       x2="762.5"
+       y1="225.041"
+       y2="225.041"
+       id="line78" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="83"
+       x="658.5"
+       y="220.2988"
+       id="text80">return Admin</text>
+    <polygon
+       fill="#181818"
+       points="297.5,250.3516,287.5,254.3516,297.5,258.3516,293.5,254.3516"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon82" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;"
+       x1="291.5"
+       x2="640.5"
+       y1="254.3516"
+       y2="254.3516"
+       id="line84" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="83"
+       x="303.5"
+       y="249.6094"
+       id="text86">return Admin</text>
+    <polygon
+       fill="#181818"
+       points="56.5,279.6621,46.5,283.6621,56.5,287.6621,52.5,283.6621"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon88" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="50.5"
+       x2="285.5"
+       y1="283.6621"
+       y2="283.6621"
+       id="line90" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="217"
+       x="62.5"
+       y="278.9199"
+       id="text92">return secretKey (login successful)</text>
+    <line
+       style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;"
+       x1="10"
+       x2="803"
+       y1="292.6621"
+       y2="292.6621"
+       id="line94" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="11"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="127"
+       x="15"
+       y="303.2969"
+       id="text96">[Admin does not exist]</text>
+    <polygon
+       fill="#181818"
+       points="652.5,323.9277,642.5,327.9277,652.5,331.9277,648.5,327.9277"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon98" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;"
+       x1="646.5"
+       x2="762.5"
+       y1="327.9277"
+       y2="327.9277"
+       id="line100" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="66"
+       x="658.5"
+       y="323.1855"
+       id="text102">return null</text>
+    <polygon
+       fill="#181818"
+       points="297.5,353.2383,287.5,357.2383,297.5,361.2383,293.5,357.2383"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon104" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;"
+       x1="291.5"
+       x2="640.5"
+       y1="357.2383"
+       y2="357.2383"
+       id="line106" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="66"
+       x="303.5"
+       y="352.4961"
+       id="text108">return null</text>
+    <polygon
+       fill="#181818"
+       points="56.5,382.5488,46.5,386.5488,56.5,390.5488,52.5,386.5488"
+       style="stroke:#181818;stroke-width:1.0;"
+       id="polygon110" />
+    <line
+       style="stroke:#181818;stroke-width:1.0;"
+       x1="50.5"
+       x2="285.5"
+       y1="386.5488"
+       y2="386.5488"
+       id="line112" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="214"
+       x="62.5"
+       y="381.8066"
+       id="text114">return error message (login failed)</text>
+    <!--SRC=[TP71QWGX38RlUOgmfovqNc0eXUcSIlTGV0FHp2AuSJ0PsdtxEZejXLeFOlBzCR_HEaqP9tyB3AlD6bnOBIkUQcfEh3d5IFc4Ld2QEnf3QshKT6WZ03N0uRdSCM9Cry0FTN_rZxXQaO-K_HcckKhCY4jWNsjUxfUcczY_7y9kgQcbOtiB1XQrx0Z0HZroz1b41R2ieduQXbsUIRVCnmGgcXioVROtsUCVAkJAwOtks6oXRCwHoBB5Cr0KEhhxH8ASjDdek-0jndzC_4P_F53EvHTlfQkzqhUFnOP8PJB47hu0]-->
+  </g>
+</svg>
