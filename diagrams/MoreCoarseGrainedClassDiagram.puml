@@ -47,12 +47,17 @@ package kedinet.kedinet.service {
     class CatService
 }
 
+package kedinet.kedinet.util {
+    class FileUploadUtil
+}
+
 KedinetApplication --> WebConfig
 
 AdminController --> AdminRepo
 AdminController --> CatRepo
 AdminController --> ImageRepo
 AdminController --> UserRepo
+AdminController --> FileUploadUtil
 
 CatController --> CatService
 CatController --> CatRepo
