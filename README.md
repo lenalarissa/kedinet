@@ -4,7 +4,7 @@
 
 ## Overview
 
-**Kedi-net Istanbul** is a full-stack web application developed as part of the **Software Engineering Project (CMPE356)** at Boğaziçi University.
+**Kedi-net Istanbul** is a full-stack web application developed as part of the **Software Engineering Project (CMPE356)** at Kadir Has University.
 The project’s goal is to support the care and adoption of stray cats in Istanbul by providing a **centralized online platform** for shelters and users.
 
 **Course:** Software Engineering (CMPE356)
